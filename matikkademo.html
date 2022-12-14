@@ -42,6 +42,7 @@
                 <li>NVDA ja CatMath-lisäosa: Lukee kaavan englanniksi. Kaavan aktivointi "napsauttamalla" lukee sen kahdesti.</li>
               </ul>
             <h3>MathML-koodi, jolla on alttext-attribuutti</h3>
+            <p>Huomio alttext-attribuutista: MathML-spesifikaation mukaan sitä käytetään, jos MathML-koodia ei tueta. Se ei toimi kuvan alt-tekstin tapaan. (Oletettavasti.)</p>
             <math alttext="h =pi *1/5">
                 <mrow>
                   <mtext>h</mtext>
@@ -92,7 +93,26 @@
               <li>NVDA: Alt-teksti luetaan ääneen. "Grafiikka. 1+1=3." Ei vaadi lisäosia. <ul>
                 <li>Pohdintaa: Voiko alt-tekstissä edetä kirjain kirjaimelta? Voi tuottaa hankaluuksia pitkien kaavojen kanssa, koska ne jakautuvat useampaan osaan.</li>
               </ul></li>
-            </ul>     
+            </ul>
+            <h3>Norjan (NLB) ratkaisu</h3>
+        <p>MathML-koodi, jonka alttext-attribuuttina on AsciiMath-esitys. On käytetty myös altimg-attribuuttia kuvan näyttämiseen, mikäli ohjelma ei tue MathML-koodia.</p>
+        <math
+ alttext="h =pi *1/5"
+ altimg="/images/math-001.png/">
+ <mrow>
+  <mtext>h</mtext>
+  <mo>=</mo>
+  <mi>π</mi>
+  <mo>⋅</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>5</mn>
+  </mfrac>
+</mrow> </math>
+ <mrow>
+  <p>Tämän lisäksi NLB tarjoaa kaavan myös tekstinä, joka on käännetty MathML-koodia käyttämällä. Se on piilotettu näkyvistä ja tulee esille ruudunlukijalle, kuten YTL:n ratkaisussa.</p>
+  <h4>Testaus</h4>
+  <p>Ei vielä tehty.</p>
             <h3>YTL:n toteutus YO-kokeessa</h3>
             <ul>
                 <li>
