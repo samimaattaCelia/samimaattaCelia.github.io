@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kopioi ja liitä metadatat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        font-size: 16px;
+        font-family: "Atkinson Hyperlegible", sans-serif;
+      }
+
+      html {
+        max-width: 700px;
+      }
+
+      body {
+        font-size: 1.2rem;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kopioi ja liitä EPUB-kirjan metadatat</h1>
+    <p>
+      Vaihtoehdot perustuvat
+      <a
+        href="http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html"
+        >Daisyn listaukseen saavutettavuusmetadatasta (englanniksi)</a
+      >. Tämä puolestaan perustuu
+      <a href="https://www.schema.org/CreativeWork"
+        >schema.orgin metadataan "<span lang="en">CreativeWorks</span
+        >"-tyyppisille julkaisuille (englanniksi)</a
+      >.
+    </p>
+    <h2>AccessMode</h2>
+    <fieldset>
+      <legend>Valitse sopivat.</legend>
+      <input
+        type="checkbox"
+        name="meta"
+        id="textual"
+        onclick="myFunction(this.id, 'textual_text')"
+      />
+      <label for="textual"
+        ><strong lang="en">textual</strong>: Ainakin osa kirjan sisällöstä on
+        tekstiä.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="visual"
+        onclick="myFunction(this.id, 'visual_text')"
+      />
+      <label for="visual"
+        ><strong lang="en">visual</strong>: Ainakin osa kirjan sisällöstä on
+        kuvina.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="auditory"
+        onclick="myFunction(this.id, 'auditory_text')"
+      />
+      <label for="auditory"
+        ><strong lang="en">auditory</strong>: Ainakin osa kirjan sisällöstä on
+        äänenä tai kuunneltavaa.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="tactile"
+        onclick="myFunction(this.id, 'tactile_text')"
+      />
+      <label for="tactile"
+        ><strong lang="en">tactile</strong>: Ainakin osa kirjan sisällöstä on
+        kosketeltava (taktiili).</label
+      ><br />
+    </fieldset>
+    <h2>AccessModeSufficient</h2>
+    <fieldset>
+      <legend>Valitse sopivat.</legend>
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textual"
+        onclick="myFunction(this.id, 'sufficient_textual_text')"
+      />
+      <label for="sufficient_textual"
+        ><strong lang="en">textual</strong>: Kirjan sisältö on
+        <strong>kokonaan</strong> varsinaista tekstiä.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_visual"
+        onclick="myFunction(this.id, 'sufficient_visual_text')"
+      />
+      <label for="sufficient_visual"
+        ><strong lang="en">visual</strong>: Kirjan sisältö on
+        <strong>kokonaan</strong> katseltavissa.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_auditory"
+        onclick="myFunction(this.id, 'sufficient_auditory_text')"
+      />
+      <label for="sufficient_auditory"
+        ><strong lang="en">auditory</strong>: Kirjan sisältö on
+        <strong>kokonaan</strong> kuunneltavissa.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_tactile"
+        onclick="myFunction(this.id, 'sufficient_tactile_text')"
+      />
+      <label for="sufficient_tactile"
+        ><strong lang="en">tactile</strong>: Kirjan sisältö on
+        <strong>kokonaan</strong> taktiili.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualVisual"
+        onclick="myFunction(this.id, 'sufficient_textualVisual_text')"
+      />
+      <label for="sufficient_textualVisual"
+        ><strong lang="en">textual, visual</strong>: Kirjan sisältö on textual
+        ja visual.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualAuditory"
+        onclick="myFunction(this.id, 'sufficient_textualAuditory_text')"
+      />
+      <label for="sufficient_textualAuditory"
+        ><strong lang="en">textual, auditory</strong>: Kirjan sisältö on textual
+        ja auditory.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualTactile"
+        onclick="myFunction(this.id, 'sufficient_textualTactile_text')"
+      />
+      <label for="sufficient_textualTactile"
+        ><strong lang="en">textual, tactile</strong>: Kirjan sisältö on textual
+        ja tactile.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualVisualAuditory"
+        onclick="myFunction(this.id, 'sufficient_textualVisualAuditory_text')"
+      />
+      <label for="sufficient_textualVisualAuditory"
+        ><strong lang="en">textual, visual, auditory</strong>: Kirjan sisältö on
+        textual, visual ja auditory.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualVisualTactile"
+        onclick="myFunction(this.id, 'sufficient_textualVisualTactile_text')"
+      />
+      <label for="sufficient_textualVisualTactile"
+        ><strong lang="en">textual, visual, tactile</strong>: Kirjan sisältö on
+        textual, visual ja tactile.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualAuditoryTactile"
+        onclick="myFunction(this.id, 'sufficient_textualAuditoryTactile_text')"
+      />
+      <label for="sufficient_textualAuditoryTactile"
+        ><strong lang="en">textual, auditory, tactile</strong>: Kirjan sisältö
+        on textual, auditory ja tactile.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_visualAuditory"
+        onclick="myFunction(this.id, 'sufficient_visualAuditory_text')"
+      />
+      <label for="sufficient_visualAuditory"
+        ><strong lang="en">visual, auditory</strong>: Kirjan sisältö on visual
+        ja auditory.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_visualTactile"
+        onclick="myFunction(this.id, 'sufficient_visualTactile_text')"
+      />
+      <label for="sufficient_visualTactile"
+        ><strong lang="en">visual, tactile</strong>: Kirjan sisältö on visual ja
+        tactile.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_auditoryTactile"
+        onclick="myFunction(this.id, 'sufficient_auditoryTactile_text')"
+      />
+      <label for="sufficient_auditoryTactile"
+        ><strong lang="en">auditory, tactile</strong>: Kirjan sisältö on
+        auditory ja tactile.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_visualAuditoryTactile"
+        onclick="myFunction(this.id, 'sufficient_visualAuditoryTactile_text')"
+      />
+      <label for="sufficient_visualAuditoryTactile"
+        ><strong lang="en">visual, auditory, tactile</strong>: Kirjan sisältö on
+        visual, auditory ja tactile.</label
+      ><br />
+
+      <input
+        type="checkbox"
+        name="meta"
+        id="sufficient_textualVisualAuditoryTactile"
+        onclick="myFunction(this.id, 'sufficient_textualVisualAuditoryTactile_text')"
+      />
+      <label for="sufficient_textualVisualAuditoryTactile"
+        ><strong lang="en">textual, visual, auditory, tactile</strong>: Kirjan
+        sisältö on textual, visual, auditory ja tactile.</label
+      ><br />
+    </fieldset>
+
+    <h2>AccessibilityFeature</h2>
+    <fieldset id="accessibilityFeature-fieldset">
+      <legend>Valitse sopivat.</legend>
+    </fieldset>
+
+    <h2>AccessibilityHazard</h2>
+    <fieldset id="accessibilityHazard-fieldset">
+      <legend>Valitse sopivat.</legend>
+    </fieldset>
+
+    <h2>Kopioivat tekstit</h2>
+    <p>Tekstit ilmestyvät, kun valitset vähintään yhden vaihtoehdon.</p>
+
+    <div id="accessMode-strings" style="padding-bottom: 0">
+      <p id="textual_text" style="display: none">textual</p>
+      <p id="visual_text" style="display: none">visual</p>
+      <p id="auditory_text" style="display: none">auditory</p>
+      <p id="tactile_text" style="display: none">tactile</p>
+    </div>
+    <div id="accessModeSufficient-strings">
+      <p id="sufficient_textual_text" style="display: none">textual</p>
+      <p id="sufficient_visual_text" style="display: none">visual</p>
+      <p id="sufficient_auditory_text" style="display: none">auditory</p>
+      <p id="sufficient_tactile_text" style="display: none">tactile</p>
+      <p id="sufficient_textualVisual_text" style="display: none">
+        textual,visual
+      </p>
+      <p id="sufficient_textualAuditory_text" style="display: none">
+        textual,auditory
+      </p>
+      <p id="sufficient_textualTactile_text" style="display: none">
+        textual,tactile
+      </p>
+      <p id="sufficient_visualTactile_text" style="display: none">
+        visual,tactile
+      </p>
+      <p id="sufficient_visualAuditory_text" style="display: none">
+        visual,auditory
+      </p>
+      <p id="sufficient_auditoryTactile_text" style="display: none">
+        auditory,tactile
+      </p>
+      <p id="sufficient_textualVisualAuditory_text" style="display: none">
+        textual,visual,auditory
+      </p>
+      <p id="sufficient_textualVisualTactile_text" style="display: none">
+        textual,visual,tactile
+      </p>
+      <p id="sufficient_textualAuditoryTactile_text" style="display: none">
+        textual,auditory,tactile
+      </p>
+
+      <p id="sufficient_visualAuditoryTactile_text" style="display: none">
+        visual,auditory,tactile
+      </p>
+
+      <p
+        id="sufficient_textualVisualAuditoryTactile_text"
+        style="display: none"
+      >
+        textual,visual,auditory,tactile
+      </p>
+    </div>
+    <div id="accessibilityFeature-strings"></div>
+    <div id="accessibilityHazard-strings"></div>
+
+    <script>
+      function myFunction(id, text_id) {
+        // Get the checkbox
+        var checkBox = document.getElementById(id);
+        // Get the output text
+        var text = document.getElementById(text_id);
+
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true) {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }
+
+      function accessModes() {
+        const accessModeDiv = document.getElementById("accessMode-strings");
+        for (const child of accessModeDiv.children) {
+          var text = child.innerHTML;
+          child.innerHTML =
+            '&lt;meta property="schema:accessMode"&gt;' +
+            text +
+            "&lt;&#47;meta&gt;";
+        }
+      }
+
+      function accessModeSufficients() {
+        const accessModeSufficientDiv = document.getElementById(
+          "accessModeSufficient-strings"
+        );
+        for (const child of accessModeSufficientDiv.children) {
+          var text = child.innerHTML;
+          child.innerHTML =
+            '&lt;meta property="schema:accessModeSufficient"&gt;' +
+            text +
+            "&lt;&#47;meta&gt;";
+        }
+      }
+
+      function accessibilityFeatures() {
+        const dict_accessibilityFeatures = [
+          ["alternativeText", "Kuvilla on alt-tekstit."],
+          [
+            "annotations",
+            "Kirjassa on saavutettavuutta parantavia ominaisuuksia.",
+          ],
+          ["ARIA", "Kirjassa on käytetty ARIA-koodausta."],
+          ["audioDescription", "Äänitteillä on tekstiversio."],
+          ["bookmarks", "PDF-tiedostolla on kirjanmerkit."],
+          ["braille", "Kirjassa on pistekirjoitusta."],
+          ["captions", "Äänitteille on kuvailutulkkaus."],
+          [
+            "ChemML",
+            "Kirjassa on käytetty ChemML-koodausta kemian esittämiseen.",
+          ],
+          ["describedMath", "Kirjan matematiikka on avattu sanoilla."],
+          ["displayTransformability", "Kirjan ulkoasua voi muuttaa."],
+          ["highContrastAudio", "Äänitteissä on hyvä äänikontrasti."],
+          ["highContrastDisplay", "Kirjassa on hyvä kontrasti."],
+          ["index", "Kirjassa on hakemisto."],
+          ["largePrint", "Kirjassa on käytetty isoa printtiä."],
+          [
+            "latex",
+            "Kirjassa on käytetty LaTeX-koodausta matematiikan esittämiseen.",
+          ],
+          ["longDescription", "Kuvilla on kuvaselostukset."],
+          [
+            "MathML",
+            "Kirjassa on käytetty MathML-koodausta matematiikan esittämiseen.",
+          ],
+          ["pageBreakMarkers", "Kirjassa sivunvaihto on merkitty näkyviin."],
+          ["pageNavigation", "Kirjassa voi navigoida sivunumeroin."],
+          [
+            "printPageNumbers",
+            "Kirjan sivunumerot ovat samat kuin painetussa kirjassa.",
+          ],
+          ["readingOrder", "Kirjassa on merkitty lukemisjärjestys."],
+          [
+            "rubyAnnotations",
+            "Kirjassa on käytetty Ruby-koodauskielen merkintöjä.",
+          ],
+          ["signLanguage", "Äänitteillä on viittomakielinen vastine."],
+          ["structuralNavigation", "Kirjassa on looginen rakenne."],
+          [
+            "synchronizedAudioText",
+            "Kirjan teksti on korostettu, kun se luetaan.",
+          ],
+          ["tableOfContents", "Kirjassa on sisällysluettelo."],
+          ["taggedPDF", "PDF-tiedosto on tägätty."],
+          ["tactileGraphic", "Kirjan sisältöön liittyy kohokuvia."],
+          ["tactileObject", "Kirjan sisältöön liittyy fyysisiä esineitä."],
+          ["timingControl", "Aikarajoja sisältäviä osia voi hallita."],
+          ["transcript", "Äänitteille on transkriptio."],
+          ["ttsMarkup", "Foneettista lausumista on paranneltu koneäänelle."],
+          ["unlocked", "Kirjassa ei käytetä DRM:ää."],
+          ["none", "Kirjassa ei ole ollenkaan saavutettavuusominaisuuksia."],
+        ];
+
+        for (var i = 0; i < dict_accessibilityFeatures.length; i++) {
+          const div = document.getElementById("accessibilityFeature-fieldset");
+          var accessibilityFeature = dict_accessibilityFeatures[i][0];
+          var accessibilityFeatureID = accessibilityFeature.concat("_Feature");
+          var accessibilityFeature_string = dict_accessibilityFeatures[i][1];
+
+          var accessibilityFeature_input = `<input type="checkbox" name="meta" id="${accessibilityFeatureID}" onclick="myFunction(this.id, '${accessibilityFeatureID}_text')"/> <label for="${accessibilityFeatureID}"><strong lang="en">${accessibilityFeature}</strong>: ${accessibilityFeature_string}</label><br />`;
+
+          div.insertAdjacentHTML("beforeend", accessibilityFeature_input);
+
+          // console.log(accessibilityFeature_input);
+
+          accessibilityFeature_string = `&lt;meta property="schema:accessibilityFeature"&gt;${accessibilityFeature}&lt;/meta&gt;`;
+          // console.log(accessibilityFeature_string);
+
+          const copy_area = document.getElementById(
+            "accessibilityFeature-strings"
+          );
+
+          var accessibilityFeature_metadata = `<p id="${accessibilityFeatureID}_text" style="display: none;">${accessibilityFeature_string}</p>`;
+
+          copy_area.insertAdjacentHTML(
+            "beforeend",
+            accessibilityFeature_metadata
+          );
+        }
+      }
+
+      function accessibilityHazards() {
+        const dict_accessibilityHazards = [
+          ["flashing", "Välkkyviä valoja, jotka voivat aiheuttaa kohtauksia."],
+          ["noFlashingHazard", "Ei välkkyviä valoja."],
+          [
+            "motionSimulation",
+            "Liikkeen simulointia, joka voi aiheuttaa pahoinvointia.",
+          ],
+          [
+            "noMotionSimulationHazard",
+            "Ei pahoinvointia aiheuttavaa liikkeen simulointia.",
+          ],
+          ["sound", "Toistuvia ääniä, jotka voivat aiheuttaa kohtauksia."],
+          ["noSoundHazard", "Ei toistuvia ääniä."],
+          ["none", "Ei varoituksia."],
+          ["unknown", "Ei tietoa."],
+        ];
+
+        for (var i = 0; i < dict_accessibilityHazards.length; i++) {
+          const div = document.getElementById("accessibilityHazard-fieldset");
+          var accessibilityHazard = dict_accessibilityHazards[i][0];
+          var accessibilityHazardID = accessibilityHazard.concat("_Hazard");
+          var accessibilityHazard_string = dict_accessibilityHazards[i][1];
+
+          var accessibilityHazard_input = `<input type="checkbox" name="meta" id="${accessibilityHazardID}" onclick="myFunction(this.id, '${accessibilityHazard.concat(
+            "_Hazard"
+          )}_text')"/> <label for="${accessibilityHazardID}"><strong lang="en">${accessibilityHazard}</strong>: ${accessibilityHazard_string}</label><br />`;
+
+          div.insertAdjacentHTML("beforeend", accessibilityHazard_input);
+
+          accessibilityHazard_string = `&lt;meta="schema:accessibilityHazard"&gt;${accessibilityHazard}&lt;/meta&gt;`;
+
+          const copy_area = document.getElementById(
+            "accessibilityHazard-strings"
+          );
+
+          var accessibilityHazard_metadata = `<p id="${accessibilityHazardID}_text" style="display: none;">${accessibilityHazard_string}</p>`;
+
+          copy_area.insertAdjacentHTML(
+            "beforeend",
+            accessibilityHazard_metadata
+          );
+        }
+      }
+
+      accessModes();
+      accessModeSufficients();
+      accessibilityFeatures();
+      accessibilityHazards();
+    </script>
+  </body>
+</html>
