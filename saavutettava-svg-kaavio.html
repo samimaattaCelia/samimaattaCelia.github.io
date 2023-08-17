@@ -5,99 +5,329 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SVG-kuva</title>
   </head>
+  <style>
+    body {
+      max-width: 55rem;
+    }
+  </style>
   <body>
-    <h1>SVG-kuvan testaaminen</h1>
-    <p>Tekstiä ennen kuvaa.</p>
-    <svg
-      viewBox="0 0 2320 1304"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xml:space="preserve"
-      overflow="hidden"
-      role="group"
-      aria-labelledby="svgtitle svgdesc"
-    >
-      <title id="svgtitle">
-        Vaakapylväskaavio: "Vastaajien ammattien jakautuminen."
-      </title>
-      <desc id="svgdesc">
-        57 % vastaajista oli laaja-alaisia erityisopettajia. 25 % vastaajista
-        oli erityisluokanopettajia. 11 % vastaajista oli muita. 4 % vastaajista
-        oli aineenopettajia ja 3 % vastaajista oli luokanopettajia.
-      </desc>
-      <defs>
-        <clipPath id="clip0">
-          <rect x="1659" y="334" width="2320" height="1304" />
-        </clipPath>
-        <clipPath id="clip1">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip2">
-          <rect x="2316" y="505" width="1564" height="1011" />
-        </clipPath>
-        <clipPath id="clip3">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip4">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip5">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip6">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip7">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip8">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip9">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip10">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip11">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip12">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip13">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip14">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip15">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip16">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip17">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip18">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip19">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip20">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-        <clipPath id="clip21">
-          <rect x="1660" y="335" width="2317" height="1301" />
-        </clipPath>
-      </defs>
-      <g clip-path="url(#clip0)" transform="translate(-1659 -334)">
-        <rect x="1660" y="335" width="2317" height="1301" fill="#FFFFFF" />
-        <g clip-path="url(#clip1)">
-          <path
-            d="M2576.58 505.5 2576.58 1512.5M2836.59 505.5 2836.59 1512.5M3096.6 505.5 3096.6 1512.5M3357.61 505.5 3357.61 1512.5M3617.62 505.5 3617.62 1512.5M3877.5 505.5 3877.5 1512.5"
+    <h1>Saavutettava SVG-kaavio</h1>
+    <p>Alla on SVG-kuva, johon pitäisi päästä käsiksi ruudunlukijalla.</p>
+    <p>
+      Ensin tulee kaavion otsikko, sitten vaihtoehtoinen teksti sen sisällöstä.
+      Sen jälkeen itse kuvan tekstit voi käydä läpi.
+    </p>
+    <p>
+      Kuvan ainoat piilotetut tekstit ovat vaaka-akselin asteikon
+      prosenttiluvut.
+    </p>
+    <figure>
+      <figcaption>
+        Kaavio 1. Kyselyyn vastanneiden ammatit. Vastaajia oli 475.
+      </figcaption>
+      <svg
+        viewBox="0 0 2320 1304"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        overflow="hidden"
+        role="group"
+        aria-labelledby="svgtitle svgdesc"
+      >
+        <title id="svgtitle">
+          Vaakapylväskaavio: "Vastaajien ammattien jakautuminen."
+        </title>
+        <desc id="svgdesc">
+          57 % vastaajista oli laaja-alaisia erityisopettajia. 25 % vastaajista
+          oli erityisluokanopettajia. 11 % vastaajista oli muita. 4 %
+          vastaajista oli aineenopettajia ja 3 % vastaajista oli
+          luokanopettajia.
+        </desc>
+        <defs>
+          <clipPath id="clip0">
+            <rect x="1659" y="334" width="2320" height="1304" />
+          </clipPath>
+          <clipPath id="clip1">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip2">
+            <rect x="2316" y="505" width="1564" height="1011" />
+          </clipPath>
+          <clipPath id="clip3">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip4">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip5">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip6">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip7">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip8">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip9">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip10">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip11">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip12">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip13">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip14">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip15">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip16">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip17">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip18">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip19">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip20">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+          <clipPath id="clip21">
+            <rect x="1660" y="335" width="2317" height="1301" />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#clip0)" transform="translate(-1659 -334)">
+          <rect x="1660" y="335" width="2317" height="1301" fill="#FFFFFF" />
+          <g clip-path="url(#clip1)">
+            <path
+              d="M2576.58 505.5 2576.58 1512.5M2836.59 505.5 2836.59 1512.5M3096.6 505.5 3096.6 1512.5M3357.61 505.5 3357.61 1512.5M3617.62 505.5 3617.62 1512.5M3877.5 505.5 3877.5 1512.5"
+              stroke="#D9D9D9"
+              stroke-width="3.4375"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+              fill="none"
+            />
+          </g>
+          <g clip-path="url(#clip2)">
+            <path
+              d="M2394.08 1448.05 2317 1448.05 2317 1376.05 2394.08 1376.05ZM2421.08 1246.04 2317 1246.04 2317 1175.04 2421.08 1175.04ZM2603.09 1045.03 2317 1045.03 2317 973.032 2603.09 973.032ZM2967.1 843.028 2317 843.028 2317 772.025 2967.1 772.025ZM3799.12 642.021 2317 642.021 2317 570.019 3799.12 570.019Z"
+              fill="#3DA928"
+            />
+          </g>
+          <g clip-path="url(#clip3)">
+            <path
+              d="M0 0 0.000360892 1007"
+              stroke="#D9D9D9"
+              stroke-width="3.4375"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+              fill="none"
+              fill-rule="evenodd"
+              transform="matrix(1 0 0 -1 2316.5 1512.5)"
+            />
+          </g>
+          <g clip-path="url(#clip21)">
+            <text
+              font-family="Calibri,Calibri_MSFontService,sans-serif"
+              font-weight="400"
+              font-size="64"
+              transform="matrix(1 0 0 1 2348.82 431)"
+            >
+              Vastaajien ammattien jakautuminen
+            </text>
+            <g clip-path="url(#clip20)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 1690.1 620)"
+              >
+                Laaja-alainen erityisopettaja
+              </text>
+            </g>
+            <g clip-path="url(#clip8)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="700"
+                font-size="55"
+                transform="matrix(1 0 0 1 3826.95 624)"
+              >
+                57 %
+              </text>
+            </g>
+            <g clip-path="url(#clip19)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 1834.46 822)"
+              >
+                Erityisluokanopettaja
+              </text>
+            </g>
+            <g clip-path="url(#clip7)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="700"
+                font-size="55"
+                transform="matrix(1 0 0 1 2994.43 826)"
+              >
+                25 %
+              </text>
+            </g>
+
+            <g clip-path="url(#clip18)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 2173.65 1023)"
+              >
+                Muu
+              </text>
+            </g>
+            <g clip-path="url(#clip6)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="700"
+                font-size="55"
+                transform="matrix(1 0 0 1 2630.2 1027)"
+              >
+                11 %
+              </text>
+            </g>
+
+            <g clip-path="url(#clip17)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 1953.51 1225)"
+              >
+                Aineenopettaja
+              </text>
+            </g>
+            <g clip-path="url(#clip5)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="700"
+                font-size="55"
+                transform="matrix(1 0 0 1 2448.08 1229)"
+              >
+                4 %
+              </text>
+            </g>
+            <g clip-path="url(#clip16)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 1949.59 1427)"
+              >
+                Luokanopettaja
+              </text>
+            </g>
+            <g clip-path="url(#clip4)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="700"
+                font-size="55"
+                transform="matrix(1 0 0 1 2422.07 1431)"
+              >
+                3 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip9)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 2280.02 1593)"
+              >
+                0 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip10)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 2527.41 1593)"
+              >
+                10 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip11)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 2787.57 1593)"
+              >
+                20 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip12)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 3047.74 1593)"
+              >
+                30 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip13)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 3307.9 1593)"
+              >
+                40 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip14)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 3568.06 1593)"
+              >
+                50 %
+              </text>
+            </g>
+            <g aria-hidden="true" clip-path="url(#clip15)">
+              <text
+                font-family="Calibri,Calibri_MSFontService,sans-serif"
+                font-weight="400"
+                font-size="50"
+                transform="matrix(1 0 0 1 3828.23 1593)"
+              >
+                60 %
+              </text>
+            </g>
+          </g>
+          <rect
+            x="1660.5"
+            y="335.5"
+            width="2317"
+            height="1301"
             stroke="#D9D9D9"
             stroke-width="3.4375"
             stroke-linejoin="round"
@@ -105,218 +335,7 @@
             fill="none"
           />
         </g>
-        <g clip-path="url(#clip2)">
-          <path
-            d="M2394.08 1448.05 2317 1448.05 2317 1376.05 2394.08 1376.05ZM2421.08 1246.04 2317 1246.04 2317 1175.04 2421.08 1175.04ZM2603.09 1045.03 2317 1045.03 2317 973.032 2603.09 973.032ZM2967.1 843.028 2317 843.028 2317 772.025 2967.1 772.025ZM3799.12 642.021 2317 642.021 2317 570.019 3799.12 570.019Z"
-            fill="#3DA928"
-          />
-        </g>
-        <g clip-path="url(#clip3)">
-          <path
-            d="M0 0 0.000360892 1007"
-            stroke="#D9D9D9"
-            stroke-width="3.4375"
-            stroke-linejoin="round"
-            stroke-miterlimit="10"
-            fill="none"
-            fill-rule="evenodd"
-            transform="matrix(1 0 0 -1 2316.5 1512.5)"
-          />
-        </g>
-        <g clip-path="url(#clip21)">
-          <text
-            font-family="Calibri,Calibri_MSFontService,sans-serif"
-            font-weight="400"
-            font-size="64"
-            transform="matrix(1 0 0 1 2348.82 431)"
-          >
-            Vastaajien ammattien jakautuminen
-          </text>
-          <g clip-path="url(#clip20)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 1690.1 620)"
-            >
-              Laaja-alainen erityisopettaja
-            </text>
-          </g>
-          <g clip-path="url(#clip8)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="700"
-              font-size="55"
-              transform="matrix(1 0 0 1 3826.95 624)"
-            >
-              57 %
-            </text>
-          </g>
-          <g clip-path="url(#clip19)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 1834.46 822)"
-            >
-              Erityisluokanopettaja
-            </text>
-          </g>
-          <g clip-path="url(#clip7)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="700"
-              font-size="55"
-              transform="matrix(1 0 0 1 2994.43 826)"
-            >
-              25 %
-            </text>
-          </g>
-
-          <g clip-path="url(#clip18)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 2173.65 1023)"
-            >
-              Muu
-            </text>
-          </g>
-          <g clip-path="url(#clip6)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="700"
-              font-size="55"
-              transform="matrix(1 0 0 1 2630.2 1027)"
-            >
-              11 %
-            </text>
-          </g>
-
-          <g clip-path="url(#clip17)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 1953.51 1225)"
-            >
-              Aineenopettaja
-            </text>
-          </g>
-          <g clip-path="url(#clip5)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="700"
-              font-size="55"
-              transform="matrix(1 0 0 1 2448.08 1229)"
-            >
-              4 %
-            </text>
-          </g>
-          <g clip-path="url(#clip16)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 1949.59 1427)"
-            >
-              Luokanopettaja
-            </text>
-          </g>
-          <g clip-path="url(#clip4)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="700"
-              font-size="55"
-              transform="matrix(1 0 0 1 2422.07 1431)"
-            >
-              3 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip9)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 2280.02 1593)"
-            >
-              0 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip10)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 2527.41 1593)"
-            >
-              10 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip11)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 2787.57 1593)"
-            >
-              20 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip12)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 3047.74 1593)"
-            >
-              30 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip13)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 3307.9 1593)"
-            >
-              40 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip14)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 3568.06 1593)"
-            >
-              50 %
-            </text>
-          </g>
-          <g aria-hidden="true" clip-path="url(#clip15)">
-            <text
-              font-family="Calibri,Calibri_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="50"
-              transform="matrix(1 0 0 1 3828.23 1593)"
-            >
-              60 %
-            </text>
-          </g>
-        </g>
-        <rect
-          x="1660.5"
-          y="335.5"
-          width="2317"
-          height="1301"
-          stroke="#D9D9D9"
-          stroke-width="3.4375"
-          stroke-linejoin="round"
-          stroke-miterlimit="10"
-          fill="none"
-        />
-      </g>
-    </svg>
+      </svg>
+    </figure>
   </body>
 </html>
