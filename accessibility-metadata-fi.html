@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kopioi ja liitä schema.orgin saavutettavuusmetatiedot</title>
+    <title>
+      Kopioi ja liitä EPUB-kirjan saavutettavuusmetatiedot (luonnos)
+    </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +16,8 @@
       :root {
         font-size: 16px;
         font-family: "Atkinson Hyperlegible", sans-serif;
+
+        --primary-color: #3fae29;
       }
 
       html {
@@ -28,19 +32,56 @@
       a[href]:is(:focus, :hover) {
         outline: 3px solid black;
       }
+
+      .note {
+        border: solid 1px var(--primary-color);
+        border-left: solid 10px var(--primary-color);
+        padding: 0 1rem;
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1 id="main">Kopioi ja liitä EPUB-kirjan saavutettavuusmetatiedot</h1>
+      <h1 id="main">
+        Kopioi ja liitä EPUB-kirjan saavutettavuusmetatiedot (luonnos)
+      </h1>
+      <div class="publicationInfo">
+        <p>Julkaistu: 19.9.2023. Viimeksi päivitetty: 19.9.2023.</p>
+      </div>
+      <div class="note">
+        <h2>Oletettu lukija</h2>
+        <p>
+          EPUB-kirjan tekijä, joka toimii kirjan HTML-koodin tasolla tai kirjan
+          jälkikäsittelijä, jonka täytyy lisätä metatiedot esimerkiksi
+          InDesignin käytön jälkeen. Hän myös ymmärtää, mihin kohtaan kirjaa
+          metatiedot on tarkoitus lisätä.
+        </p>
+        <h2>Saavutettavuuspuutteita</h2>
+        <ol>
+          <li>
+            Kaikkia englanninkielisiä sanoja ei ole merkitty
+            englanninkielisiksi.
+          </li>
+          <li>
+            Valintojen tyhjentämisestä ei tule erillistä ilmoitusta painikkeen
+            painamisen jälkeen.
+          </li>
+        </ol>
+      </div>
+      <h2>Valitsimen käyttö</h2>
+      <p>
+        Käy lista läpi ja valitse metatiedot, jotka tarviset. Metatiedot
+        ilmestyvät sivun alalaitaan, josta voit lopulta kopioida ne omaan
+        käyttöösi.
+      </p>
       <p>
         Vaihtoehdot perustuvat
         <a
           href="http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html"
-          >Daisyn listaukseen saavutettavuusmetadatasta (englanniksi)</a
+          >Daisyn listaukseen saavutettavuusmetatiedoista (englanniksi)</a
         >. Tämä puolestaan perustuu
         <a href="https://www.schema.org/CreativeWork"
-          >schema.orgin metadataan "<span lang="en">CreativeWorks</span
+          >schema.orgin metatietoon "<span lang="en">CreativeWorks</span
           >"-tyyppisille julkaisuille (englanniksi)</a
         >.
       </p>
