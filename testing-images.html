@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testejä</title>
+    <style>
+      img {
+        max-width: 20rem;
+      }
+      #white {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>figcaption, alt-teksti, ei title</h1>
+    <p>Kuvilla figcaption ja alt-teksti.</p>
+    <figure>
+      <figcaption>Esittelen hiili-logoa.</figcaption>
+      <img src="images/celia-logo-fi-hiili.png" alt="hiili, Celian logo" />
+    </figure>
+    <figure>
+      <figcaption>Esittelen orvokki-logoa</figcaption>
+      <img src="images/celia-logo-fi-orvokki.png" alt="orvokki, Celian logo" />
+    </figure>
+    <figure id="white">
+      <figcaption>Esittelen valkoinen-logoa</figcaption>
+      <img
+        src="images/celia-logo-fi-valkoinen.png"
+        alt="valkoinen, Celian logo"
+      />
+    </figure>
+    <figure>
+      <figcaption>Esittelen musta-logoa</figcaption>
+      <img src="images/celia-logo-fi-musta.png" alt="musta, Celian logo" />
+    </figure>
+    <figure>
+      <figcaption>Esittelen smaragdi-logoa</figcaption>
+      <img
+        src="images/celia-logo-fi-smaragdi.png"
+        alt="smaragdi, Celian logo"
+      />
+    </figure>
+    <figure>
+      <figcaption>Esittelen lehtivihreä-logoa</figcaption>
+      <img
+        src="images/celia-logo-fi-lehtivihrea.png"
+        alt="lehtivihreä, Celian logo"
+      />
+    </figure>
+    <h2>ei figcaption, ei alt-teksti, ei title</h2>
+    <p>Ei alt-tekstiä tai figcaptionia.</p>
+    <figure>
+      <img src="images/celia-logo-fi-musta.png" />
+    </figure>
+    <figure>
+      <img src="images/celia-logo-fi-smaragdi.png" />
+    </figure>
+    <figure>
+      <img src="images/celia-logo-fi-lehtivihrea.png" />
+    </figure>
+    <h2>figcaption, ei alt-tekstiä</h2>
+    <figure>
+      <figcaption>Esittelen musta-logoa</figcaption>
+      <img src="images/celia-logo-fi-musta.png" />
+    </figure>
+    <figure>
+      <figcaption>Esittelen smaragdi-logoa</figcaption>
+      <img src="images/celia-logo-fi-smaragdi.png" />
+    </figure>
+    <figure>
+      <figcaption>Esittelen lehtivihreä-logoa</figcaption>
+      <img src="images/celia-logo-fi-lehtivihrea.png" />
+    </figure>
+    <h2>figcaption, alt-teksti, title</h2>
+    <figure>
+      <figcaption>Esittelen hiili-logoa.</figcaption>
+      <img
+        src="images/celia-logo-fi-hiili.png"
+        title="Celian hiilinvärinen logo"
+        alt="hiili, Celian logo"
+      />
+    </figure>
+    <figure>
+      <figcaption>Esittelen orvokki-logoa</figcaption>
+      <img
+        src="images/celia-logo-fi-orvokki.png"
+        title="Celian orvokin värinen logo"
+        alt="orvokki, Celian logo"
+      />
+    </figure>
+    <h2>figcaption, title, ei alt-tekstiä</h2>
+    <figure>
+      <figcaption>Esittelen hiili-logoa.</figcaption>
+      <img
+        src="images/celia-logo-fi-hiili.png"
+        title="Celian hiilinvärinen logo"
+      />
+    </figure>
+    <figure>
+      <figcaption>Esittelen orvokki-logoa</figcaption>
+      <img
+        src="images/celia-logo-fi-orvokki.png"
+        title="Celian orvokin värinen logo"
+      />
+    </figure>
+  </body>
+</html>
