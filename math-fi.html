@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testaus sivusto MathML-koodille</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        font-size: 16px;
+        font-family: "Atkinson Hyperlegible", sans-serif;
+
+        --primary-color: #3fae29;
+      }
+
+      html {
+        max-width: 700px;
+      }
+
+      body {
+        font-size: 1.2rem;
+        overflow-x: auto;
+      }
+
+      a[href]:is(:focus, :hover) {
+        outline: 3px solid black;
+      }
+
+      .note {
+        border: solid 1px var(--primary-color);
+        border-left: solid 10px var(--primary-color);
+        padding: 0 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Testaussivusto MathML-koodille</h1>
+    <div class="note">
+      <p>
+        Sivusto on tarkoitettu NVDA:n ruudunlukijalisäosan MathCAT testaamiseen
+        suomeksi.
+      </p>
+      <p>
+        Ota yhteyttä Sami Määttään,
+        <a href="mailto:sami.maatta@celia.fi">sami.maatta@celia.fi</a>, jos
+        sinulla tulee kysyttävää sivustoon liittyen.
+      </p>
+      <h2>Testejä</h2>
+      <math>
+        <mrow
+          ><mo>(</mo>
+          <mrow><mo>-</mo> <mi>∞</mi><mo>,</mo><mi>∞</mi></mrow>
+          <mo>)</mo></mrow
+        >
+      </math>
+    </div>
+  </body>
+</html>
