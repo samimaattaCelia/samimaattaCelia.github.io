@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>intent</title>
+    </head>
+    <body>
+        <p>silent_intent_mi:</p>
+        <p>2</p>
+        <p>2</p>
+        <math>
+            <mn>2</mn>
+            <mi intent=":silent">x</mi>
+        </math>
+        <hr>
+        <p>silent_intent_msup:</p>
+        <p>cap h 2</p>
+        <p>cap h 2</p>
+        <math>
+            <msup intent="index:silent($H,$n)">
+                <mi arg="H" mathvariant="normal">H</mi>
+                <mn arg="n">2</mn>
+            </msup>
+        </math>
+        <hr>
+        <p>silent_intent_underscore:</p>
+        <p>cap h 2</p>
+        <p>cap h 2</p>
+        <math>
+            <msup intent="_($H,$n)">
+                <mi arg="H" mathvariant="normal">H</mi>
+                <mn arg="n">2</mn>
+            </msup>
+        </math>
+        <hr>
+        <p>intent_prob_x:</p>
+        <p>probability of, x</p>
+        <math>
+            <msup intent="$op($arg)">
+                <mi arg="arg">x</mi>
+                <mi arg="op" intent="probability" mathvariant="normal">P</mi>
+            </msup>
+        </math>
+    </body>
+</html>
