@@ -1,0 +1,29 @@
+:root {
+  font-size: 16px;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+
+  --primary-color: #3fae29;
+}
+
+html {
+  max-width: 700px;
+}
+
+body {
+  font-size: 1.2rem;
+  overflow-x: auto;
+}
+
+a[href]:is(:focus, :hover) {
+  outline: 3px solid black;
+}
+
+.note {
+  border: solid 1px var(--primary-color);
+  border-left: solid 10px var(--primary-color);
+  padding: 0 1rem;
+}
+
+math {
+  margin-block-start: 1rem;
+}

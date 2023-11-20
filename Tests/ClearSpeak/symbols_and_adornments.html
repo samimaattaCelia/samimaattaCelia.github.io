@@ -1,259 +1,277 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ClearSpeak: symbols and adornments</title>
-    </head>
-    <body>
-        <main>
-            <p>multiplication: 2 times 3</p>
-            <math>
-                <mn>2</mn><mo>×</mo><mn>3</mn>
-            </math>
-			<hr>
-            <p>multiplication_by: 2 by 3</p>
-            <math>
-                <mn>2</mn><mo>×</mo><mn>3</mn>
-            </math>
-			<hr>
-            <p>multiplication_cross: u cross v</p>
-            <math>
-                <mi>u</mi><mo>×</mo><mi>v</mi>
-            </math>
-			<hr>
-            <p>ellipses_auto_start: dot dot dot comma negative 2 comma negative 1 comma 0</p>
-            <math>
-                <mi>…</mi><mo>,</mo>
-                <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn><mo>,</mo><mn>0</mn>
-            </math>
-			<hr>
-            <p>ellipses_auto_end: 1 comma 2 comma 3 comma dot dot dot</p>
-            <math>
-                <mn>1</mn>
-                <mo>,</mo>
-                <mn>2</mn>
-                <mo>,</mo>
-                <mn>3</mn>
-                <mo>,</mo>
-                <mi>…</mi>
-            </math>
-			<hr>
-            <p>ellipses_auto_middle: 1 comma 2 comma 3 comma dot dot dot comma 20</p>
-            <math>
-                <mrow>
-                    <mn>1</mn>
-                    <mo>,</mo>
-                    <mn>2</mn>
-                    <mo>,</mo>
-                    <mn>3</mn>
-                    <mo>,</mo>
-                    <mi>…</mi>
-                    <mo>,</mo>
-                    <mn>20</mn>
-                </mrow>
-            </math>
-			<hr>
-            <p>ellipses_auto_both: dot dot dot comma negative 2 comma negative 1 comma 0 comma 1 comma 2 comma dot dot
-                dot</p>
-            <math>
-                <mi>…</mi><mo>,</mo>
-                <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn>
-                <mo>,</mo><mi>…</mi>
-            </math>
-			<hr>
-            <p>ellipses_and_so_on_start: dot dot dot comma negative 2 comma negative 1 comma 0</p>
-            <math>
-                <mi>…</mi><mo>,</mo>
-                <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn><mo>,</mo><mn>0</mn>
-            </math>
-			<hr>
-            <p>ellipses_and_so_on_end: 1 comma 2 comma 3 and so on</p>
-            <math>
-                <mn>1</mn>
-                <mo>,</mo>
-                <mn>2</mn>
-                <mo>,</mo>
-                <mn>3</mn>
-                <mo>,</mo>
-                <mi>…</mi>
-            </math>
-			<hr>
-            <p>ellipses_and_so_on_middle: 1 comma 2 comma 3 and so on up to 20</p>
-            <math>
-                <mrow>
-                    <mn>1</mn>
-                    <mo>,</mo>
-                    <mn>2</mn>
-                    <mo>,</mo>
-                    <mn>3</mn>
-                    <mo>,</mo>
-                    <mi>…</mi>
-                    <mo>,</mo>
-                    <mn>20</mn>
-                </mrow>
-            </math>
-			<hr>
-            <p>ellipses_and_so_on_both: dot dot dot comma negative 2 comma negative 1 comma 0 comma 1 comma 2 comma dot dot
-                dot</p>
-            <math>
-                <mi>…</mi><mo>,</mo>
-                <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn>
-                <mo>,</mo><mi>…</mi>
-            </math>
-			<hr>
-            <p>vertical_line_auto: 3 divides 6</p>
-            <math>
-                <mn>3</mn><mo>|</mo><mn>6</mn>
-            </math>
-			<hr>
-			<p>vertical_line_divides: 3 divides 6</p>
-            <math>
-                <mn>3</mn><mo>|</mo><mn>6</mn>
-            </math>
-			<hr>
-            <p>vertical_line_given: 3 given 6</p>
-            <math>
-                <mn>3</mn><mo>|</mo><mn>6</mn>
-            </math>
-			<hr>
-            <p>vertical_line_probability_given: cap p, open paren, cap eigh given cap b, close paren</p>
-            <math>
-                <mi>P</mi>
-                <mrow>
-                    <mo>(</mo>
-                    <mrow>
-                        <mi>A</mi>
-                        <mo>|</mo>
-                        <mi>B</mi>
-                    </mrow>
-                    <mo>)</mo>
-                </mrow>
-            </math>
-			<hr>
-            <p>vertical_line_set: the set of all x such that x is greater than 0</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>|</mo>
-                    <mi>x</mi>
-                    <mo>&gt;</mo>
-                    <mn>0</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-			<hr>
-            <p>vertical_line_set_such_that: the set of all x such that x is greater than 0</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>|</mo>
-                    <mi>x</mi>
-                    <mo>&gt;</mo>
-                    <mn>0</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-			<hr>
-            <p>vertical_line_set_given: the set of all x such that x is greater than 0</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>|</mo>
-                    <mi>x</mi>
-                    <mo>&gt;</mo>
-                    <mn>0</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-			<hr>
-            <p>vertical_line_set_and_abs: the set of all x such that the absolute value of x; is greater than 2</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>&#x007C;</mo>
-                    <mrow>
-                        <mo>|</mo>
-                        <mi>x</mi>
-                        <mo>|</mo>
-                    </mrow>
-                    <mo>&gt;</mo>
-                    <mn>2</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-			<hr>
-            <p>vertical_line_evaluated_at: f of x evaluated at, x is equal to 5</p>
-            <math>
-                <mi>f</mi>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>x</mi>
-                    <mo>)</mo>
-                </mrow>
-                <msub>
-                    <mo>&#x007C;</mo>
-                    <mrow>
-                        <mi>x</mi>
-                        <mo>=</mo>
-                        <mn>5</mn>
-                    </mrow>
-                </msub>
-            </math>
-			<hr>
-            <p>vertical_line_evaluated_at_both: x squared plus x, evaluated at 1 minus the same expression evaluated at 0</p>
-            <math>
-                <msup>
-                    <mi>x</mi>
-                    <mn>2</mn>
-                </msup>
-                <mo>+</mo>
-                <mi>x</mi>
-                <msubsup>
-                    <mstyle mathsize="140%" displaystyle="true">
-                        <mo>&#x007C;</mo>
-                    </mstyle>
-                    <mn>0</mn>
-                    <mn>1</mn>
-                </msubsup>
-            </math>
-			<hr>
-            <p>vertical_line_evaluated_at_divides: f of x evaluated at, x is equal to 5</p>
-            <math>
-                <mi>f</mi>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>x</mi>
-                    <mo>)</mo>
-                </mrow>
-                <msub>
-                    <mo>&#x007C;</mo>
-                    <mrow>
-                        <mi>x</mi>
-                        <mo>=</mo>
-                        <mn>5</mn>
-                    </mrow>
-                </msub>
-            </math>
-			<hr>
-            <p>vertical_line_evaluated_at_both_given: x squared plus x, evaluated at 1 minus the same expression evaluated at 0</p>
-            <math>
-                <msup>
-                    <mi>x</mi>
-                    <mn>2</mn>
-                </msup>
-                <mo>+</mo>
-                <mi>x</mi>
-                <msubsup>
-                    <mstyle mathsize="140%" displaystyle="true">
-                        <mo>&#x007C;</mo>
-                    </mstyle>
-                    <mn>0</mn>
-                    <mn>1</mn>
-                </msubsup>
-            </math>
-        </main>
-    </body>
+  <head>
+    <title>ClearSpeak: symbols and adornments</title>
+    <link rel="stylesheet" href="/Tests/test.css" />
+  </head>
+  <body>
+    <main>
+      <p>multiplication: 2 times 3</p>
+      <math> <mn>2</mn><mo>×</mo><mn>3</mn> </math>
+      <hr />
+      <p>multiplication_by: 2 by 3</p>
+      <math> <mn>2</mn><mo>×</mo><mn>3</mn> </math>
+      <hr />
+      <p>multiplication_cross: u cross v</p>
+      <math> <mi>u</mi><mo>×</mo><mi>v</mi> </math>
+      <hr />
+      <p>
+        ellipses_auto_start: dot dot dot comma negative 2 comma negative 1 comma
+        0
+      </p>
+      <math>
+        <mi>…</mi><mo>,</mo> <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn
+        ><mo>,</mo><mn>0</mn>
+      </math>
+      <hr />
+      <p>ellipses_auto_end: 1 comma 2 comma 3 comma dot dot dot</p>
+      <math>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mn>2</mn>
+        <mo>,</mo>
+        <mn>3</mn>
+        <mo>,</mo>
+        <mi>…</mi>
+      </math>
+      <hr />
+      <p>ellipses_auto_middle: 1 comma 2 comma 3 comma dot dot dot comma 20</p>
+      <math>
+        <mrow>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mi>…</mi>
+          <mo>,</mo>
+          <mn>20</mn>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        ellipses_auto_both: dot dot dot comma negative 2 comma negative 1 comma
+        0 comma 1 comma 2 comma dot dot dot
+      </p>
+      <math>
+        <mi>…</mi><mo>,</mo> <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn
+        ><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn> <mo>,</mo
+        ><mi>…</mi>
+      </math>
+      <hr />
+      <p>
+        ellipses_and_so_on_start: dot dot dot comma negative 2 comma negative 1
+        comma 0
+      </p>
+      <math>
+        <mi>…</mi><mo>,</mo> <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn
+        ><mo>,</mo><mn>0</mn>
+      </math>
+      <hr />
+      <p>ellipses_and_so_on_end: 1 comma 2 comma 3 and so on</p>
+      <math>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mn>2</mn>
+        <mo>,</mo>
+        <mn>3</mn>
+        <mo>,</mo>
+        <mi>…</mi>
+      </math>
+      <hr />
+      <p>ellipses_and_so_on_middle: 1 comma 2 comma 3 and so on up to 20</p>
+      <math>
+        <mrow>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mn>2</mn>
+          <mo>,</mo>
+          <mn>3</mn>
+          <mo>,</mo>
+          <mi>…</mi>
+          <mo>,</mo>
+          <mn>20</mn>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        ellipses_and_so_on_both: dot dot dot comma negative 2 comma negative 1
+        comma 0 comma 1 comma 2 comma dot dot dot
+      </p>
+      <math>
+        <mi>…</mi><mo>,</mo> <mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn
+        ><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn> <mo>,</mo
+        ><mi>…</mi>
+      </math>
+      <hr />
+      <p>vertical_line_auto: 3 divides 6</p>
+      <math> <mn>3</mn><mo>|</mo><mn>6</mn> </math>
+      <hr />
+      <p>vertical_line_divides: 3 divides 6</p>
+      <math> <mn>3</mn><mo>|</mo><mn>6</mn> </math>
+      <hr />
+      <p>vertical_line_given: 3 given 6</p>
+      <math> <mn>3</mn><mo>|</mo><mn>6</mn> </math>
+      <hr />
+      <p>
+        vertical_line_probability_given: cap p, open paren, cap eigh given cap
+        b, close paren
+      </p>
+      <math>
+        <mi>P</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>A</mi>
+            <mo>|</mo>
+            <mi>B</mi>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </math>
+      <hr />
+      <p>vertical_line_set: the set of all x such that x is greater than 0</p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>|</mo>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        vertical_line_set_such_that: the set of all x such that x is greater
+        than 0
+      </p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>|</mo>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        vertical_line_set_given: the set of all x such that x is greater than 0
+      </p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>|</mo>
+          <mi>x</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        vertical_line_set_and_abs: the set of all x such that the absolute value
+        of x; is greater than 2
+      </p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>&#x007C;</mo>
+          <mrow>
+            <mo>|</mo>
+            <mi>x</mi>
+            <mo>|</mo>
+          </mrow>
+          <mo>&gt;</mo>
+          <mn>2</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>vertical_line_evaluated_at: f of x evaluated at, x is equal to 5</p>
+      <math>
+        <mi>f</mi>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+        <msub>
+          <mo>&#x007C;</mo>
+          <mrow>
+            <mi>x</mi>
+            <mo>=</mo>
+            <mn>5</mn>
+          </mrow>
+        </msub>
+      </math>
+      <hr />
+      <p>
+        vertical_line_evaluated_at_both: x squared plus x, evaluated at 1 minus
+        the same expression evaluated at 0
+      </p>
+      <math>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>x</mi>
+        <msubsup>
+          <mstyle mathsize="140%" displaystyle="true">
+            <mo>&#x007C;</mo>
+          </mstyle>
+          <mn>0</mn>
+          <mn>1</mn>
+        </msubsup>
+      </math>
+      <hr />
+      <p>
+        vertical_line_evaluated_at_divides: f of x evaluated at, x is equal to 5
+      </p>
+      <math>
+        <mi>f</mi>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+        <msub>
+          <mo>&#x007C;</mo>
+          <mrow>
+            <mi>x</mi>
+            <mo>=</mo>
+            <mn>5</mn>
+          </mrow>
+        </msub>
+      </math>
+      <hr />
+      <p>
+        vertical_line_evaluated_at_both_given: x squared plus x, evaluated at 1
+        minus the same expression evaluated at 0
+      </p>
+      <math>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <mi>x</mi>
+        <msubsup>
+          <mstyle mathsize="140%" displaystyle="true">
+            <mo>&#x007C;</mo>
+          </mstyle>
+          <mn>0</mn>
+          <mn>1</mn>
+        </msubsup>
+      </math>
+    </main>
+  </body>
 </html>

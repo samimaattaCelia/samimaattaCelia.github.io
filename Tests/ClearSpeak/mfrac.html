@@ -1,277 +1,304 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ClearSpeak: mfrac</title>
-    </head>
-    <body>
-        <main>
-            <p>common_fraction_half: 1 half</p>
-            <math>
-                <mfrac>
-                    <mn>1</mn>
-                    <mn>2</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>common_fraction_thirds: 2 thirds</p>
-            <math>
-                <mfrac>
-                    <mn>2</mn>
-                    <mn>3</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>common_fraction_tenths: 17 tenths</p>
-            <math>
-                <mfrac>
-                    <mn>17</mn>
-                    <mn>10</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>not_ClearSpeak_common_fraction_tenths: 89 over 10</p>
-            <p>89 tenths</p>
-            <math>
-                <mfrac>
-                    <mn>89</mn>
-                    <mn>10</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>non_simple_fraction: the fraction with numerator; x plus y; and denominator x minus y;</p>
-            <p>the fraction with numerator; x plus y; and denominator x minus y;</p>
-            <p>x plus y over x minus y</p>
-            <p>the fraction x plus y over x minus y</p>
-            <p>the fraction with numerator; x plus y; and denominator x minus y;</p>
-            <p>the fraction with numerator; x plus y; and denominator x minus y; end fraction,</p>
-            <p>the fraction with numerator; x plus y; and denominator x minus y; end fraction,</p>
-            <p>x plus y over x minus y, end fraction,</p>
-            <p>x plus y per x minus y</p>
-            <p>the fraction with numerator; x plus y; and denominator x minus y; end fraction,</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>+</mo>
-                            <mi>y</mi>
-                        </mrow>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>-</mo>
-                            <mi>y</mi>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-			<hr>
-            <p>mixed_number: 3 and 1 half</p>
-            <math>
-                <mn>3</mn>
-                <mfrac>
-                    <mn>1</mn>
-                    <mn>2</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>explicit_mixed_number: 3 and 1 eighth</p>
-            <math>
-                <mn>3</mn>
-                <mo>&#x2064;</mo>
-                <mfrac>
-                    <mn>1</mn>
-                    <mn>8</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>mixed_number_big: 3 and 7 over 83</p>
-            <math>
-                <mn>3</mn>
-                <mfrac>
-                    <mn>7</mn>
-                    <mn>83</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>simple_text: rise over run</p>
-            <math>
-                <mfrac>
-                    <mi>rise</mi>
-                    <mi>run</mi>
-                </mfrac>
-            </math>
-			<hr>
-            <p>number_and_text: 2 miles over 3 gallons</p>
-            <math>
-                <mfrac>
-                    <mrow>
-                        <mn>2</mn>
-                        <mtext>miles</mtext>
-                    </mrow>
-                    <mrow>
-                        <mn>3</mn>
-                        <mtext>gallons</mtext>
-                    </mrow>
-                </mfrac>
-            </math>
-			<hr>
-            <p>nested_simple_fractions: 1 half over 2 thirds</p>
-            <p>1 half over 2 thirds</p>
-            <p>1 over 2 over 2 over 3</p>
-            <p>the fraction the fraction 1 over 2 over the fraction 2 over 3</p>
-            <p>the fraction with numerator the fraction with numerator 1; and denominator 2; and
-                denominator the fraction with numerator 2; and denominator 3;</p>
-            <p>1 half over 2 thirds</p>
-            <p>the fraction with numerator the fraction with numerator 1; and denominator 2; end
-                fraction; and denominator the fraction with numerator 2; and denominator 3; end
-                fraction; end fraction,</p>
-            <p>1 over 2, end fraction, over 2 over 3, end fraction; end fraction,</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mfrac>
-                                <mn>1</mn>
-                                <mn>2</mn>
-                            </mfrac>
-                        </mrow>
-                        <mrow>
-                            <mfrac>
-                                <mn>2</mn>
-                                <mn>3</mn>
-                            </mfrac>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-			<hr>
-            <p>semi_nested_fraction: 2 thirds x over 6</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mfrac>
-                                <mn>2</mn>
-                                <mn>3</mn>
-                            </mfrac>
-                            <mi>x</mi>
-                        </mrow>
-                        <mn>6</mn>
-                    </mfrac>
-                </mrow>
-            </math>
-			<hr>
-            <p>general_nested_fraction: the fraction with numerator; 10 over n; and denominator 2 over n;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mfrac>
-                                <mn>10</mn>
-                                <mi>n</mi>
-                            </mfrac>
-                        </mrow>
-                        <mrow>
-                            <mfrac>
-                                <mn>2</mn>
-                                <mi>n</mi>
-                            </mfrac>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-			<hr>
-            <p>complex_nested_fraction: the fraction with numerator; the fraction with numerator; n plus 10; and denominator
-                n; and denominator 2 over n;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mfrac>
-                                <mrow>
-                                    <mi>n</mi>
-                                    <mo>+</mo>
-                                    <mn>10</mn>
-                                </mrow>
-                                <mi>n</mi>
-                            </mfrac>
-                        </mrow>
-                        <mrow>
-                            <mfrac>
-                                <mn>2</mn>
-                                <mi>n</mi>
-                            </mfrac>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-			<hr>
-            <p>simple_function: f of x over 2</p>
-            <p>f of x over 2, end fraction,</p>
-            <math>
-                <mfrac>
-                    <mrow>
-                        <mi>f</mi>
-                        <mo>(</mo>
-                        <mi>x</mi>
-                        <mo>)</mo>
-                    </mrow>
-                    <mn>2</mn>
-                </mfrac>
-            </math>
-			<hr>
-            <p>function_over_function: f of x over g of x</p>
-            <p>f of x over g of x, end fraction,</p>
-            <math>
-                <mfrac>
-                    <mrow>
-                        <mi>f</mi>
-                        <mo>(</mo>
-                        <mi>x</mi>
-                        <mo>)</mo>
-                    </mrow>
-                    <mrow>
-                        <mi>g</mi>
-                        <mo>(</mo>
-                        <mi>x</mi>
-                        <mo>)</mo>
-                    </mrow>
-                </mfrac>
-            </math>
-			<hr>
-            <p>non_simple_function_over_function: the fraction with numerator; f of, open paren x plus 1, close paren; and denominator
-                g of x;</p>
-            <p>the fraction with numerator; f of, open paren x plus 1, close paren; and denominator
-                g of x; end fraction,</p>
-            <math>
-                <mfrac>
-                    <mrow>
-                        <mi>f</mi>
-                        <mo>(</mo>
-                        <mi>x</mi>
-                        <mo>+</mo>
-                        <mn>1</mn>
-                        <mo>)</mo>
-                    </mrow>
-                    <mrow>
-                        <mi>g</mi>
-                        <mo>(</mo>
-                        <mi>x</mi>
-                        <mo>)</mo>
-                    </mrow>
-                </mfrac>
-            </math>
-			<hr>
-            <p>binomial: 2 times 7 choose 3</p>
-            <math>
+  <head>
+    <title>ClearSpeak: mfrac</title>
+    <link rel="stylesheet" href="/Tests/test.css" />
+  </head>
+  <body>
+    <main>
+      <p>common_fraction_half: 1 half</p>
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>common_fraction_thirds: 2 thirds</p>
+      <math>
+        <mfrac>
+          <mn>2</mn>
+          <mn>3</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>common_fraction_tenths: 17 tenths</p>
+      <math>
+        <mfrac>
+          <mn>17</mn>
+          <mn>10</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>not_ClearSpeak_common_fraction_tenths: 89 over 10</p>
+      <p>89 tenths</p>
+      <math>
+        <mfrac>
+          <mn>89</mn>
+          <mn>10</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        non_simple_fraction: the fraction with numerator; x plus y; and
+        denominator x minus y;
+      </p>
+      <p>the fraction with numerator; x plus y; and denominator x minus y;</p>
+      <p>x plus y over x minus y</p>
+      <p>the fraction x plus y over x minus y</p>
+      <p>the fraction with numerator; x plus y; and denominator x minus y;</p>
+      <p>
+        the fraction with numerator; x plus y; and denominator x minus y; end
+        fraction,
+      </p>
+      <p>
+        the fraction with numerator; x plus y; and denominator x minus y; end
+        fraction,
+      </p>
+      <p>x plus y over x minus y, end fraction,</p>
+      <p>x plus y per x minus y</p>
+      <p>
+        the fraction with numerator; x plus y; and denominator x minus y; end
+        fraction,
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>mixed_number: 3 and 1 half</p>
+      <math>
+        <mn>3</mn>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>explicit_mixed_number: 3 and 1 eighth</p>
+      <math>
+        <mn>3</mn>
+        <mo>&#x2064;</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>8</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>mixed_number_big: 3 and 7 over 83</p>
+      <math>
+        <mn>3</mn>
+        <mfrac>
+          <mn>7</mn>
+          <mn>83</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>simple_text: rise over run</p>
+      <math>
+        <mfrac>
+          <mi>rise</mi>
+          <mi>run</mi>
+        </mfrac>
+      </math>
+      <hr />
+      <p>number_and_text: 2 miles over 3 gallons</p>
+      <math>
+        <mfrac>
+          <mrow>
+            <mn>2</mn>
+            <mtext>miles</mtext>
+          </mrow>
+          <mrow>
+            <mn>3</mn>
+            <mtext>gallons</mtext>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>nested_simple_fractions: 1 half over 2 thirds</p>
+      <p>1 half over 2 thirds</p>
+      <p>1 over 2 over 2 over 3</p>
+      <p>the fraction the fraction 1 over 2 over the fraction 2 over 3</p>
+      <p>
+        the fraction with numerator the fraction with numerator 1; and
+        denominator 2; and denominator the fraction with numerator 2; and
+        denominator 3;
+      </p>
+      <p>1 half over 2 thirds</p>
+      <p>
+        the fraction with numerator the fraction with numerator 1; and
+        denominator 2; end fraction; and denominator the fraction with numerator
+        2; and denominator 3; end fraction; end fraction,
+      </p>
+      <p>1 over 2, end fraction, over 2 over 3, end fraction; end fraction,</p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mfrac>
+                <mn>1</mn>
                 <mn>2</mn>
-                <mo>(</mo>
-                <mfrac linethickness="0">
-                    <mn>7</mn>
-                    <mn>3</mn>
-                </mfrac>
-                <mo>)</mo>
-            </math>
-        </main>
-    </body>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mfrac>
+                <mn>2</mn>
+                <mn>3</mn>
+              </mfrac>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>semi_nested_fraction: 2 thirds x over 6</p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mfrac>
+                <mn>2</mn>
+                <mn>3</mn>
+              </mfrac>
+              <mi>x</mi>
+            </mrow>
+            <mn>6</mn>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        general_nested_fraction: the fraction with numerator; 10 over n; and
+        denominator 2 over n;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mfrac>
+                <mn>10</mn>
+                <mi>n</mi>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mfrac>
+                <mn>2</mn>
+                <mi>n</mi>
+              </mfrac>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        complex_nested_fraction: the fraction with numerator; the fraction with
+        numerator; n plus 10; and denominator n; and denominator 2 over n;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mfrac>
+                <mrow>
+                  <mi>n</mi>
+                  <mo>+</mo>
+                  <mn>10</mn>
+                </mrow>
+                <mi>n</mi>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mfrac>
+                <mn>2</mn>
+                <mi>n</mi>
+              </mfrac>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>simple_function: f of x over 2</p>
+      <p>f of x over 2, end fraction,</p>
+      <math>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>function_over_function: f of x over g of x</p>
+      <p>f of x over g of x, end fraction,</p>
+      <math>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+          </mrow>
+          <mrow>
+            <mi>g</mi>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        non_simple_function_over_function: the fraction with numerator; f of,
+        open paren x plus 1, close paren; and denominator g of x;
+      </p>
+      <p>
+        the fraction with numerator; f of, open paren x plus 1, close paren; and
+        denominator g of x; end fraction,
+      </p>
+      <math>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+            <mo>)</mo>
+          </mrow>
+          <mrow>
+            <mi>g</mi>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>binomial: 2 times 7 choose 3</p>
+      <math>
+        <mn>2</mn>
+        <mo>(</mo>
+        <mfrac linethickness="0">
+          <mn>7</mn>
+          <mn>3</mn>
+        </mfrac>
+        <mo>)</mo>
+      </math>
+    </main>
+  </body>
 </html>

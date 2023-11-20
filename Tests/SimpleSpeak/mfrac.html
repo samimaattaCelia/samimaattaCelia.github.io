@@ -1,246 +1,261 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SimpleSpeak: mfrac</title>
-    </head>
-    <body>
-        <main>
-            <p>common_fraction_half: 1 half</p>
-            <math>
-                <mfrac>
+  <head>
+    <title>SimpleSpeak: mfrac</title>
+    <link rel="stylesheet" href="/Tests/test.css" />
+  </head>
+  <body>
+    <main>
+      <p>common_fraction_half: 1 half</p>
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>common_fraction_thirds: 2 thirds</p>
+      <math>
+        <mfrac>
+          <mn>2</mn>
+          <mn>3</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>common_fraction_tenths: 17 tenths</p>
+      <math>
+        <mfrac>
+          <mn>17</mn>
+          <mn>10</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>not_SimpleSpeak_common_fraction_tenths: 89 over 10,</p>
+      <math>
+        <mfrac>
+          <mn>89</mn>
+          <mn>10</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        non_simple_fraction: fraction, x plus y, over, x minus y, end fraction;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        nested_fraction: fraction, x plus, fraction, 1 over y, end fraction;
+        over, x minus y, end fraction;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mfrac>
+                <mn>1</mn>
+                <mi>y</mi>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        deeply_nested_fraction_msqrt: fraction, x plus, the square root of 1
+        over y, end root; over, x minus y, end fraction;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <msqrt>
+                <mrow>
+                  <mfrac>
                     <mn>1</mn>
-                    <mn>2</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>common_fraction_thirds: 2 thirds</p>
-            <math>
-                <mfrac>
-                    <mn>2</mn>
-                    <mn>3</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>common_fraction_tenths: 17 tenths</p>
-            <math>
-                <mfrac>
-                    <mn>17</mn>
-                    <mn>10</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>not_SimpleSpeak_common_fraction_tenths: 89 over 10,</p>
-            <math>
-                <mfrac>
-                    <mn>89</mn>
-                    <mn>10</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>non_simple_fraction: fraction, x plus y, over, x minus y, end fraction;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>+</mo>
-                            <mi>y</mi>
-                        </mrow>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>-</mo>
-                            <mi>y</mi>
-                        </mrow>
-                    </mfrac>
+                    <mi>y</mi>
+                  </mfrac>
                 </mrow>
-            </math>
-            <hr>
-            <p>nested_fraction: fraction, x plus, fraction, 1 over y, end fraction; over, x minus y,
-                end fraction;</p>
-            <math>
+              </msqrt>
+            </mrow>
+            <mrow>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        deeply_nested_fraction_mrow_msqrt: fraction, x plus, the square root of
+        2 plus 1 over y, end root; over, x minus y, end fraction;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <msqrt>
                 <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>+</mo>
-                            <mfrac>
-                                <mn>1</mn>
-                                <mi>y</mi>
-                            </mfrac>
-                        </mrow>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>-</mo>
-                            <mi>y</mi>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-            <hr>
-            <p>deeply_nested_fraction_msqrt: fraction, x plus, the square root of 1 over y, end
-                root; over, x minus y, end fraction;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>+</mo>
-                            <msqrt>
-                                <mrow>
-                                    <mfrac>
-                                        <mn>1</mn>
-                                        <mi>y</mi>
-                                    </mfrac>
-                                </mrow>
-                            </msqrt>
-                        </mrow>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>-</mo>
-                            <mi>y</mi>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-            <hr>
-            <p>deeply_nested_fraction_mrow_msqrt: fraction, x plus, the square root of 2 plus 1 over
-                y, end root; over, x minus y, end fraction;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>+</mo>
-                            <msqrt>
-                                <mrow>
-                                    <mn>2</mn>
-                                    <mo>+</mo>
-                                    <mfrac>
-                                        <mn>1</mn>
-                                        <mi>y</mi>
-                                    </mfrac>
-                                </mrow>
-                            </msqrt>
-                        </mrow>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>-</mo>
-                            <mi>y</mi>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-            <hr>
-            <p>numerator_simple_fraction: fraction, x over, x minus y, end fraction;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mi>x</mi>
-                        </mrow>
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>-</mo>
-                            <mi>y</mi>
-                        </mrow>
-                    </mfrac>
-                </mrow>
-            </math>
-            <hr>
-            <p>denominator_simple_fraction: fraction, x minus y, over x, end fraction;</p>
-            <math>
-                <mfrac>
-                    <mrow>
-                        <mi>x</mi>
-                        <mo>-</mo>
-                        <mi>y</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>x</mi>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>mixed_number: 3 and 1 half</p>
-            <math>
-                <mn>3</mn>
-                <mfrac>
+                  <mn>2</mn>
+                  <mo>+</mo>
+                  <mfrac>
                     <mn>1</mn>
-                    <mn>2</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>explicit_mixed_number: 3 and 1 eighth</p>
-            <math>
-                <mn>3</mn>
-                <mo>&#x2064;</mo>
-                <mfrac>
-                    <mn>1</mn>
-                    <mn>8</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>mixed_number_big: 3 and 7 eighty thirds</p>
-            <math>
-                <mn>3</mn>
-                <mfrac>
-                    <mn>7</mn>
-                    <mn>83</mn>
-                </mfrac>
-            </math>
-            <hr>
-            <p>simple_text: rise over run,</p>
-            <math>
-                <mfrac>
-                    <mi>rise</mi>
-                    <mi>run</mi>
-                </mfrac>
-            </math>
-            <hr>
-            <p>number_and_text: fraction, 2 miles, over, 3 gallons, end fraction;</p>
-            <math>
-                <mfrac>
-                    <mrow>
-                        <mn>2</mn>
-                        <mtext>miles</mtext>
-                    </mrow>
-                    <mrow>
-                        <mn>3</mn>
-                        <mtext>gallons</mtext>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>nested_simple_fractions: fraction, 1 half, over, 2 thirds, end fraction;</p>
-            <math>
-                <mrow>
-                    <mfrac>
-                        <mrow>
-                            <mfrac>
-                                <mn>1</mn>
-                                <mn>2</mn>
-                            </mfrac>
-                        </mrow>
-                        <mrow>
-                            <mfrac>
-                                <mn>2</mn>
-                                <mn>3</mn>
-                            </mfrac>
-                        </mrow>
-                    </mfrac>
+                    <mi>y</mi>
+                  </mfrac>
                 </mrow>
-            </math>
-            <hr>
-            <p>binomial: 2 times 7 choose 3</p>
-            <math>
+              </msqrt>
+            </mrow>
+            <mrow>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        numerator_simple_fraction: fraction, x over, x minus y, end fraction;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+            </mrow>
+            <mrow>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>
+        denominator_simple_fraction: fraction, x minus y, over x, end fraction;
+      </p>
+      <math>
+        <mfrac>
+          <mrow>
+            <mi>x</mi>
+            <mo>-</mo>
+            <mi>y</mi>
+          </mrow>
+          <mrow>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>mixed_number: 3 and 1 half</p>
+      <math>
+        <mn>3</mn>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>explicit_mixed_number: 3 and 1 eighth</p>
+      <math>
+        <mn>3</mn>
+        <mo>&#x2064;</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>8</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>mixed_number_big: 3 and 7 eighty thirds</p>
+      <math>
+        <mn>3</mn>
+        <mfrac>
+          <mn>7</mn>
+          <mn>83</mn>
+        </mfrac>
+      </math>
+      <hr />
+      <p>simple_text: rise over run,</p>
+      <math>
+        <mfrac>
+          <mi>rise</mi>
+          <mi>run</mi>
+        </mfrac>
+      </math>
+      <hr />
+      <p>number_and_text: fraction, 2 miles, over, 3 gallons, end fraction;</p>
+      <math>
+        <mfrac>
+          <mrow>
+            <mn>2</mn>
+            <mtext>miles</mtext>
+          </mrow>
+          <mrow>
+            <mn>3</mn>
+            <mtext>gallons</mtext>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        nested_simple_fractions: fraction, 1 half, over, 2 thirds, end fraction;
+      </p>
+      <math>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mfrac>
+                <mn>1</mn>
                 <mn>2</mn>
-                <mo>(</mo>
-                <mfrac linethickness="0">
-                    <mn>7</mn>
-                    <mn>3</mn>
-                </mfrac>
-                <mo>)</mo>
-            </math>
-        </main>
-    </body>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mfrac>
+                <mn>2</mn>
+                <mn>3</mn>
+              </mfrac>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <hr />
+      <p>binomial: 2 times 7 choose 3</p>
+      <math>
+        <mn>2</mn>
+        <mo>(</mo>
+        <mfrac linethickness="0">
+          <mn>7</mn>
+          <mn>3</mn>
+        </mfrac>
+        <mo>)</mo>
+      </math>
+    </main>
+  </body>
 </html>

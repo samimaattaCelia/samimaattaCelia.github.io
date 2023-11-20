@@ -1,453 +1,486 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ClearSpeak: sets</title>
-    </head>
-    <body>
-        <main>
-            <p>complex: the complex numbers</p>
-            <math>
-                <mi>ℂ</mi>
-            </math>
-            <hr>
-            <p>natural: the natural numbers</p>
-            <math>
-                <mi>ℕ</mi>
-            </math>
-            <hr>
-            <p>rationals: the rational numbers</p>
-            <math>
-                <mi>ℚ</mi>
-            </math>
-            <hr>
-            <p>reals: the real numbers</p>
-            <math>
-                <mi>ℝ</mi>
-            </math>
-            <hr>
-            <p>integers: the integers</p>
-            <math>
-                <mi>ℤ</mi>
-            </math>
-            <hr>
-            <p>msup_complex: C 2</p>
-            <math>
-                <msup>
-                    <mi>ℂ</mi>
-                    <mn>2</mn>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_natural: N 2</p>
-            <math>
-                <msup>
-                    <mi>ℕ</mi>
-                    <mn>2</mn>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_rationals: Q 2</p>
-            <math>
-                <msup>
-                    <mi>ℚ</mi>
-                    <mn>2</mn>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_reals: R 3</p>
-            <math>
-                <msup>
-                    <mi>ℝ</mi>
-                    <mn>3</mn>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_integers: Z 4</p>
-            <math>
-                <msup>
-                    <mi>ℤ</mi>
-                    <mn>4</mn>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_positive_integers: the positive integers</p>
-            <math>
-                <msup>
-                    <mi>ℤ</mi>
-                    <mo>+</mo>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_negative_integers: the negative integers</p>
-            <math>
-                <msup>
-                    <mi>ℤ</mi>
-                    <mo>-</mo>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_positive_rationals: the positive rational numbers</p>
-            <math>
-                <msup>
-                    <mi>ℚ</mi>
-                    <mo>+</mo>
-                </msup>
-            </math>
-            <hr>
-            <p>msup_negative_rationals: the negative rational numbers</p>
-            <math>
-                <msup>
-                    <mi>ℚ</mi>
-                    <mo>-</mo>
-                </msup>
-            </math>
-            <hr>
-            <p>empty_set: the empty set</p>
-            <math>
-                <mo>{</mo>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>single_element_set: the set 12</p>
-            <math>
-                <mo>{</mo>
-                <mn>12</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>multiple_element_set: the set 5 comma 10 comma 15</p>
-            <math>
-                <mo>{</mo>
-                <mn>5</mn>
-                <mo>,</mo>
-                <mn>10</mn>
-                <mo>,</mo>
-                <mn>15</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>set_with_colon: the set of all x such that x is greater than 2</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>:</mo>
-                    <mi>x</mi>
-                    <mo>&#x003E;</mo>
-                    <mn>2</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>set_with_bar: the set of all x such that x is greater than 2</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>|</mo>
-                    <mi>x</mi>
-                    <mo>&#x003E;</mo>
-                    <mn>2</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>element_alone: 3 plus 2 i, is not a member of, the real numbers</p>
-            <math>
-                <mn>3</mn>
-                <mo>+</mo>
-                <mn>2</mn>
-                <mi>i</mi>
-                <mo>∉</mo>
-                <mi>ℝ</mi>
-            </math>
-            <hr>
-            <p>element_under_sum: the sum over i is a member of the integers of; the fraction with
-                numerator 1; and denominator i squared;</p>
-            <math>
-                <munder>
-                    <mo>∑</mo>
-                    <mrow>
-                        <mi>i</mi>
-                        <mo>∈</mo>
-                        <mi>ℤ</mi>
-                    </mrow>
-                </munder>
-                <mfrac>
-                    <mn>1</mn>
-                    <mrow>
-                        <msup>
-                            <mi>i</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>complicated_set_with_colon: the set of all x in the integers such that 2 is less than
-                x is less than 7</p>
-            <math>
-                <mo>{</mo>
-                <mi>x</mi>
-                <mo>∈</mo>
-                <mi>ℤ</mi>
-                <mo>:</mo>
-                <mn>2</mn>
-                <mo>&#x003C;</mo>
-                <mi>x</mi>
-                <mo>&#x003C;</mo>
-                <mn>7</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>complicated_set_with_mtext: the set of all x in the natural numbers such that x is an
-                even number</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>∈</mo>
-                    <mi>ℕ</mi>
-                </mrow>
-                <mo>|</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mtext>is an even number</mtext>
-                </mrow>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>set_with_bar_member: the set of all x member of the integers such that x is greater
-                than 5</p>
-            <math>
-                <mo>{</mo>
-                <mi>x</mi>
-                <mo>∈</mo>
-                <mi>ℤ</mi>
-                <mo>:</mo>
-                <mi>x</mi>
-                <mo>&#x003E;</mo>
-                <mn>5</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>element_alone_member: 3 plus 2 i, is not a member of, the real numbers</p>
-            <math>
-                <mn>3</mn>
-                <mo>+</mo>
-                <mn>2</mn>
-                <mi>i</mi>
-                <mo>∉</mo>
-                <mi>ℝ</mi>
-            </math>
-            <hr>
-            <p>element_under_sum_member: the sum over i is a member of the integers of; the fraction
-                with numerator 1; and denominator i squared;</p>
-            <math>
-                <munder>
-                    <mo>∑</mo>
-                    <mrow>
-                        <mi>i</mi>
-                        <mo>∈</mo>
-                        <mi>ℤ</mi>
-                    </mrow>
-                </munder>
-                <mfrac>
-                    <mn>1</mn>
-                    <mrow>
-                        <msup>
-                            <mi>i</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>set_with_bar_element: the set of all x element of the integers such that x is greater
-                than 5</p>
-            <math>
-                <mo>{</mo>
-                <mi>x</mi>
-                <mo>∈</mo>
-                <mi>ℤ</mi>
-                <mo>:</mo>
-                <mi>x</mi>
-                <mo>&#x003E;</mo>
-                <mn>5</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>element_alone_element: 3 plus 2 i, is not an element of, the real numbers</p>
-            <math>
-                <mn>3</mn>
-                <mo>+</mo>
-                <mn>2</mn>
-                <mi>i</mi>
-                <mo>∉</mo>
-                <mi>ℝ</mi>
-            </math>
-            <hr>
-            <p>element_under_sum_element: the sum over i is an element of the integers of; the
-                fraction with numerator 1; and denominator i squared;</p>
-            <math>
-                <munder>
-                    <mo>∑</mo>
-                    <mrow>
-                        <mi>i</mi>
-                        <mo>∈</mo>
-                        <mi>ℤ</mi>
-                    </mrow>
-                </munder>
-                <mfrac>
-                    <mn>1</mn>
-                    <mrow>
-                        <msup>
-                            <mi>i</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>set_with_bar_in: the set of all x in the integers such that x is greater than 5</p>
-            <math>
-                <mo>{</mo>
-                <mi>x</mi>
-                <mo>∈</mo>
-                <mi>ℤ</mi>
-                <mo>:</mo>
-                <mi>x</mi>
-                <mo>&#x003E;</mo>
-                <mn>5</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>element_alone_in: 3 plus 2 i, is not in the real numbers</p>
-            <math>
-                <mn>3</mn>
-                <mo>+</mo>
-                <mn>2</mn>
-                <mi>i</mi>
-                <mo>∉</mo>
-                <mi>ℝ</mi>
-            </math>
-            <hr>
-            <p>element_under_sum_in: the sum over i is in the integers of; the fraction with
-                numerator 1; and denominator i squared;</p>
-            <math>
-                <munder>
-                    <mo>∑</mo>
-                    <mrow>
-                        <mi>i</mi>
-                        <mo>∈</mo>
-                        <mi>ℤ</mi>
-                    </mrow>
-                </munder>
-                <mfrac>
-                    <mn>1</mn>
-                    <mrow>
-                        <msup>
-                            <mi>i</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>set_with_bar_belongs: the set of all x belonging to the integers such that x is
-                greater than 5</p>
-            <math>
-                <mo>{</mo>
-                <mi>x</mi>
-                <mo>∈</mo>
-                <mi>ℤ</mi>
-                <mo>:</mo>
-                <mi>x</mi>
-                <mo>&#x003E;</mo>
-                <mn>5</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>element_alone_belongs: 3 plus 2 i, does not belong to, the real numbers</p>
-            <math>
-                <mn>3</mn>
-                <mo>+</mo>
-                <mn>2</mn>
-                <mi>i</mi>
-                <mo>∉</mo>
-                <mi>ℝ</mi>
-            </math>
-            <hr>
-            <p>element_under_sum_belongs: the sum over i belongs to the integers of; the fraction
-                with numerator 1; and denominator i squared;</p>
-            <math>
-                <munder>
-                    <mo>∑</mo>
-                    <mrow>
-                        <mi>i</mi>
-                        <mo>∈</mo>
-                        <mi>ℤ</mi>
-                    </mrow>
-                </munder>
-                <mfrac>
-                    <mn>1</mn>
-                    <mrow>
-                        <msup>
-                            <mi>i</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                </mfrac>
-            </math>
-            <hr>
-            <p>set_member_woall: the set of x member of the integers such that x is greater than
-                5</p>
-            <math>
-                <mo>{</mo>
-                <mi>x</mi>
-                <mo>∈</mo>
-                <mi>ℤ</mi>
-                <mo>:</mo>
-                <mi>x</mi>
-                <mo>&#x003E;</mo>
-                <mn>5</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>multiple_element_set_woall: the set 5 comma 10 comma 15</p>
-            <math>
-                <mo>{</mo>
-                <mn>5</mn>
-                <mo>,</mo>
-                <mn>10</mn>
-                <mo>,</mo>
-                <mn>15</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>multiple_element_set_silent_bracket: 5 comma 10 comma 15</p>
-            <math>
-                <mo>{</mo>
-                <mn>5</mn>
-                <mo>,</mo>
-                <mn>10</mn>
-                <mo>,</mo>
-                <mn>15</mn>
-                <mo>}</mo>
-            </math>
-            <hr>
-            <p>silent_bracket: the set of all x such that x is greater than 2</p>
-            <math>
-                <mo>{</mo>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>|</mo>
-                    <mi>x</mi>
-                    <mo>&#x003E;</mo>
-                    <mn>2</mn>
-                </mrow>
-                <mo>}</mo>
-            </math>
-        </main>
-    </body>
+  <head>
+    <title>ClearSpeak: sets</title>
+    <link rel="stylesheet" href="/Tests/test.css" />
+  </head>
+  <body>
+    <main>
+      <p>complex: the complex numbers</p>
+      <math>
+        <mi>ℂ</mi>
+      </math>
+      <hr />
+      <p>natural: the natural numbers</p>
+      <math>
+        <mi>ℕ</mi>
+      </math>
+      <hr />
+      <p>rationals: the rational numbers</p>
+      <math>
+        <mi>ℚ</mi>
+      </math>
+      <hr />
+      <p>reals: the real numbers</p>
+      <math>
+        <mi>ℝ</mi>
+      </math>
+      <hr />
+      <p>integers: the integers</p>
+      <math>
+        <mi>ℤ</mi>
+      </math>
+      <hr />
+      <p>msup_complex: C 2</p>
+      <math>
+        <msup>
+          <mi>ℂ</mi>
+          <mn>2</mn>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_natural: N 2</p>
+      <math>
+        <msup>
+          <mi>ℕ</mi>
+          <mn>2</mn>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_rationals: Q 2</p>
+      <math>
+        <msup>
+          <mi>ℚ</mi>
+          <mn>2</mn>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_reals: R 3</p>
+      <math>
+        <msup>
+          <mi>ℝ</mi>
+          <mn>3</mn>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_integers: Z 4</p>
+      <math>
+        <msup>
+          <mi>ℤ</mi>
+          <mn>4</mn>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_positive_integers: the positive integers</p>
+      <math>
+        <msup>
+          <mi>ℤ</mi>
+          <mo>+</mo>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_negative_integers: the negative integers</p>
+      <math>
+        <msup>
+          <mi>ℤ</mi>
+          <mo>-</mo>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_positive_rationals: the positive rational numbers</p>
+      <math>
+        <msup>
+          <mi>ℚ</mi>
+          <mo>+</mo>
+        </msup>
+      </math>
+      <hr />
+      <p>msup_negative_rationals: the negative rational numbers</p>
+      <math>
+        <msup>
+          <mi>ℚ</mi>
+          <mo>-</mo>
+        </msup>
+      </math>
+      <hr />
+      <p>empty_set: the empty set</p>
+      <math>
+        <mo>{</mo>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>single_element_set: the set 12</p>
+      <math>
+        <mo>{</mo>
+        <mn>12</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>multiple_element_set: the set 5 comma 10 comma 15</p>
+      <math>
+        <mo>{</mo>
+        <mn>5</mn>
+        <mo>,</mo>
+        <mn>10</mn>
+        <mo>,</mo>
+        <mn>15</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>set_with_colon: the set of all x such that x is greater than 2</p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>:</mo>
+          <mi>x</mi>
+          <mo>&#x003E;</mo>
+          <mn>2</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>set_with_bar: the set of all x such that x is greater than 2</p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>|</mo>
+          <mi>x</mi>
+          <mo>&#x003E;</mo>
+          <mn>2</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>element_alone: 3 plus 2 i, is not a member of, the real numbers</p>
+      <math>
+        <mn>3</mn>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>i</mi>
+        <mo>∉</mo>
+        <mi>ℝ</mi>
+      </math>
+      <hr />
+      <p>
+        element_under_sum: the sum over i is a member of the integers of; the
+        fraction with numerator 1; and denominator i squared;
+      </p>
+      <math>
+        <munder>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>∈</mo>
+            <mi>ℤ</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>i</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        complicated_set_with_colon: the set of all x in the integers such that 2
+        is less than x is less than 7
+      </p>
+      <math>
+        <mo>{</mo>
+        <mi>x</mi>
+        <mo>∈</mo>
+        <mi>ℤ</mi>
+        <mo>:</mo>
+        <mn>2</mn>
+        <mo>&#x003C;</mo>
+        <mi>x</mi>
+        <mo>&#x003C;</mo>
+        <mn>7</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        complicated_set_with_mtext: the set of all x in the natural numbers such
+        that x is an even number
+      </p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>∈</mo>
+          <mi>ℕ</mi>
+        </mrow>
+        <mo>|</mo>
+        <mrow>
+          <mi>x</mi>
+          <mtext>is an even number</mtext>
+        </mrow>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        set_with_bar_member: the set of all x member of the integers such that x
+        is greater than 5
+      </p>
+      <math>
+        <mo>{</mo>
+        <mi>x</mi>
+        <mo>∈</mo>
+        <mi>ℤ</mi>
+        <mo>:</mo>
+        <mi>x</mi>
+        <mo>&#x003E;</mo>
+        <mn>5</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        element_alone_member: 3 plus 2 i, is not a member of, the real numbers
+      </p>
+      <math>
+        <mn>3</mn>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>i</mi>
+        <mo>∉</mo>
+        <mi>ℝ</mi>
+      </math>
+      <hr />
+      <p>
+        element_under_sum_member: the sum over i is a member of the integers of;
+        the fraction with numerator 1; and denominator i squared;
+      </p>
+      <math>
+        <munder>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>∈</mo>
+            <mi>ℤ</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>i</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        set_with_bar_element: the set of all x element of the integers such that
+        x is greater than 5
+      </p>
+      <math>
+        <mo>{</mo>
+        <mi>x</mi>
+        <mo>∈</mo>
+        <mi>ℤ</mi>
+        <mo>:</mo>
+        <mi>x</mi>
+        <mo>&#x003E;</mo>
+        <mn>5</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        element_alone_element: 3 plus 2 i, is not an element of, the real
+        numbers
+      </p>
+      <math>
+        <mn>3</mn>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>i</mi>
+        <mo>∉</mo>
+        <mi>ℝ</mi>
+      </math>
+      <hr />
+      <p>
+        element_under_sum_element: the sum over i is an element of the integers
+        of; the fraction with numerator 1; and denominator i squared;
+      </p>
+      <math>
+        <munder>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>∈</mo>
+            <mi>ℤ</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>i</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        set_with_bar_in: the set of all x in the integers such that x is greater
+        than 5
+      </p>
+      <math>
+        <mo>{</mo>
+        <mi>x</mi>
+        <mo>∈</mo>
+        <mi>ℤ</mi>
+        <mo>:</mo>
+        <mi>x</mi>
+        <mo>&#x003E;</mo>
+        <mn>5</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>element_alone_in: 3 plus 2 i, is not in the real numbers</p>
+      <math>
+        <mn>3</mn>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>i</mi>
+        <mo>∉</mo>
+        <mi>ℝ</mi>
+      </math>
+      <hr />
+      <p>
+        element_under_sum_in: the sum over i is in the integers of; the fraction
+        with numerator 1; and denominator i squared;
+      </p>
+      <math>
+        <munder>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>∈</mo>
+            <mi>ℤ</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>i</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        set_with_bar_belongs: the set of all x belonging to the integers such
+        that x is greater than 5
+      </p>
+      <math>
+        <mo>{</mo>
+        <mi>x</mi>
+        <mo>∈</mo>
+        <mi>ℤ</mi>
+        <mo>:</mo>
+        <mi>x</mi>
+        <mo>&#x003E;</mo>
+        <mn>5</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>
+        element_alone_belongs: 3 plus 2 i, does not belong to, the real numbers
+      </p>
+      <math>
+        <mn>3</mn>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mi>i</mi>
+        <mo>∉</mo>
+        <mi>ℝ</mi>
+      </math>
+      <hr />
+      <p>
+        element_under_sum_belongs: the sum over i belongs to the integers of;
+        the fraction with numerator 1; and denominator i squared;
+      </p>
+      <math>
+        <munder>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>∈</mo>
+            <mi>ℤ</mi>
+          </mrow>
+        </munder>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msup>
+              <mi>i</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </math>
+      <hr />
+      <p>
+        set_member_woall: the set of x member of the integers such that x is
+        greater than 5
+      </p>
+      <math>
+        <mo>{</mo>
+        <mi>x</mi>
+        <mo>∈</mo>
+        <mi>ℤ</mi>
+        <mo>:</mo>
+        <mi>x</mi>
+        <mo>&#x003E;</mo>
+        <mn>5</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>multiple_element_set_woall: the set 5 comma 10 comma 15</p>
+      <math>
+        <mo>{</mo>
+        <mn>5</mn>
+        <mo>,</mo>
+        <mn>10</mn>
+        <mo>,</mo>
+        <mn>15</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>multiple_element_set_silent_bracket: 5 comma 10 comma 15</p>
+      <math>
+        <mo>{</mo>
+        <mn>5</mn>
+        <mo>,</mo>
+        <mn>10</mn>
+        <mo>,</mo>
+        <mn>15</mn>
+        <mo>}</mo>
+      </math>
+      <hr />
+      <p>silent_bracket: the set of all x such that x is greater than 2</p>
+      <math>
+        <mo>{</mo>
+        <mrow>
+          <mi>x</mi>
+          <mo>|</mo>
+          <mi>x</mi>
+          <mo>&#x003E;</mo>
+          <mn>2</mn>
+        </mrow>
+        <mo>}</mo>
+      </math>
+    </main>
+  </body>
 </html>
