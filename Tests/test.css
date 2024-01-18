@@ -7,11 +7,13 @@
 
 html {
   max-width: 700px;
+  background-color: rgb(201, 201, 201);
 }
 
 body {
   font-size: 1.2rem;
   overflow-x: auto;
+  padding-left: 2rem;
 }
 
 a[href]:is(:focus, :hover) {
