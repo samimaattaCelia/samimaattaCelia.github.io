@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MathCAT - käyttöopas</title>
+    <link rel="stylesheet" href="style.css">
+    
     <style>
         table, td, th {
            border: 1px solid black; border-collapse: collapse;
@@ -12,7 +14,8 @@
         th,
         td {
             text-align: left;
-            padding-left: 0.5rem;
+            vertical-align: text-top;
+            padding: 0.5em;
         }
 
         tr:nth-child(even) {
@@ -21,6 +24,7 @@
     </style>
 </head>
 <body>
+    <main>
     <h1>MathCAT-käyttöopas</h1>
     <p>MathCAT-ohjelmistoa käytetään yhdessä ruudunlukijan kanssa. MathCAT-ohjelmisto tulkitsee MathML-koodia ja sen avulla matematiikkaa voi kuunnella ja lukea pistenäytöltä.</p>
     <h2>Käytän NVDA-ruudunlukijaa</h2>
@@ -34,12 +38,12 @@
     <ul>
         <li>Voit liikkua oikealle, vasemmalle, ylös ja alas -suunnissa käyttämällä nuolinäppäimiä.</li>
         <li>Voit liikkua taulukon soluissa Ctrl+nuolinäppäimet.</li>
-        <li>Voit siirtyä matemaattisen lausekkeen alkuun Home-näppäimellä ja loppuun End-näppäimellä.</li>
+        <li>Voit siirtyä matemaattisen sisällön alkuun Home-näppäimellä ja loppuun End-näppäimellä.</li>
         <li>Voit kuulla nykyisen sijaintisi painamlla välilyönti-näppäintä.</li>
         <li>Voit muuttaa navigointitilaa painamalla Vaihto+Nuoli ylös/Nuoli alas. Lue lisää kohdasta: <a href="#navigaatio">Navigaatio</a>.</li>
     </ul>
     <p>Kun siirryt navigaatiotilaan, niin voit kopioida kyseisen osan matemaattisesta sisällöstä MathML-koodina painamalla Ctrl+c.</p>
-    <p>Navigoitiin on monia eri komentoja. Voit lukea kaikki: <a href="#kaikki-navigaatiokomennot">Kaikki navigaatiokomennot</a>.</p>
+    <p>Navigointiin on monia eri näppäinkomentoja. Voit lukea kaikki: <a href="#kaikki-navigaatiokomennot">Kaikki navigaatiokomennot</a>.</p>
     <h3>MathCATin asetukset</h3>
     <p><strong style="background-color: yellow;">TSEKKAA TÄMÄ KÄÄNNÖS JA TEE SE NVDA:HAN OIKEIN</strong></p>
     <p>MathCATissä on erilaisia asetuksia, joita säätämällä saat sen itsellesi sopivaksi. Pääset asetuksiin näppäinkomennolla NVDA-näppäin+n, sitten Asetukset ja sitten MathCATin asetukset. Asetuksissa voi valita Puhe, Navigaatio ja Pistekirjoitus.</p>
@@ -56,13 +60,14 @@
         <li>Kieli:
             <ul>
                 <li>Käytä puheäänen kieltä</li>
-                <li>englanti (en)</li>
-                <li>espanja (es)</li>
-                <li>indonesia (id)</li>
-                <li>italia (it)</li>
-                <li>ruotsi (sv)</li>
-                <li>vietnami (vi)</li>
-                <li>kiina, perinteinen (zh-tw)</li>
+                <li>Englanti (en)</li>
+                <li>Espanja (es)</li>
+                <li>Suomi (fi)</li>
+                <li>Indonesia (id)</li>
+                <li>Italia (it)</li>
+                <li>Ruotsi (sv)</li>
+                <li>Vietnami (vi)</li>
+                <li>Kiina, perinteinen (zh-tw)</li>
             </ul>
         </li>
         <li>Puhetyyli:
@@ -238,5 +243,6 @@
     </table>
     <h2>Lähetä palautetta MathCATin toiminnasta</h2>
     <p style="background-color: yellow;">Yhteystiedot...</p>
+</main>
 </body>
 </html>
