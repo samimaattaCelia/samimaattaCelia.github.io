@@ -84,9 +84,9 @@
                 <li>Runsas. Kaikki puhutaan ääneen. Luenta on yksikäsitteinen.</li>
             </ul>
         </li>
-        <li>Suhteellisen puheen nopeus:
+        <li>Puheen suhteellinen nopeus:
             <ul>
-                <li>[100]. Luku on prosenteissa ja nopeutta voi muuttaa välillä 1 ja 1000. Nopeus muuttuu suhteessa ruudunlukijan asetettuun puhenopeuteen. 100 tarkoittaa samaa nopeutta, vähemmän tarkoittaa hitaampaa ja suurempi nopeampaa.</li>
+                <li>[100]. Nopeus muuttuu suhteessa ruudunlukijan asetettuun puhenopeuteen. Luku on prosenteissa ja nopeutta voi muuttaa välillä 1 ja 1000. 100 tarkoittaa samaa nopeutta, vähemmän tarkoittaa hitaampaa ja suurempi nopeampaa.</li>
             </ul>
         </li>
         <li>Taukokerroin:
@@ -111,7 +111,7 @@
     <p>MathCATin avulla voit siirtyä yksityiskohtaisesti matemaattisen sisällön sisällä. Voit kuunnella sen kokonaan, osissa tai liikkua edestakaisin esimerkiksi kaavassa. Voit määrittää asetuksissa, kuinka tämä tehdään ja miten yksityiskohtaista tietoa haluat.</p>
     <p>Jokaisen asetuksen alla on sen kaikki vaihtoehdot lyhyellä kuvauksella. Oletusasetukset on kirjoitettu hakasulkeisiin.</p>
     <ul>
-        <li>Navigaatiotyyli, kun siirryt matemaattiseen sisältöön:
+        <li>Navigointitila, kun siirryt matemaattiseen sisältöön:
             <ul>
                 <li>[Laajennettu.] Voit liikkua matemaattisesti merkittävien osien välillä. Esimerkiksi osoittaja, nimittäjä, eksponentti, suluissa oleva lauseke.</li>
                 <li>Yksinkertainen. Voit liikkua sanojen välillä, mutta jos kohtaat lausekkeen (esimerkiksi neliöjuuren), se luetaan kokonaan ääneen.</li>
@@ -119,8 +119,8 @@
             </ul>
         </li>
     </ul>
-    <p>Voit muuttaa navigaatiotyylin laajemmaksi matemaattisen sisällön sisällä näppäinkomennolla Shift+Nuoli ylös, jolloin tyyli muuttuu Yksinkertaisesta Laajennetuksi (tai Merkki merkiltä Yksinkertaiseksi). </p>
-    <p>Voit muuttaa navigaatiotyylin yksityiskohtaisemmaksi näppäinkomennolla Shift+Nuoli alas, jolloin tyyli muuttuu Laajennetusta Yksinkertaiseksi (tai Yksinkertaisesesta Merkki merkille -tyyliin). "Ylös" tarkoittaa laajempaa kuvailua ja "alas" tarkoittaa tarkempaa kuvailua.</p>
+    <p>Voit muuttaa navigointitilan laajemmaksi matemaattisen sisällön sisällä näppäinkomennolla Shift+Nuoli ylös, jolloin tyyli muuttuu Yksinkertaisesta Laajennetuksi (tai Merkki merkiltä Yksinkertaiseksi). </p>
+    <p>Voit muuttaa navigointitilan yksityiskohtaisemmaksi näppäinkomennolla Shift+Nuoli alas, jolloin tyyli muuttuu Laajennetusta Yksinkertaiseksi (tai Yksinkertaisesesta Merkki merkille -tyyliin). "Ylös" tarkoittaa laajempaa kuvailua ja "alas" tarkoittaa tarkempaa kuvailua.</p>
     <p>Voit painaa valintaruutua, jolla voit valita, mikä navigointityyli on oletuksena, kun palautat tyylin ennalleen. Oletuksena mitään tiettyä navigointityyliä ei ole valittu.</p>
     <ul>
         <li>Puhetyyli liikkumisen jälkeen:
@@ -158,15 +158,16 @@
                 <li>Vietnamilainen.</li>
             </ul>
         </li>
-        <li>Pisteet 7 ja 8 merkitsevät navigaatiotilassa
+        <li>Korosta nykyinen navigaatiosolmu pisteillä 7 ja 8:
             <ul>
                 <li>Pois päältä.</li>
-                <li>Ensimmäinen merkki.</li>
-                <li>Viimeinen merkki.</li>
-                <li>Kaikki.</li>
+                <li>Ensimmäinen merkki. Matemaattisen sisällön ensimmäinen merkki on korostettu.</li>
+                <li>Päätepisteet. Matemaattisen sisällön ensimmäinen ja viimeinen merkki ovat korostettuja.</li>
+                <li>Kaikki. Koko matemaattinen sisältö on korostettu.</li>
             </ul>
         </li>
     </ul>
+    <p>Korostus riippuu navigaatiotilan tarkkuudesta. Korostus voi olla koko matemaattisen sisällön alueella tai yksityiskohtaisempana esimerkiksi murtoluvun alussa.</p>
     <h3 id="kaikki-navigaatiokomennot" tabindex="-1">Kaikki navigaatiokomennot</h3>
     <p>Taulukossa on esitetty kaikki komennot, joita voit käyttää matemaattisessa sisällössä liikkumiseen. Ensimmäisessä sarakkeessa on näppäimen nimi. Toisessa sarakkeessa kerrotaan, mitä tapahtuu, jos painat vain kyseistä näppäintä. Kolmannessa sarakkeessa kerrotaan, mitä tapahtuu, jos painat näppäinkomentona Ctrl-näppäintä ja kyseistä näppäintä. Neljännessä sarakkeessa kerrotaan, mitä tapahtuu, jos painat näppäinkomentona Vaihto-näppäintä ja kyseistä näppäintä. Viidennessä sarakkeessa kerrotaan, mitä tapahtuu, jos painat näppäinkomentona Ctrl- ja Vaihto-näppäimiä ja kyseistä näppäintä.</p><p>Sarakematematiikalla tarkoitetaan matemaattista sisältöä, joka esitetään taulukkona, kuten matriisit, yhtälöparit tai -ryhmät. Niitä voi navigoida kuten taulukoita.</p>
     <table>
@@ -187,14 +188,14 @@
                 <th scope="row">Nuoli ylös</th>
                 <td>Siirry yleisemmälle tasolle.</td>
                 <td>Taulukossa: siirry sarakkeessa yksi solu ylöspäin. Sarakematematiikassa: siirry sarakkeessa yksi numero ylöspäin. Huomaa: Ctrl+Alt+Nuoli ylös toimii myös.</td>
-                <td><strong style="background-color: yellow;">Tarkista tämä!</strong> Muuta navigaatiotyyliä (Tarkka, Yksinkertainen, Kirjain kirjaimelta) yleisemmäksi.</td>
+                <td><strong style="background-color: yellow;">Tarkista tämä!</strong> Muuta navigointitilaa (Tarkka, Yksinkertainen, Kirjain kirjaimelta) yleisemmäksi.</td>
                 <td>Siirry uloimmalle tasolle (uloin taso).</td>
             </tr>
             <tr>
                 <th scope="row">Nuoli alas</th>
                 <td>Siirry yksityiskohtaisemmalle tasolle.</td>
                 <td>Taulukossa: siirry sarakkeessa yksi solu alaspäin. Sarakematematiikassa: siirry sarakkeessa numero alaspäin. Huomaa: Ctrl+Alt+Nuoli alas toimii myös.</td>
-                <td><strong style="background-color: yellow;">Tarkista tämä!</strong> Muuta navigaatiotyyliä (Tarkka, Yksinkertainen, Kirjain kirjaimelta) tarkemmaksi.</td>
+                <td><strong style="background-color: yellow;">Tarkista tämä!</strong> Muuta navigointitilaa (Tarkka, Yksinkertainen, Kirjain kirjaimelta) tarkemmaksi.</td>
                 <td>Siirry yksityiskohtaisimmalle tasolle (sisin taso).</td>
             </tr>
             <tr>
