@@ -45,7 +45,6 @@
     <p>Kun siirryt navigaatiotilaan, niin voit kopioida kyseisen osan matemaattisesta sisällöstä MathML-koodina painamalla Ctrl+c.</p>
     <p>Navigointiin on monia eri näppäinkomentoja. Voit lukea kaikki: <a href="#kaikki-navigaatiokomennot">Kaikki navigaatiokomennot</a>.</p>
     <h3>MathCATin asetukset</h3>
-    <p><strong style="background-color: yellow;">TSEKKAA TÄMÄ KÄÄNNÖS JA TEE SE NVDA:HAN OIKEIN</strong></p>
     <p>MathCATissä on erilaisia asetuksia, joita säätämällä saat sen itsellesi sopivaksi. Pääset asetuksiin näppäinkomennolla NVDA-näppäin+n, sitten Asetukset ja sitten MathCATin asetukset. Asetuksissa voi valita Puhe, Navigaatio ja Pistekirjoitus.</p>
     <h4>Puhe</h4>
     <p>Vot säätää seuraavat asetukset puheelle. Jokaisen asetuksen alla on sen kaikki vaihtoehdot lyhyellä kuvauksella. Oletusasetukset on kirjoitettu hakasulkeisiin.</p>
@@ -53,13 +52,13 @@
         <li>Vamma:
             <ul>
                 <li>[Sokeus.] Puhe on yksikäsitteistä.</li>
-                <li>Muu näkövamma. Puhetta on vähemmän.</li>
+                <li>Heikkonäköisyys. Puhetta on vähemmän.</li>
                 <li>Oppimisvaikeus. Puhetta on vähemmän.</li>
             </ul>
         </li>
         <li>Kieli:
             <ul>
-                <li>[Käytä puheäänen kieltä]</li>
+                <li>[Käytä puheäänen kieltä (automaattinen)]</li>
                 <li>Englanti (en)</li>
                 <li>Espanja (es)</li>
                 <li>Suomi (fi)</li>
@@ -94,15 +93,15 @@
                 <li>[1]. Arvot ovat välillä 0 ja 10. Säätää, miten pitkiä taukoja matemaattisen sisällön eri osien välillä on.</li>
             </ul>
         </li>
-        <li>Matematiikkaääni:
+        <li>Toista äänimerkki, kun matemaattisen sisällön puhuminen aloitetaan/lopetetaan
             <ul>
                 <li>[Ei ääntä.]</li>
-                <li>Äänimerkki. Äänimerkki kuuluu ennen matemaattista sisältöä ja sen jälkeen.</li>
+                <li>Äänimerkki.</li>
             </ul>
         </li>
-        <li>Kemia:
+        <li>Kemiallisten kaavojen puhuminen:
             <ul>
-                <li>[Kirjain kirjaimelta.] Kemialliset kaavat luetaan kirjain kirjaimelta, esimerkiksi H<sub>2</sub>O luetaan H kaksi O.</li>
+                <li>[Tavaaminen.] Kemialliset kaavat luetaan kirjain kirjaimelta, esimerkiksi H<sub>2</sub>O luetaan H kaksi O.</li>
                 <li>Pois käytöstä. H<sub>2</sub>O luetaan H ala 2 O.</li>
             </ul>
         </li>
@@ -115,30 +114,39 @@
             <ul>
                 <li>[Laajennettu.] Voit liikkua matemaattisesti merkittävien osien välillä. Esimerkiksi osoittaja, nimittäjä, eksponentti, suluissa oleva lauseke.</li>
                 <li>Yksinkertainen. Voit liikkua sanojen välillä, mutta jos kohtaat lausekkeen (esimerkiksi neliöjuuren), se luetaan kokonaan ääneen.</li>
-                <li>Merkki merkiltä. Voit liikkua sanojen tai lukujen välillä. Voit siirtyä yksityiskohtaisemmalle tasolle, jolla voit lukea kirjain kirjaimelta tai numero numerolta.</li>
+                <li>Merkki. Voit liikkua sanojen tai lukujen välillä. Voit siirtyä yksityiskohtaisemmalle tasolle, jolla voit lukea kirjain kirjaimelta tai numero numerolta.</li>
             </ul>
         </li>
     </ul>
-    <p>Voit muuttaa navigointitilan laajemmaksi matemaattisen sisällön sisällä näppäinkomennolla Shift+Nuoli ylös, jolloin tyyli muuttuu Yksinkertaisesta Laajennetuksi (tai Merkki merkiltä Yksinkertaiseksi). </p>
-    <p>Voit muuttaa navigointitilan yksityiskohtaisemmaksi näppäinkomennolla Shift+Nuoli alas, jolloin tyyli muuttuu Laajennetusta Yksinkertaiseksi (tai Yksinkertaisesesta Merkki merkille -tyyliin). "Ylös" tarkoittaa laajempaa kuvailua ja "alas" tarkoittaa tarkempaa kuvailua.</p>
+    <p>Voit muuttaa navigointitilan laajemmaksi matemaattisen sisällön sisällä näppäinkomennolla Shift+Nuoli ylös, jolloin tyyli muuttuu Yksinkertaisesta Laajennetuksi (tai Merkki -tyylistä Yksinkertaiseksi). </p>
+    <p>Voit muuttaa navigointitilan yksityiskohtaisemmaksi näppäinkomennolla Shift+Nuoli alas, jolloin tyyli muuttuu Laajennetusta Yksinkertaiseksi (tai Yksinkertaisesta Merkki -tyyliin). "Ylös" tarkoittaa laajempaa kuvailua ja "alas" tarkoittaa tarkempaa kuvailua.</p>
     <p>Voit painaa valintaruutua, jolla voit valita, mikä navigointityyli on oletuksena, kun palautat tyylin ennalleen. Oletuksena mitään tiettyä navigointityyliä ei ole valittu.</p>
-    <ul>
-        <li>Puhetyyli liikkumisen jälkeen:
+    <!-- <ul>
+        <li>Navigointipuhe liikkumisen jälkeen:
             <ul>
                 <li>[Lue kohta ääneen.] Lukee sen kohdan matemaattisesta sisällöstä ääneen, jossa tällä hetkellä olet.</li>
                 <li>Kuvailu. Antaa laajemman kuvailun koko valitusta sisällöstä.</li>
             </ul>
         </li>
     </ul>
-    <p>Voit painaa valintaruutua, jolla voit valita, palautuuko puhetyyli liikkumisen jälkeen oletusvalinnaksi vai ei. Oletuksena tämä on valittu.</p>
+    <p>Voit painaa valintaruutua, jolla voit valita, palautuuko navigointipuheen tyyli liikkumisen jälkeen oletusvalinnaksi vai ei. Oletuksena tämä on valittu.</p> -->
     <ul>
-        <li>Siirry uloimmalle tasolle automaattisesti, kun osa matemaattisesti sisällöstä (esimerkiksi osoittaja tai neliöjuuri) on luettu.
+        <li>Navigointipuheen tyyli, kun aloitat lausekkeessa navigoimisen:
+            <ul>
+                <li>[Puhu.] Lukee sen kohdan matemaattisesta sisällöstä ääneen, jossa tällä hetkellä olet.</li>
+                <li>Kuvailu/anna yhteenveto. Antaa laajemman kuvailun koko valitusta sisällöstä.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Voit painaa valintaruutua, jolla voit valita, nollaanko navigointipuheen tyyli, kun siirryt uuteen lausekkeeseen. Se on oletuksena valittuna.</p>
+    <ul>
+        <!-- <li>Siirry uloimmalle tasolle automaattisesti, kun osa matemaattisesta sisällöstä (esimerkiksi osoittaja tai neliöjuuri) on luettu.
             <ul>
                 <li>[Päällä.] (Valintaruutu valittu.)</li>
                 <li>Pois päältä. (Valintaruutu ei valittu.)</li>
             </ul>
-        </li>
-        <li>Puheen määrä navigaatiossa:
+        </li> -->
+        <li>Puheen määrä navigoitaessa:
             <ul>
                 <li>Harva. Tiettyjä sanoja on lyhennetty, kuten "logaritmi" on "log".</li>
                 <li>[Keskitaso.] Harvan ja runsaan välillä.</li>
@@ -158,7 +166,7 @@
                 <li>Vietnamilainen.</li>
             </ul>
         </li>
-        <li>Korosta nykyinen navigaatiosolmu pisteillä 7 ja 8:
+        <li>Korosta nykyinen navigaatiokohta pisteillä 7 ja 8:
             <ul>
                 <li>Pois päältä.</li>
                 <li>Ensimmäinen merkki. Matemaattisen sisällön ensimmäinen merkki on korostettu.</li>
@@ -188,14 +196,14 @@
                 <th scope="row">Nuoli ylös</th>
                 <td>Siirry yleisemmälle tasolle.</td>
                 <td>Taulukossa: siirry sarakkeessa yksi solu ylöspäin. Sarakematematiikassa: siirry sarakkeessa yksi numero ylöspäin. Huomaa: Ctrl+Alt+Nuoli ylös toimii myös.</td>
-                <td><strong style="background-color: yellow;">Tarkista tämä!</strong> Muuta navigointitilaa (Tarkka, Yksinkertainen, Kirjain kirjaimelta) yleisemmäksi.</td>
+                <td>Muuta navigointitilaa (Laajennettu, Yksinkertainen, Merkki) yleisemmäksi.</td>
                 <td>Siirry uloimmalle tasolle (uloin taso).</td>
             </tr>
             <tr>
                 <th scope="row">Nuoli alas</th>
                 <td>Siirry yksityiskohtaisemmalle tasolle.</td>
                 <td>Taulukossa: siirry sarakkeessa yksi solu alaspäin. Sarakematematiikassa: siirry sarakkeessa numero alaspäin. Huomaa: Ctrl+Alt+Nuoli alas toimii myös.</td>
-                <td><strong style="background-color: yellow;">Tarkista tämä!</strong> Muuta navigointitilaa (Tarkka, Yksinkertainen, Kirjain kirjaimelta) tarkemmaksi.</td>
+                <td>Muuta navigointitilaa (Laajennettu, Yksinkertainen, Merkki) tarkemmaksi.</td>
                 <td>Siirry yksityiskohtaisimmalle tasolle (sisin taso).</td>
             </tr>
             <tr>
@@ -242,8 +250,6 @@
             </tr>
         </tbody>
     </table>
-    <h2>Lähetä palautetta MathCATin toiminnasta</h2>
-    <p style="background-color: yellow;">Yhteystiedot...</p>
 </main>
 </body>
 </html>
