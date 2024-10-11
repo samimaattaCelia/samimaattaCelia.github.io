@@ -38,6 +38,16 @@
         border-left: solid 10px var(--primary-color);
         padding: 0 1rem;
       }
+
+      div,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      p.empty-space-after {
+        margin-bottom:1rem;
+      }
     </style>
   </head>
   <body>
@@ -316,7 +326,7 @@
       </fieldset>
 
       <h2>Kopioivat tekstit</h2>
-      <p>Tekstit ilmestyvät, kun valitset vähintään yhden vaihtoehdon.</p>
+      <p class="empty-space-after">Tekstit ilmestyvät, kun valitset vähintään yhden vaihtoehdon.</p>
 
       <div id="accessMode-strings" style="padding-bottom: 0">
         <p lang="en" id="textual_text" style="display: none">textual</p>
