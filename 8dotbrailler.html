@@ -1,0 +1,33 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="Web-Brailler%208-dot%20-%20by%20Kvile_tiedostot/style.css">
+	<title>Web-Brailler 8-dot - by Kvile</title>
+	<script src="Web-Brailler%208-dot%20-%20by%20Kvile_tiedostot/j.js"></script>
+</head>
+<body>
+	<h1>Web-Brailler 8-dot</h1>
+	<label>Braille-keyboard input, 8-dot
+		<textarea id="input" contenteditable="true" onkeydown="return false" oninput="return false;" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="⠁⠂⣽"></textarea>
+	</label>
+	<input id="copyText" type="button" value="Copy text" onclick="copyText()"><br>
+	<input id="clearText" type="button" value="Clear text" onclick="clearText()"><br>
+	<label>
+		<input type="text" id="brailleSizeInput" value="50" pattern="\d+" maxlength="3" size="4"> size of braille</label>
+	<input type="button" class="button" value="Update size" onclick="updateSize();"><br>
+	<label>
+		<input type="text" id="dot8" value="ö" maxlength="1" onchange="u();" size="4"> char for dot 8</label>
+
+	<p>Click on the braille text and use your keyboard as a brailler. Dot 
+1-6 are f, d, s, j, k and l. Dot 7 is a, and dot 8 you can choose 
+yourself. You can also use space, left/right arrow, home, end, backspace
+ and the delete key.</p>
+	<p><a href="https://kvile.com/blind/brailler/index.html">6-dot brailler</a></p>
+	<p><a href="https://kvile.com/blind/brailler/musicIndex.html">Music brailler</a></p>
+	<footer>
+		<p>Made by Kvile</p>
+	</footer>
+	<script src="Web-Brailler%208-dot%20-%20by%20Kvile_tiedostot/javascriptOriginal8dot.js"></script>
+	<!-- <script src="j8.js"></script> -->
+
+</body></html>
