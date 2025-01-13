@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing referencing math equations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+      :root {
+        font-size: 16px;
+        font-family: "Atkinson Hyperlegible", sans-serif;
+
+        --primary-color: #3fae29;
+      }
+
+      html {
+        max-width: 700px;
+      }
+
+      body {
+        font-size: 1.2rem;
+        overflow-x: auto;
+      }
+
+      a[href]:is(:focus, :hover) {
+        outline: 3px solid black;
+      }
+
+      .note {
+        border: solid 1px var(--primary-color);
+        border-left: solid 10px var(--primary-color);
+        padding: 0 1rem;
+      }
+
+      math {
+        margin-block-start: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tests for math equations</h1>
+    <h2><code>math</code> element with <code>overlow-x: auto;</code></h2>
+    <p>If we have an equation such as
+        <math style="overflow-x: auto;" 
+    tabindex="0" 
+    aria-labelledby="label-1-3" 
+    id="eq-1-3a" 
+    display="block">
+        <mo>(</mo>
+          <mi>a</mi>
+          <mo>∘<!-- ∘ --></mo>
+          <mi>b</mi>
+          <mo>)</mo>
+          <mo>∘<!-- ∘ --></mo>
+          <mi>c</mi>
+          <mo>=</mo>
+          <mi>a</mi>
+          <mo>∘<!-- ∘ --></mo>
+          <mo>(</mo>
+          <mi>b</mi>
+          <mo>∘<!-- ∘ --></mo>
+          <mi>c</mi>
+          <mo>)</mo>
+          <mspace width="5em"/>
+          <mtext id="label-1-3a">(1.3).</mtext>
+      </math>
+      </p>
+      <p>Then you can reference it with a link: "Check out the equation <a href="#eq-1-3a">1.3</a>."</p>
+    <h2>Wrapper element with <code>overlow-x: auto;</code></h2>
+    <p>If we have an equation such as
+        <div style="overflow-x: auto;" 
+        tabindex="0" 
+        aria-labelledby="label-1-3" role="math" id="eq-1-3b">
+        <math 
+     
+    display="block">
+        <mo>(</mo>
+          <mi>a</mi>
+          <mo>∘<!-- ∘ --></mo>
+          <mi>b</mi>
+          <mo>)</mo>
+          <mo>∘<!-- ∘ --></mo>
+          <mi>c</mi>
+          <mo>=</mo>
+          <mi>a</mi>
+          <mo>∘<!-- ∘ --></mo>
+          <mo>(</mo>
+          <mi>b</mi>
+          <mo>∘<!-- ∘ --></mo>
+          <mi>c</mi>
+          <mo>)</mo>
+          <mspace width="5em"/>
+          <mtext id="label-1-3b">(1.3).</mtext>
+      </math>
+    </div>
+      </p>
+      <p>Then you can reference it with a link: "Check out the equation <a href="#eq-1-3b">1.3</a>."</p>
+  </body>
+</html>
