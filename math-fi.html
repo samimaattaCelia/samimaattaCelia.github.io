@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap"
       rel="stylesheet"
     />
-    <script>
+    <!-- <script>
       MathJax = {
         loader: {
           load: ['input/tex']
@@ -31,7 +31,7 @@
     id="MathJax-script"
     async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"
-  ></script>
+  ></script> -->
     
     <style>
       :root {
@@ -93,8 +93,37 @@
         <mtext id="label-1-3">(1.3).</mtext>
     </math>
     </p>
-    <p style="overflow-x: auto;">$x^2 = \int_2^4 f(x) = \big/_2^4 F(x)$</p>
+    <p style="overflow-x: auto; overflow-y: hidden;">$x^2 = \int_2^4 f(x) = \big/_2^4 F(x)$</p>
     <p>Siihen voidaan viitata käyttämällä linkkiä tällä tavalla: "Siirry kaavaan <a href="#eq-1-3">1.3</a>." </p>
+    <h2>Kaava :equation-label toteutus</h2>
+    <p style="overflow-x: auto; overflow-y: hidden;"><math display="block">
+      <mtable>
+        <mtr>
+        <mtd>
+          <mrow>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>∘<!-- ∘ --></mo>
+            <mi>b</mi>
+            <mo>)</mo>
+            <mo>∘<!-- ∘ --></mo>
+            <mi>c</mi>
+            <mo>=</mo>
+            <mi>a</mi>
+            <mo>∘<!-- ∘ --></mo>
+            <mo>(</mo>
+            <mi>b</mi>
+            <mo>∘<!-- ∘ --></mo>
+            <mi>c</mi>
+            <mo>)</mo>
+          </mrow>
+          </mtd>
+            <mtd id="label-1-3">
+              <mtext>(1.3).</mtext>
+            </mtd>
+          </mtr>
+          </mtable>
+        </math></p>
     <h2>Kaava SVG-kuvana ja altin sekä role="math" käyttö</h2>
     <div class="note">
       <p>Testattu: 6.6.2024. </p>
