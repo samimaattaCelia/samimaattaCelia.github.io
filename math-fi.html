@@ -67,6 +67,46 @@
   </head>
   <body>
     <h1>Testaussivusto matemaattiselle sisällölle</h1>
+    <h2>Equation-label with one equation</h2>
+    <p><math display="block" id="eq-0" tabindex="0" aria-labelledby="label-text-1-4">
+<mtable>
+<mtr>
+  <mtd intent=":equation-label"><mtext id="label-text-1-4">(1.4)</mtext></mtd>
+  <mtd>
+   <mi>x</mi>
+   <mo>+</mo>
+   <mi>y</mi>
+  </mtd>
+  <mtd><mo>=</mo></mtd>
+  <mtd><mn>2</mn></mtd>
+ </mtr>
+</mtable>
+</math></p>    <p>Now I want to reference the equation up top with a hyperlink <a href="#eq-0">jump to eq 1</a>.</p>
+    <h2>Equation-label testing and table (two equations)</h2>
+      <p><math display="block" id="eq-1" tabindex="0" aria-labelledby="label-text-1 label-text-2">
+<mtable>
+  <mtr>
+    <mtd intent=":equation-label"><mtext id="label-text-1">(1.4)</mtext></mtd>
+    <mtd>
+     <mi>x</mi>
+     <mo>+</mo>
+     <mi>y</mi>
+    </mtd>
+    <mtd><mo>=</mo></mtd>
+    <mtd><mn>2</mn></mtd>
+   </mtr>
+   <mtr>
+     <mtd intent=":equation-label" id="eq-2"><mtext id="label-text-2">(2.7)</mtext></mtd>
+     <mtd>
+     <mi>x</mi>
+     <mo>&#x2212;</mo>
+     <mi>y</mi>
+    </mtd>
+    <mtd><mo>=</mo></mtd>
+    <mtd><mn>0</mn></mtd>
+   </mtr>
+  </mtable>
+</math></p>
     <h2><code>overflow-x: auto; </code></h2>
     <p>Jos on esimerkiksi kaava
       <math style="overflow-x: auto;" 
@@ -95,6 +135,7 @@
     </p>
     <p style="overflow-x: auto; overflow-y: hidden;">$x^2 = \int_2^4 f(x) = \big/_2^4 F(x)$</p>
     <p>Siihen voidaan viitata käyttämällä linkkiä tällä tavalla: "Siirry kaavaan <a href="#eq-1-3">1.3</a>." </p>
+    <p>Now I want to reference the equation up top with a hyperlink <a href="#eq-1">jump to eq 1</a>.</p>
     <h2>Kaava :equation-label toteutus</h2>
     <p style="overflow-x: auto; overflow-y: hidden;"><math display="block">
       <mtable>
