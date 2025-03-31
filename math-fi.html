@@ -68,6 +68,23 @@
   <body>
     <h1>Testaussivusto matemaattiselle sisällölle</h1>
     <h2>Equation-label with one equation</h2>
+    <p>Inside the mtable</p>
+    <p><math display="block">
+      <mtable id="eq-0a" tabindex="0" aria-labelledby="label-text-1-4a">
+      <mtr >
+        <mtd intent=":equation-label" ><mtext id="label-text-1-4a">(1.4)</mtext></mtd>
+        <mtd>
+         <mi>x</mi>
+         <mo>+</mo>
+         <mi>y</mi>
+        </mtd>
+        <mtd><mo>=</mo></mtd>
+        <mtd><mn>2</mn></mtd>
+       </mtr>
+      </mtable>
+      </math>
+      <p>Inside math element</p>
+
     <p><math display="block" id="eq-0" tabindex="0" aria-labelledby="label-text-1-4">
 <mtable>
 <mtr>
@@ -82,6 +99,7 @@
  </mtr>
 </mtable>
 </math></p>    <p>Now I want to reference the equation up top with a hyperlink <a href="#eq-0">jump to eq 1</a>.</p>
+<p>Now I want to reference the equation up top with a hyperlink <a href="#eq-0a">jump to eq 1.4a</a>.</p>
     <h2>Equation-label testing and table (two equations)</h2>
       <p><math display="block" id="eq-1" tabindex="0" aria-labelledby="label-text-1 label-text-2">
 <mtable>
