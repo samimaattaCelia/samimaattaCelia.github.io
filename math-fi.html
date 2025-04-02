@@ -67,6 +67,48 @@
   </head>
   <body>
     <h1>Testaussivusto matemaattiselle sisällölle</h1>
+    <h2>Crossed out math (block)</h2>
+    <p>When looking at the crossing out of the expression
+    <img style="display: block" src="images/fractional-with-crossing-out.png" aria-describedby="img-desc-1" alt="Image description below."></p>
+    <details open id="img-desc-1"><summary>Image description for the block equation</summary><math display="block">
+      <mfrac>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+            </msup>
+            <mo>&#x2212;</mo>
+            <mn>2</mn>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mn>3</mn>
+            <mo>)</mo>
+          </mrow>
+          <menclose notation="updiagonalstrike">
+          <mrow>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+            <mo>)</mo>
+          </mrow>
+        </menclose>
+        </mrow>
+        <menclose notation="updiagonalstrike">
+        <mrow>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </menclose>
+      </mfrac>
+  </math></details>
+    
+    <h2>Crossed out math (inline and alt text)</h2>
+    <p>When looking at the crossing out of the expression
+    <img style="display: inline" src="images/crossed-out.png" alt="3 over 2 crossed out."> it is easy to see that it doesn't matter.</p>
     <h2>Equation-label with one equation</h2>
     <p>Inside the mtable</p>
     <p><math display="block">
