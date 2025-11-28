@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathML-koodin perusteet</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>MathML-koodin perusteet</h1>
+    <p>Tällä sivulla selitetään perusteita MathML-koodin kirjoittamisesta.</p>
+    <p>MathML-koodi perustuu käytännössä kahteen standardiin: <a href="https://www.w3.org/TR/MathML3/">MathML 3 (englanniksi)</a> ja <a href="https://www.w3.org/TR/mathml-core/">MathML Core (englanniksi)</a>. Koko MathML-kehitystä voi seurata <a href="https://www.w3.org/Math/">W3C:n MathML-sivuilla (englanniksi)</a>.</p>
+    <h2>MathML 3 ja MathML Core eroavaisuudet</h2>
+    <p>MathML 3 on laajempi, mutta vanhempi versio MathML-standardista. Sen haasteena oli, että juurikaan mikään selain ei ryhtynyt työhön tukemaan sitä. Monissa selaimissa tämä standardi ei ole voimassa, mutta joitain sen vanhoja ominaisuuksia saatetaan tukea esimerkiksi Mozilla Firefoxissa.</p>
+    <p>MathML Core on suppeampi standardi, jota nykyiset, suurimmat selaimet tukevat.</p>
+    <h2>Unicode-merkit</h2>
+    <p>Apuvälineiden toiminta perustuu siihen, että merkit on lisätty oikealla tavalla. Nettiympäristössä erilaiset merkit perustuvat Unicode-merkkeihin.</p>
+    <p>Voit tarkistaa ja kopioida itsellesi talteen tärkeitä Unicode-merkkejä.</p>
+    <h2>Esimerkkejä</h2>
+    <h3>Luvut</h3>
+    <p>Luvut ja niiden kaikki osat merkitään <code>mn</code> -elementin ("<strong>m</strong>ath-<strong>n</strong>umber") sisään:</p> 
+        <p>Selaimessa: <math><mn>2</mn></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;
+        2
+    &#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code></pre></p>
+        <p>Selaimessa: <math><mn>0,453</mn></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;
+        0,453
+    &#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code></pre></p>
+            <p>Selaimessa: <math><mn>0,777...</mn></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;
+        0,777...
+    &#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code></pre></p>
+            <p>Selaimessa: <math><mn>−7</mn></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;
+        &#x2212;7
+    &#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code></pre></p>
+        <p class="note">Esimerkki tuhaterottimesta.</p>
+        <div class="note">
+            <p>Lukujen (ja ylipäänsä matematiikan) kirjoitusasussa noudatetaan tekstin ja teoksen kieltä. Eli desimaalierottimena käytetään kielestä tai teoksesta riippuen pilkkua tai pistettä. Samoin tuhaterottimena väliä ja pilkkua.</p>
+        </div>
+        <h3>Laskutoimitukset, operaattorit</h3>
+        <p>Laskutoimitusoperaattorit merkitään <code>mo</code> -elementin ("<strong>m</strong>ath-<strong>o</strong>perator") sisään.</p>
+        <p>Huomaa! Tämä elementti tarkoittaa myös monia muunlaisia merkintöjä kuin vain laskutoimituksia. Esimerkiksi yhtäsuuruusmerkki on myös operaattori.</p>
+        <p>Selaimessa: <math>
+    <mn>10</mn>
+    <mo>+</mo>
+    <mn>7</mn>
+    <mo>=</mo>
+    <mn>17</mn>
+</math></p>
+        <p>Koodina:<pre>
+            <code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;10&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;7&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;17&#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+</code>
+        </pre>
+        </p>
+        <p>Selaimessa: <math>
+    <mn>10</mn>
+    <mo>·</mo>
+    <mn>4</mn>
+    <mo>=</mo>
+    <mn>40</mn>
+</math></p>
+        <p>Koodina:<pre>
+            <code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;10&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;·&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;40&#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code>
+        </pre>
+        </p>
+        <p>Kaikenlaiset sulkeet ovat myös operaattoreita.</p>
+        <p>Selaimessa: <math>
+    <mn>20</mn>
+    <mo>−</mo>
+    <mo>(</mo>
+    <mn>10</mn>
+    <mo>+</mo>
+    <mn>7</mn>
+    <mo>)</mo>
+    <mo>=</mo>
+    <mn>3</mn>
+</math></p><p>Koodina:
+        <pre>
+            <code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;20&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;10&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;7&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code>
+        </pre></p>
+        <p>Pilkku on operaattori, kun esitetään pisteitä koordinaatistossa tai esimerkiksi joukossa:</p>
+        <p>Selaimessa: <math>
+    <mo>{</mo>
+    <mn>1</mn>
+    <mo>,</mo>
+    <mn>2</mn>
+    <mo>,</mo>
+    <mn>3</mn>
+    <mi>&#x2026;</mi>
+    <mo>}</mo>
+</math>
+</p><p>Koodina:
+        <pre>
+            <code>
+&#x3C;math&#x3E;
+    &#x3C;mo&#x3E;{&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;mi&#x3E;&#x26;#x2026;&#x3C;/mi&#x3E; &#x3C;!-- Kolme pistettä (ellipsis) --&#x3E;
+    &#x3C;mo&#x3E;}&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+</code>
+</pre></p><p>Huomaa! Tällaisissa tapauksissa muunnostyökalut voivat tehdä virheitä, koska pilkkua ei välttämättä tunnisteta oikein, kun sen pitäisi osa lukua.</p>
+        <h3>Muuttujat ja funktiot</h3>
+        <p>Muuttujia, funktioita ja muuta tekstiä, joka tarkoittaa esimerkiksi suuretta, merkitään <code>mi</code>-elementillä ("<strong>m</strong>ath-<strong>i</strong>dentifier").</p>
+        <p>Selaimessa: <math><mi>α</mi><mo>,</mo><mi>π</mi></mo></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;π&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: <math><mi>α</mi><mo>+</mo><mi>x</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Funktioita kirjoittaessa täytyy muistaa näkymätön merkki, joka tarkoittaa "funktion käyttöä".</p><div class="note">
+            <p>Näkymättömän merkin käyttäminen on tärkeää siksi, että esimerkiksi ruudunlukijakäyttäjä tietää, onko kyseessä funktio vai kertolasku.</p>
+            <p>Näkymätön funktiomerkki on <code>&amp#x2061;</code>. Se on operaattori.</p>
+        </div>
+        <p>Selaimessa: <math>
+            <mi>f</mi>
+            <mo>&#x2061;</mo>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+        </math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;f&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x26;#x2061;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Sama pätee myös valmiiksi määriteltyihin funktioihin, kuten trigonometrisiin funktioihin. Ne kirjoitetaan kokonaan yhden <code>mi</code>-elementin sisään.</p>
+        <p>Selaimessa: <math>
+            <mi>sin</mi>
+            <mo>&#x2061;</mo>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+        </math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;sin&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x26;#x2061;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+</body>
+</html>
