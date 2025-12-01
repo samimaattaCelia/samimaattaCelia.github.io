@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    
+        <a href="./index.html">Palaa sisällysluetteloon</a>
     <h1>MathML-koodin perusteet</h1>
     <p>Tällä sivulla selitetään perusteita MathML-koodin kirjoittamisesta.</p>
     <p>MathML-koodi perustuu käytännössä kahteen standardiin: <a href="https://www.w3.org/TR/MathML3/">MathML 3 (englanniksi)</a> ja <a href="https://www.w3.org/TR/mathml-core/">MathML Core (englanniksi)</a>. Koko MathML-kehitystä voi seurata <a href="https://www.w3.org/Math/">W3C:n MathML-sivuilla (englanniksi)</a>.</p>
@@ -22,39 +24,31 @@
         <p>Selaimessa: <math><mn>2</mn></math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
-    &#x3C;mn&#x3E;
-        2
-    &#x3C;/mn&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
 &#x3C;/math&#x3E;
             </code></pre></p>
         <p>Selaimessa: <math><mn>0,453</mn></math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
-    &#x3C;mn&#x3E;
-        0,453
-    &#x3C;/mn&#x3E;
+    &#x3C;mn&#x3E;0,453&#x3C;/mn&#x3E;
 &#x3C;/math&#x3E;
             </code></pre></p>
             <p>Selaimessa: <math><mn>0,777...</mn></math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
-    &#x3C;mn&#x3E;
-        0,777...
-    &#x3C;/mn&#x3E;
+    &#x3C;mn&#x3E;0,777#x2026;&#x3C;/mn&#x3E; &#x3C;!-- Kolme pistettä (ellipsis) --&#x3E;
 &#x3C;/math&#x3E;
             </code></pre></p>
             <p>Selaimessa: <math><mn>−7</mn></math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
-    &#x3C;mn&#x3E;
-        &#x2212;7
-    &#x3C;/mn&#x3E;
+    &#x3C;mn&#x3E;&#x2212;7&#x3C;/mn&#x3E;
 &#x3C;/math&#x3E;
             </code></pre></p>
         <p class="note">Esimerkki tuhaterottimesta.</p>
-        <div class="note">
+        <aside class="note">
             <p>Lukujen (ja ylipäänsä matematiikan) kirjoitusasussa noudatetaan tekstin ja teoksen kieltä. Eli desimaalierottimena käytetään kielestä tai teoksesta riippuen pilkkua tai pistettä. Samoin tuhaterottimena väliä ja pilkkua.</p>
-        </div>
+        </aside>
         <h3>Laskutoimitukset, operaattorit</h3>
         <p>Laskutoimitusoperaattorit merkitään <code>mo</code> -elementin ("<strong>m</strong>ath-<strong>o</strong>perator") sisään.</p>
         <p>Huomaa! Tämä elementti tarkoittaa myös monia muunlaisia merkintöjä kuin vain laskutoimituksia. Esimerkiksi yhtäsuuruusmerkki on myös operaattori.</p>
@@ -144,7 +138,7 @@
     &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
     &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
-    &#x3C;mi&#x3E;&#x26;#x2026;&#x3C;/mi&#x3E; &#x3C;!-- Kolme pistettä (ellipsis) --&#x3E;
+    &#x3C;mi&#x3E;&#x26;#x2026;&#x3C;/mi&#x3E; 
     &#x3C;mo&#x3E;}&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
 </code>
@@ -187,7 +181,7 @@
     &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Sama pätee myös valmiiksi määriteltyihin funktioihin, kuten trigonometrisiin funktioihin. Ne kirjoitetaan kokonaan yhden <code>mi</code>-elementin sisään.</p>
+        <p>Näkymätöntä funktion merkkiä käytetään myös valmiiksi määriteltyihin funktioihin, kuten trigonometrisiin funktioihin, ja, joissa on useampi kirjain. Ne kirjoitetaan kokonaan yhden <code>mi</code>-elementin sisään.</p>
         <p>Selaimessa: <math>
             <mi>sin</mi>
             <mo>&#x2061;</mo>
@@ -204,5 +198,376 @@
     &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
+        <h2>Juuret</h2>
+        <p>Neliöjuurimerkintä tehdään <code>mqsrt</code>-elementin avulla ja muut juurimerkinnät tehdään <code>mroot</code>-elementin avulla.</p>
+        <p>Selaimessa: 
+<math>
+    <msqrt>
+        <mn>2</mn>
+    </msqrt>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msqrt&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msqrt&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <msqrt>
+        <mi>h</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+    </msqrt>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msqrt&#x3E;
+        &#x3C;mi&#x3E;h&#x3C;/mi&#x3E;
+        &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msqrt&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Muiden juurimerkintöjen kirjoittamisessa on tärkeää, että elementit ovat oikeassa järjestyksessä.</p><p><code>mroot</code>-elementin tapauksessa juurrettava (eli juurimerkin alla oleva luku tai lauseke) tulee järjestyksessä ennen juuren indeksiä (eli juurimerkin päällä oleva luku tai lauseke).</p>
+        <p>Selaimessa: 
+<math>
+    <mroot>
+        <mn>9</mn>
+        <mn>3</mn>
+    </mroot>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mroot&#x3E;
+        &#x3C;mn&#x3E;9&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;/mroot&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <mroot>
+        <mn>9</mn>
+        <mi>n</mi>
+    </mroot>
+    <mo>=</mo>
+    <mn>3</mn>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mroot&#x3E;
+        &#x3C;mn&#x3E;9&#x3C;/mn&#x3E;
+        &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+    &#x3C;/mroot&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <h2>Murtoluvut</h2>
+        <p>Murtolukujen kirjoittamiseen käytetään <code>mfrac</code>-elementtiä. Tässäkin järjestyksellä on väliä.</p>
+        <p>Osoittaja (murtolukuviivan yläpuolella) kirjoitetaan ensin ja sen jälkeen nimittäjä (murtolukuviivan alapuolella).</p>
+        <p>Selaimessa: 
+<math>
+    <mfrac>
+        <mn>12</mn>
+        <mn>27</mn>
+    </mfrac>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mfrac&#x3E;
+        &#x3C;mn&#x3E;12&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;27&#x3C;/mn&#x3E;
+    &#x3C;/mfrac&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <h2>Lukujen ja lausekkeiden ryhmittely</h2>
+        <p>MathML-koodissa pitää erikseen käyttää ryhmittelyelementtiä <code>mrow</code>, kun useampi luku tai lauseke halutaan esimerkiksi juurimerkinnän alle.</p>
+        <p><code>mrow</code>-elementti on kuin näkymättön sulkumerkintä, joka kertoo MathML-koodin kautta selaimelle tai lukuohjelmalle, miten matematiikka esitetään.</p>
+        <p>Selaimessa: 
+<math>
+    <mfrac>
+        <mrow>
+            <mn>1</mn>
+            <mo>−</mo>
+            <mn>5</mn>
+        </mrow>
+        <mn>6</mn>
+    </mfrac>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mfrac&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;/mrow&#x3E;
+        &#x3C;mn&#x3E;6&#x3C;/mn&#x3E;
+    &#x3C;/mfrac&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <aside class="note">
+            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Esimerkiksi seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
+        
+        <p>Selaimessa: 
+<math>
+    <mfrac>
+        <mn>1</mn>
+        <mo>−</mo>
+        <mn>5</mn>
+        <mn>6</mn>
+    </mfrac>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mfrac&#x3E;
+        &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+        &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+        &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;6&#x3C;/mn&#x3E;
+    &#x3C;/mfrac&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p></aside>
+        <h2>Eksponentit, ylä- ja alaindeksit</h2>
+        <p>Eksponentti tai yläindeksi merkitään <code>msup</code>-elementillä ("<strong>m</strong>ath-<strong>sup</strong>erscript"). Vastaavasti alaindeksi merkitään <code>msub</code>-elementillä ("<strong>m</strong>ath-<strong>sub</strong>script")</p>
+        <p>Selaimessa: 
+<math>
+    <msup>
+        <mn>5</mn>
+        <mn>2</mn>
+    </msup>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msup&#x3E;
+        &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msup&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <msup>
+        <mn>5</mn>
+        <mrow>
+            <mn>2</mn>
+            <mo>+</mo>
+            <mo>5</mo>
+        </mrow>
+    </msup>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msup&#x3E;
+        &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+            &#x3C;mo&#x3E;5&#x3C;/mo&#x3E;
+        &#x3C;/mrow&#x3E;
+    &#x3C;/msup&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <msub>
+        <mi>h</mi>
+        <mn>2</mn>
+    </msub>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi&#x3E;h&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <msub>
+        <mi>h</mi>
+        <mrow>
+            <mn>2</mn>
+            <mo>,</mo>
+            <mn>3</mn>
+        </mrow>
+    </msub>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi&#x3E;h&#x3C;/mi&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+        &#x3C;/mrow&#x3E;
+    &#x3C;/msub&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>MathML-koodissa on erikseen elementti ylä- ja alaindeksille samaan aikaan <code>msubsup</code>.</p>
+        <p>Huomaa! Järjestyksellä on väliä. Ensimmäinen elementti on kanta (se, joka korotetaan potenssiin tai jolla on alaindeksi), seuraava elementti on eksponentti (tai yläindeksi) ja kolmas elementti on alaindeksi.</p>
+
+<p>Selaimessa: 
+<math>
+    <msubsup>
+        <mi>h</mi>
+        <mn>5</mn>
+        <mn>3</mn>
+    </msubsup>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msubsup&#x3E;
+        &#x3C;mi&#x3E;h&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;/msubsup&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+
+        <p>Selaimessa: 
+<math>
+    <msubsup>
+        <mrow>
+            <mo>(</mo>
+            <mi>h</mi>
+            <mo>/</mo>
+            <mn>2</mn>
+            <mo>)</mo>
+        </mrow>
+        <mn>5</mn>
+        <mn>3</mn>
+    </msubsup>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msubsup&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+            &#x3C;mi&#x3E;h&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;/&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+        &#x3C;/mrow&#x3E;
+        &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;/msubsup&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <mfrac>
+                <mn>5</mn>
+                <mn>3</mn>
+            </mfrac>
+            <mo>)</mo>
+        </mrow>
+        <mn>3</mn>
+    </msup>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msup&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+            &#x3C;mfrac&#x3E;
+                &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+                &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+            &#x3C;/mfrac&#x3E;
+            &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+        &#x3C;/mrow&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;/msup&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <h2>Ylä- ja alamerkinnät</h2>
+        <p><code>mover</code>- ja <code>munder</code>-elementit mahdollistavat toisten merkkien kirjoittamisen toisen elementin päälle tai alle.</p>
+<p>Selaimessa: 
+<math>
+    <mover>
+    <mi>x</mi>
+    <mo>‾</mo>
+    </mover>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mover&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x203E;&#x3C;/mo&#x3E;
+    &#x3C;/mover&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <munder>
+    <mi>lim</mi>
+    <mrow>
+        <mi>x</mi>
+        <mo>→</mo>
+        <mn>4</mn>
+    </mrow>
+    </munder>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;munder&#x3E;
+    &#x3C;mi&#x3E;lim&#x3C;/mi&#x3E;
+    &#x3C;mrow&#x3E;
+        &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+        &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
+        &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
+    &#x3C;/mrow&#x3E;
+    &#x3C;/munder&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Vastaavasti kuin ylä- ja alaindeksille, niin ylä- ja alamerkinnälle on myös yhdistetty <code>munderover</code>-elementti.</p>
+        <p>Seuraavassa lausekkeessa on myös käytetty <code>display="block"</code> -attribuuttia. Siitä kerrotaan enemmän seuraavassa luvussa. Se erottaa matemaattisen sisällön omalle rivilleen ja muuttaa tiettyjen merkkien näkymistä sivulla.</p>
+<p>Selaimessa: 
+<math display="block">
+    <munderover>
+        <mo>∑</mo>
+        <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn> 
+        </mrow>
+        <mi>∞</mi>
+    </munderover>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math display="block"&#x3E;
+    &#x3C;munderover&#x3E;
+        &#x3C;mo&#x3E;&#x3A3;&#x3C;/mo&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;1&#x3C;/mn&#x3E; 
+        &#x3C;/mrow&#x3E;
+        &#x3C;mi&#x3E;&#x221E;&#x3C;/mi&#x3E;
+    &#x3C;/munderover&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <h2>Suuret operaattorit ja matemaattisen sisällön rivitys</h2>
+        <p>Suuria operaattoreita ovat esimerkiksi sarjoissa käytettävä sigma (∑) tai tulossa käytettävä pii (∏).</p>
+        <p>Unicode-merkkeinä nämä ovat</p>
+        <ul>
+            <li>N-ary summation: ∑ (0x2211)</li>
+            <li>N-ary product: ∏ (0x220F)</li>
+        </ul>
+        <p>Edellisessä esimerkissä summaoperaattori ∑ esitettiin omalla rivillään. Se tehdään <code>display</code>-attribuutin avulla. Sillä on kaksi mahdollista arvoa:</p>
+        <ul>
+            <li><code>display="<strong>block</strong>"</code></li>
+            <li><code>display="<strong>inline</strong>"</code></li>
+        </ul>
+        <p>Kaikella MathML-koodilla kirjoitetulla matematiikalla on oletuksena <code>display="inline"</code>. Se mahdollistaa matematiikan kirjoittamisen tekstin sekaan luontevasti.</p>
+        <a href="./index.html">Palaa sisällysluetteloon</a>
 </body>
 </html>
