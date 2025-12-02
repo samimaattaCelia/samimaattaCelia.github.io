@@ -567,7 +567,89 @@
             <li><code>display="<strong>block</strong>"</code></li>
             <li><code>display="<strong>inline</strong>"</code></li>
         </ul>
-        <p>Kaikella MathML-koodilla kirjoitetulla matematiikalla on oletuksena <code>display="inline"</code>. Se mahdollistaa matematiikan kirjoittamisen tekstin sekaan luontevasti.</p>
+        <p>Kaikella MathML-koodilla kirjoitetulla matematiikalla on oletuksena <code>display="inline"</code>, sitä ei tarvitse kirjoittaa erikseen koodiin. Se mahdollistaa matematiikan kirjoittamisen tekstin sekaan luontevasti.</p>
+        <p><code>display</code>-attribuutti vaikuttaa erityisesti suurien operaattoreihin ja, miltä ne näyttävät. Aiempi esimerkki uudelleen:</p>
+        <p>Selaimessa: 
+<math display="block">
+    <munderover>
+        <mo>∑</mo>
+        <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn> 
+        </mrow>
+        <mi>∞</mi>
+    </munderover>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math display="block"&#x3E;
+    &#x3C;munderover&#x3E;
+        &#x3C;mo&#x3E;&#x3A3;&#x3C;/mo&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;1&#x3C;/mn&#x3E; 
+        &#x3C;/mrow&#x3E;
+        &#x3C;mi&#x3E;&#x221E;&#x3C;/mi&#x3E;
+    &#x3C;/munderover&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Uudelleen, mutta ilman <code>display="block"</code>-attribuuttia:</p>
+        <p>Selaimessa: 
+        <math>
+    <munderover>
+        <mo>∑</mo>
+        <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn> 
+        </mrow>
+        <mi>∞</mi>
+    </munderover>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;munderover&#x3E;
+        &#x3C;mo&#x3E;&#x3A3;&#x3C;/mo&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;1&#x3C;/mn&#x3E; 
+        &#x3C;/mrow&#x3E;
+        &#x3C;mi&#x3E;&#x221E;&#x3C;/mi&#x3E;
+    &#x3C;/munderover&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Kokoero johtuu yleensä siitä, että pienempänä suuri operaattori ei vie niin paljon tilaa rivillä ja se sopii paremmin rivin muuhun tekstiin.</p>
+        <div class="note">
+            <p>Huomaa! On myös mahdollista, että rivillä oleva suuri operaattori halutaankin kirjoittaa block-tyylisenä. Sen voi tehdä käyttämällä <code>displaystyle="true"</code>-attribuuttia.</p>
+        </div>
+        <p>Tällä tavoin rivillä voi olla suurikin operaattori 
+<math displaystyle="true">
+    <munderover>
+        <mo>∑</mo>
+        <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn> 
+        </mrow>
+        <mi>∞</mi>
+    </munderover>
+</math>, mutta se silti rivitetään tekstin tasolle. Tässäkin voi jo huomata, miten riviväli suurenee merkinnän vuoksi.</p>
+        <p>Koodina: <pre><code>
+&#x3C;p&#x3E;T&#xE4;ll&#xE4; tavoin rivill&#xE4; voi olla suurikin operaattori 
+&#x3C;math displaystyle=&#x22;true&#x22;&#x3E;
+    &#x3C;munderover&#x3E;
+        &#x3C;mo&#x3E;&#x2211;&#x3C;/mo&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;1&#x3C;/mn&#x3E; 
+        &#x3C;/mrow&#x3E;
+        &#x3C;mi&#x3E;&#x221E;&#x3C;/mi&#x3E;
+    &#x3C;/munderover&#x3E;
+&#x3C;/math&#x3E;, mutta se silti rivitet&#xE4;&#xE4;n tekstin tasolle. T&#xE4;ss&#xE4;kin voi jo huomata, miten riviv&#xE4;li suurenee merkinn&#xE4;n vuoksi.&#x3C;/p&#x3E;
+        </code></pre></p>
         <a href="./index.html">Palaa sisällysluetteloon</a>
 </body>
 </html>
