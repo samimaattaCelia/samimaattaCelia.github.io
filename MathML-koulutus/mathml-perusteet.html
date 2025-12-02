@@ -284,7 +284,7 @@
 &#x3C;/math&#x3E;
         </code></pre></p>
         <h2>Lukujen ja lausekkeiden ryhmittely</h2>
-        <p>MathML-koodissa pitää erikseen käyttää ryhmittelyelementtiä <code>mrow</code>, kun useampi luku tai lauseke halutaan esimerkiksi juurimerkinnän alle.</p>
+        <p>MathML-koodissa pitää erikseen käyttää ryhmittelyelementtiä <code>mrow</code>, kun useampi luku tai lauseke halutaan esimerkiksi murtoluvun osoittajaksi tai nimittäjäksi.</p>
         <p><code>mrow</code>-elementti on kuin näkymättön sulkumerkintä, joka kertoo MathML-koodin kautta selaimelle tai lukuohjelmalle, miten matematiikka esitetään.</p>
         <p>Selaimessa: 
 <math>
@@ -310,7 +310,7 @@
 &#x3C;/math&#x3E;
         </code></pre></p>
         <aside class="note">
-            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Esimerkiksi seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
+            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
         
         <p>Selaimessa: 
 <math>
@@ -333,6 +333,7 @@
         </code></pre></p></aside>
         <h2>Eksponentit, ylä- ja alaindeksit</h2>
         <p>Eksponentti tai yläindeksi merkitään <code>msup</code>-elementillä ("<strong>m</strong>ath-<strong>sup</strong>erscript"). Vastaavasti alaindeksi merkitään <code>msub</code>-elementillä ("<strong>m</strong>ath-<strong>sub</strong>script")</p>
+        
         <p>Selaimessa: 
 <math>
     <msup>
@@ -348,6 +349,7 @@
     &#x3C;/msup&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
+        <p><code>mrow</code>-elementtiä käytetään ryhmittelemään ylä- tai alaindeksin lausekkeita.</p>
         <p>Selaimessa: 
 <math>
     <msup>
@@ -355,7 +357,7 @@
         <mrow>
             <mn>2</mn>
             <mo>+</mo>
-            <mo>5</mo>
+            <mn>5</mn>
         </mrow>
     </msup>
 </math></p>
@@ -366,7 +368,7 @@
         &#x3C;mrow&#x3E;
             &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
             &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
-            &#x3C;mo&#x3E;5&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
         &#x3C;/mrow&#x3E;
     &#x3C;/msup&#x3E;
 &#x3C;/math&#x3E;
@@ -493,38 +495,38 @@
 <p>Selaimessa: 
 <math>
     <mover>
-    <mi>x</mi>
-    <mo>‾</mo>
+        <mi>x</mi>
+        <mo>‾</mo>
     </mover>
 </math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
     &#x3C;mover&#x3E;
-    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;&#x203E;&#x3C;/mo&#x3E;
+        &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+        &#x3C;mo&#x3E;&#x203E;&#x3C;/mo&#x3E;
     &#x3C;/mover&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
         <p>Selaimessa: 
 <math>
     <munder>
-    <mi>lim</mi>
-    <mrow>
-        <mi>x</mi>
-        <mo>→</mo>
-        <mn>4</mn>
-    </mrow>
+        <mi>lim</mi>
+        <mrow>
+            <mi>x</mi>
+            <mo>→</mo>
+            <mn>4</mn>
+        </mrow>
     </munder>
 </math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
     &#x3C;munder&#x3E;
     &#x3C;mi&#x3E;lim&#x3C;/mi&#x3E;
-    &#x3C;mrow&#x3E;
-        &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-        &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
-        &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
-    &#x3C;/mrow&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
+        &#x3C;/mrow&#x3E;
     &#x3C;/munder&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
@@ -620,7 +622,7 @@
     &#x3C;/munderover&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Kokoero johtuu yleensä siitä, että pienempänä suuri operaattori ei vie niin paljon tilaa rivillä ja se sopii paremmin rivin muuhun tekstiin.</p>
+        <p>Pienempänä kirjoitettuna lauseke sopii paremmin riville muun tekstin mukaan.</p>
         <div class="note">
             <p>Huomaa! On myös mahdollista, että rivillä oleva suuri operaattori halutaankin kirjoittaa block-tyylisenä. Sen voi tehdä käyttämällä <code>displaystyle="true"</code>-attribuuttia.</p>
         </div>
@@ -648,7 +650,168 @@
         &#x3C;/mrow&#x3E;
         &#x3C;mi&#x3E;&#x221E;&#x3C;/mi&#x3E;
     &#x3C;/munderover&#x3E;
-&#x3C;/math&#x3E;, mutta se silti rivitet&#xE4;&#xE4;n tekstin tasolle. T&#xE4;ss&#xE4;kin voi jo huomata, miten riviv&#xE4;li suurenee merkinn&#xE4;n vuoksi.&#x3C;/p&#x3E;
+&#x3C;/math&#x3E;, mutta se silti rivitet&#xE4;&#xE4;n tekstin tasolle. 
+T&#xE4;ss&#xE4;kin voi jo huomata, miten riviv&#xE4;li suurenee merkinn&#xE4;n 
+vuoksi.&#x3C;/p&#x3E;
+        </code></pre></p>
+        <h2>Monirivinen matematiikka</h2>
+        <p>Monirivinen matematiikka esitetään yleensä <code>mtable</code>-elementin avulla. Monirivistä matematiikkaa ovat esimerkiksi yhtälöparit, yhtälöryhmät, matriisit, determinantit ja yhtälönratkaisu.</p>
+        
+        <p>Yhtälönratkaisussa taulukkorakenne auttaa järjestämään lausekkeet oikeisiin kohtiin.</p>
+        <p>Selaimessa:
+<math display="block">
+    <mtable>
+    <mtr>
+        <mtd>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>y</mi>
+        </mtd>
+        <mtd>
+            <mo>=</mo>
+        </mtd>
+        <mtd>
+            <mn>7</mn>
+        </mtd>
+    </mtr>
+    <mtr>
+        <mtd>
+            <mi>x</mi>
+        </mtd>
+        <mtd>
+            <mo>=</mo>  
+        </mtd>
+        <mtd>
+            <mn>7</mn>
+            <mo>−</mo>
+            <mi>y</mi>
+        </mtd>
+    </mtr>
+    </mtable>
+</math></p><p>Koodina:
+    <pre><code>
+&#x3C;math display=&#x22;block&#x22;&#x3E;
+    &#x3C;mtable&#x3E;
+    &#x3C;mtr&#x3E;
+        &#x3C;mtd&#x3E;
+            &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+            &#x3C;mi&#x3E;y&#x3C;/mi&#x3E;
+        &#x3C;/mtd&#x3E;
+        &#x3C;mtd&#x3E;
+            &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+        &#x3C;/mtd&#x3E;
+        &#x3C;mtd&#x3E;
+            &#x3C;mn&#x3E;7&#x3C;/mn&#x3E;
+        &#x3C;/mtd&#x3E;
+    &#x3C;/mtr&#x3E;
+    &#x3C;mtr&#x3E;
+        &#x3C;mtd&#x3E;
+            &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+        &#x3C;/mtd&#x3E;
+        &#x3C;mtd&#x3E;
+            &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;  
+        &#x3C;/mtd&#x3E;
+        &#x3C;mtd&#x3E;
+            &#x3C;mn&#x3E;7&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+            &#x3C;mi&#x3E;y&#x3C;/mi&#x3E;
+        &#x3C;/mtd&#x3E;
+    &#x3C;/mtr&#x3E;
+    &#x3C;/mtable&#x3E;
+&#x3C;/math&#x3E;
+    </code></pre>
+</p>
+<p>Välillä matemaattisen tekstin seassa on tarpeen käyttää normaalia tekstiä, joka ei ole "matematiikkaa". Siihen käytetään <code>mtext</code>-elementtiä.</p>
+<div class="note">
+    <p>Huomaa! Jos <code>mtext</code>-elementin sisältö alkaa tai loppuu välilyönnillä, niin siinä pitää käyttää sitovaa välilyöntiä, koska normaali välilyönti ei näy lukijalle. Tekstin seassa olevat välilyönnit toimivat.</p>
+    <p>Sitova välilyönti on <code>&ampnbsp;</code></p>
+</div>
+<div class="note">
+            <p>Korjaa alla oleva.</p>
+        </div>
+        <p>Selaimessa: 
+<math>
+    <mi>f</mi>
+    <mo>⁡</mo>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+    <mo>{</mo>
+        <mtable>
+        <mtr>
+            <mtd>
+                <mo>−</mo>
+                <mn>1</mn>
+                <mtext>,&nbsp;jos&nbsp;</mtext>
+                <mi>x</mi>
+                <mo>&lt;</mo>
+                <mn>0</mn>
+            </mtd>
+        </mtr>
+        <mtr>
+            <mtd>
+                <mn>0</mn>
+                <mtext>,&nbsp;jos&nbsp;</mtext>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+            </mtd>
+        </mtr>
+        <mtr>
+            <mtd>
+                <mn>1</mn>
+                <mtext>,&nbsp;jos&nbsp;</mtext>
+                <mi>x</mi>
+                <mo>&gt;</mo>
+                <mn>0</mn>
+            </mtd>
+        </mtr>
+    </mtable>
+</math>
+        </p>
+        <p>Koodina:
+            <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;f&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2061;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;{&#x3C;/mo&#x3E;
+        &#x3C;mtable&#x3E;
+        &#x3C;mtr&#x3E;
+            &#x3C;mtd&#x3E;
+                &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+                &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+                &#x3C;mtext&#x3E;&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
+                &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+                &#x3C;mo&#x3E;&#x26;lt;&#x3C;/mo&#x3E;
+                &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+            &#x3C;/mtd&#x3E;
+        &#x3C;/mtr&#x3E;
+        &#x3C;mtr&#x3E;
+            &#x3C;mtd&#x3E;
+                &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+                &#x3C;mtext&#x3E;&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
+                &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+                &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+                &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+            &#x3C;/mtd&#x3E;
+        &#x3C;/mtr&#x3E;
+        &#x3C;mtr&#x3E;
+            &#x3C;mtd&#x3E;
+                &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+                &#x3C;mtext&#x3E;&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
+                &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+                &#x3C;mo&#x3E;&#x26;gt;&#x3C;/mo&#x3E;
+                &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+            &#x3C;/mtd&#x3E;
+        &#x3C;/mtr&#x3E;
+    &#x3C;/mtable&#x3E;
+&#x3C;/math&#x3E;
         </code></pre></p>
         <a href="./index.html">Palaa sisällysluetteloon</a>
 </body>

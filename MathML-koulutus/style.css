@@ -36,3 +36,14 @@ pre {
   border: 1px dashed black;
   background-color: var(--grey-100);
 }
+
+.write-as-is {
+  border: 1px dashed black;
+  padding: 1em;
+}
+
+details {
+  border: 3px solid var(--primary-color);
+  width: fit-content;
+  padding: 0.5em;
+}
