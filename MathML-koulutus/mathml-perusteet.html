@@ -48,9 +48,31 @@
     &#x3C;mn&#x3E;&#x2212;7&#x3C;/mn&#x3E;
 &#x3C;/math&#x3E;
             </code></pre></p>
-        <p class="note">Esimerkki tuhaterottimesta.</p>
+        <p>Selaimessa: <math><mn>2</mn></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code></pre></p>
+            <p>Tuhaterottimena käytetään sitovaa välilyöntiä. Tämä estää luvun hajoamisen useille riveille, jos rivin pituus on lyhyt.</p>
+            <aside class="note">
+    <p>Sitova välilyönti on <code>&ampnbsp;</code></p>
+</aside>
+        <p>Selaimessa: 
+<math>
+    <mn>5&nbsp;655&nbsp;715</mn>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;5&#x26;nbsp;655&#x26;nbsp;715&#x3C;/mn&#x3E;
+&#x3C;/math&#x3E;
+            </code></pre></p>
         <aside class="note">
-            <p>Lukujen (ja ylipäänsä matematiikan) kirjoitusasussa noudatetaan tekstin ja teoksen kieltä. Eli desimaalierottimena käytetään kielestä tai teoksesta riippuen pilkkua tai pistettä. Samoin tuhaterottimena väliä ja pilkkua.</p>
+            <p>Matematiikan kirjoittamisessa noudatetaan tekstin ja teoksen kieltä. Eli siitä riippuen
+                <ul>
+                    <li>desimaalierottimena käytetään pilkkua (suomeksi) tai pistettä (englanniksi)</li>
+                    <li>tuhaterottimena käytetään tyhjää väliä (suomeksi) tai pilkkua (englanniksi).</li>
+                </ul>
         </aside>
         <h3>Laskutoimitukset, operaattorit</h3>
         <p>Laskutoimitusoperaattorit merkitään <code>mo</code> -elementin ("<strong>m</strong>ath-<strong>o</strong>perator") sisään.</p>
@@ -819,52 +841,6 @@ vuoksi.&#x3C;/p&#x3E;
     </mrow>
 </math>
         </p>
-        <p>Koodina:
-            <pre><code>
-&#x3C;math&#x3E;
-    &#x3C;mi&#x3E;f&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;&#x26;#x2061;&#x3C;/mo&#x3E;
-    &#x3C;mrow&#x3E;
-        &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
-        &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-        &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
-    &#x3C;/mrow&#x3E;
-    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
-    &#x3C;mrow&#x3E;
-        &#x3C;mo&#x3E;{&#x3C;/mo&#x3E;
-        &#x3C;mtable&#x3E;
-            &#x3C;mtr&#x3E;
-                &#x3C;mtd&#x3E;
-                    &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
-                    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
-                    &#x3C;mtext&#x3E;,&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
-                    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-                    &#x3C;mo&#x3E;&#x26;lt;&#x3C;/mo&#x3E;
-                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
-                &#x3C;/mtd&#x3E;
-            &#x3C;/mtr&#x3E;
-            &#x3C;mtr&#x3E;
-                &#x3C;mtd&#x3E;
-                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
-                    &#x3C;mtext&#x3E;,&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
-                    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-                    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
-                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
-                &#x3C;/mtd&#x3E;
-            &#x3C;/mtr&#x3E;
-            &#x3C;mtr&#x3E;
-                &#x3C;mtd&#x3E;
-                    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
-                    &#x3C;mtext&#x3E;,&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
-                    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-                    &#x3C;mo&#x3E;&#x26;gt;&#x3C;/mo&#x3E;
-                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
-                &#x3C;/mtd&#x3E;
-            &#x3C;/mtr&#x3E;
-        &#x3C;/mtable&#x3E;
-    &#x3C;/mrow&#x3E;
-&#x3C;/math&#x3E;
-        </code></pre></p>
         <p>Selaimessa:
             <math>
         <mrow>
@@ -1001,6 +977,53 @@ vuoksi.&#x3C;/p&#x3E;
     &#x3C;/mrow&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
+        <p>Koodina:
+            <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;f&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x26;#x2061;&#x3C;/mo&#x3E;
+    &#x3C;mrow&#x3E;
+        &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+        &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+        &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;/mrow&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mrow&#x3E;
+        &#x3C;mo&#x3E;{&#x3C;/mo&#x3E;
+        &#x3C;mtable&#x3E;
+            &#x3C;mtr&#x3E;
+                &#x3C;mtd&#x3E;
+                    &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+                    &#x3C;mtext&#x3E;,&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
+                    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+                    &#x3C;mo&#x3E;&#x26;lt;&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+                &#x3C;/mtd&#x3E;
+            &#x3C;/mtr&#x3E;
+            &#x3C;mtr&#x3E;
+                &#x3C;mtd&#x3E;
+                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+                    &#x3C;mtext&#x3E;,&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
+                    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+                    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+                &#x3C;/mtd&#x3E;
+            &#x3C;/mtr&#x3E;
+            &#x3C;mtr&#x3E;
+                &#x3C;mtd&#x3E;
+                    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+                    &#x3C;mtext&#x3E;,&#x26;nbsp;jos&#x26;nbsp;&#x3C;/mtext&#x3E;
+                    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+                    &#x3C;mo&#x3E;&#x26;gt;&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;0&#x3C;/mn&#x3E;
+                &#x3C;/mtd&#x3E;
+            &#x3C;/mtr&#x3E;
+        &#x3C;/mtable&#x3E;
+    &#x3C;/mrow&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        
         <h2>Yksiköt</h2>
         <p>Yksiköiden merkitsemiseen on oma tapansa, jotta ne näkyvät oikein. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
