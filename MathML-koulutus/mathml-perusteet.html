@@ -319,8 +319,8 @@
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
     &#x3C;mfrac&#x3E;
-        &#x3C;mtext&#x3E;12&#x3C;/mtext&#x3E;
-        &#x3C;mtext&#x3E;27&#x3C;/mtext&#x3E;
+        &#x3C;mtext&#x3E;osoittaja&#x3C;/mtext&#x3E;
+        &#x3C;mtext&#x3E;nimittäjä&#x3C;/mtext&#x3E;
     &#x3C;/mfrac&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
@@ -588,6 +588,60 @@
             &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
             &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
         &#x3C;/mrow&#x3E;
+    &#x3C;/munder&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Ala- ja ylämerkintää voi kirjoittaa myös sisäkkäin.</p>
+        <p>Selaimessa: 
+<math>
+    <munder>
+        <mrow>
+            <munder>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>,</mo>
+                    <mn>7</mn>
+                    <mo>,</mo>
+                    <mn>12</mn>
+                    <mo>,</mo>
+                    <mn>17</mn>
+                    <mo>,</mo>
+                    <mo>…<!-- … --></mo>
+                    <mo>,</mo>
+                    <mn>n</mn>
+                    <mo>+</mo>
+                    <mn>5</mn>
+                </mrow>
+                <mo>⏟</mo>
+            </munder>
+        </mrow>
+        <mtext>N kpl</mtext>
+    </munder>
+</math></p>
+<p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;munder&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;munder&#x3E;
+                &#x3C;mrow&#x3E;
+                    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+                    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;7&#x3C;/mn&#x3E;
+                    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;12&#x3C;/mn&#x3E;
+                    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;17&#x3C;/mn&#x3E;
+                    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+                    &#x3C;mo&#x3E;&#x2026;&#x3C;!-- &#x2026; --&#x3E;&#x3C;/mo&#x3E;
+                    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;n&#x3C;/mn&#x3E;
+                    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+                    &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+                &#x3C;/mrow&#x3E;
+                &#x3C;mo&#x3E;&#x23DF;&#x3C;/mo&#x3E;
+            &#x3C;/munder&#x3E;
+        &#x3C;/mrow&#x3E;
+        &#x3C;mtext&#x3E;N kpl&#x3C;/mtext&#x3E;
     &#x3C;/munder&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
