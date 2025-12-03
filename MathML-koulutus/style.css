@@ -20,11 +20,27 @@ a[href]:is(:focus, :hover) {
   outline: 3px solid black;
 }
 
-.note {
+aside.note {
   border: solid 1px var(--primary-color);
   border-left: solid 10px var(--primary-color);
-  padding: 0 1rem;
+  padding: 1.25em 1em 0 1em ;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Huomio";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+  }
+  
+
 }
+
+
 
 code {
     padding-left: 0.25em;
