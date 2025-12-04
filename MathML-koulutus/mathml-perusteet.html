@@ -168,7 +168,7 @@
 &#x3C;/math&#x3E;
 </code>
 </pre></p><aside class="note"><p>Tällaisissa tapauksissa muunnostyökalut voivat tehdä virheitä: Pilkkua ei välttämättä tunnisteta osaksi lukua.</p></aside>
-        <h3>Muuttujat ja funktiot</h3>
+        <h3>Muuttujat, funktiot ja näkymättömät merkit</h3>
         <p>Muuttujia, funktioita ja muuta tekstiä, joka tarkoittaa esimerkiksi suuretta, merkitään <code>mi</code>-elementillä ("<strong>m</strong>ath-<strong>i</strong>dentifier").</p>
         <p>Selaimessa: <math><mi>α</mi><mo>,</mo><mi>π</mi></mo></math></p>
         <p>Koodina: <pre><code>
@@ -188,7 +188,7 @@
         </code></pre></p>
         <p>Funktioita kirjoittaessa täytyy muistaa näkymätön merkki, joka tarkoittaa "funktion käyttöä".</p><aside class="note">
             <p>Näkymättömän merkin käyttäminen on tärkeää siksi, että esimerkiksi ruudunlukijakäyttäjä tietää, onko kyseessä funktio vai kertolasku.</p>
-            <p>Näkymätön funktiomerkki on <code>&amp#x2061;</code>. Se on operaattori.</p>
+            <p>Näkymätön funktiomerkki on <code>&amp#x2061;</code> ja näkymätön kertomerkki on <code>&amp#8290;</code>. Ne ovat operaattororeita, joihin käytetään <code>mo</code>-elementtiä.</p>
         </aside>
         <p>Selaimessa: <math>
             <mi>f</mi>
@@ -223,6 +223,26 @@
     &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
+        <p>Selaimessa: <math>
+            <mi>ln</mi>
+            <mo>&#x2061;</mo>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+        </math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;ln&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x26;#x2061;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <aside class="note">
+            <p>Erityisesti epäselvissä tapauksissa on tärkeää, että näkymätön merkki merkitään.</p>
+            <p>Esimerkiksi lausekkeesta <math><mi>a</mi><mo>&#8290;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>h</mi><mo>)</mo></math> ei voi tietää, onko kyseessä kertolasku vai funktio ellei näkymätöntä merkkiä käytä. (Tässä se on kertolasku.)</p>
+        </aside>
         <h2>Juuret</h2>
         <p>Neliöjuurimerkintä tehdään <code>mqsrt</code>-elementin avulla ja muut juurimerkinnät tehdään <code>mroot</code>-elementin avulla.</p>
         <p>Selaimessa: 
@@ -351,7 +371,7 @@
 &#x3C;/math&#x3E;
         </code></pre></p>
         <aside class="note">
-            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
+            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Riippuu kuitenkin paljon selaimesta tai lukuohjelmasta, miltä lopputulos näyttää. Seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
         
         <p>Selaimessa: 
 <math>
@@ -844,56 +864,7 @@ vuoksi.&#x3C;/p&#x3E;
 &#x3C;/math&#x3E;
     </code></pre>
 </p>
-<p>Välillä matemaattisen tekstin seassa on tarpeen käyttää normaalia tekstiä, joka ei ole "matematiikkaa". Siihen käytetään <code>mtext</code>-elementtiä.</p>
-<aside class="note">
-    <p>Jos <code>mtext</code>-elementin sisältö alkaa tai loppuu välilyönnillä, niin siinä pitää käyttää sitovaa välilyöntiä, koska normaali välilyönti ei näy lukijalle. Tekstin seassa olevat välilyönnit toimivat.</p>
-    <p>Sitova välilyönti on <code>&ampnbsp;</code></p>
-</aside>
 
-        <p>Selaimessa: 
-<math>
-    <mi>f</mi>
-    <mo>&#x2061;</mo>
-    <mrow>
-        <mo>(</mo>
-        <mi>x</mi>
-        <mo>)</mo>
-    </mrow>
-    <mo>=</mo>
-    <mrow>
-        <mo>{</mo>
-        <mtable>
-            <mtr>
-                <mtd>
-                    <mo>−</mo>
-                    <mn>1</mn>
-                    <mtext>,&nbsp;jos&nbsp;</mtext>
-                    <mi>x</mi>
-                    <mo>&lt;</mo>
-                    <mn>0</mn>
-                </mtd>
-            </mtr>
-            <mtr>
-                <mtd>
-                    <mn>0</mn>
-                    <mtext>,&nbsp;jos&nbsp;</mtext>
-                    <mi>x</mi>
-                    <mo>=</mo>
-                    <mn>0</mn>
-                </mtd>
-            </mtr>
-            <mtr>
-                <mtd>
-                    <mn>1</mn>
-                    <mtext>,&nbsp;jos&nbsp;</mtext>
-                    <mi>x</mi>
-                    <mo>&gt;</mo>
-                    <mn>0</mn>
-                </mtd>
-            </mtr>
-        </mtable>
-    </mrow>
-</math>
         </p>
         <p>Selaimessa:
             <math>
@@ -1031,6 +1002,57 @@ vuoksi.&#x3C;/p&#x3E;
     &#x3C;/mrow&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
+
+        <p>Sulkeet venyvät suurimman elementin mukaisiksi ellei sitä rajata <code>mrow</code>-elementin avulla.</p>
+<aside class="note">
+    <p>Jos <code>mtext</code>-elementin sisältö alkaa tai loppuu välilyönnillä, niin siinä pitää käyttää sitovaa välilyöntiä, koska normaali välilyönti ei näy lukijalle. Tekstin seassa olevat välilyönnit toimivat.</p>
+    <p>Sitova välilyönti on <code>&ampnbsp;</code></p>
+</aside>
+
+        <p>Selaimessa: 
+<math>
+    <mi>f</mi>
+    <mo>&#x2061;</mo>
+    <mrow>
+        <mo>(</mo>
+        <mi>x</mi>
+        <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+        <mo>{</mo>
+        <mtable>
+            <mtr>
+                <mtd>
+                    <mo>−</mo>
+                    <mn>1</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>&lt;</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mn>0</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mn>1</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+        </mtable>
+    </mrow>
+</math>
         <p>Koodina:
             <pre><code>
 &#x3C;math&#x3E;
@@ -1077,7 +1099,92 @@ vuoksi.&#x3C;/p&#x3E;
     &#x3C;/mrow&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        
+        <aside class="note">
+            <p>Esimerkki, jos <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> -merkinnässä ei ole käytetty <code>mrow</code>-elementtiä (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
+<math display="block">
+    <mi>f</mi>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+    <mrow>
+        <mo>{</mo>
+        <mtable>
+            <mtr>
+                <mtd>
+                    <mo>−</mo>
+                    <mn>1</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>&lt;</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mn>0</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mn>1</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+        </mtable>
+    </mrow>
+</math>
+            </p>
+            <p>Esimerkki, jos funktion määrittelyssä ei ole käytetty <code>mrow</code>-elementtiä (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
+<math display="block">
+    <mi>f</mi>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+        <mo>{</mo>
+        <mtable>
+            <mtr>
+                <mtd>
+                    <mo>−</mo>
+                    <mn>1</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>&lt;</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mn>0</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mn>1</mn>
+                    <mtext>,&nbsp;jos&nbsp;</mtext>
+                    <mi>x</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                </mtd>
+            </mtr>
+        </mtable>
+</math>
+            </p>
+        </aside>
         <h2>Yksiköt</h2>
         <p>Yksiköiden merkitsemiseen on oma tapansa, jotta ne näkyvät oikein. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
