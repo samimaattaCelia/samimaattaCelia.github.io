@@ -83,7 +83,46 @@
                     <li>tuhaterottimena käytetään tyhjää väliä (suomeksi) tai pilkkua (englanniksi).</li>
                 </ul>
         </aside>
-        <h3>Laskutoimitukset, operaattorit</h3>
+        <h3>Muuttujat, funktiot ja yksiköt</h3>
+         <p>Muuttujia, funktioita, yksiköitä ja muita vastaavia symboleita, jotka tarkoittavat esimerkiksi suuretta, merkitään <code>mi</code>-elementillä ("<strong>m</strong>ath-<strong>i</strong>dentifier").</p>
+         <p>Selaimessa: <math><mi>b</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+                 <p>Selaimessa: <math><mi>∞</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;∞&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Selaimessa: <math><mi>α</mi><mo>,</mo><mi>π</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;π&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Funktiotkin merkitään samalla <code>mi</code>-elementillä. Niitä ei kursivoida, koska ne koostuvat useammasta merkistä.</p>
+        <p>Selaimessa: <math><mi>cos</mi><mo>,</mo><mi>ln</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;&#x3E;cos&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;ln&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Yksiköiden ei ole tarkoitus olla kursiivilla, joten ne saa näyttämään normaalilta kirjoitukselta <code>mathvariant="normal"</code>-attribuutilla.</p>
+        <p>Esimerkiksi litran lyhenne selaimessa: <math><mi mathvariant="normal">l</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi mathvariant="normal"&#x3E;l&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        
+        <h3>Laskutoimitukset ja operaattorit</h3>
         <p>Laskutoimitusoperaattorit merkitään <code>mo</code> -elementin ("<strong>m</strong>ath-<strong>o</strong>perator") sisään.</p>
         <aside class="note"><p>Tämä elementti tarkoittaa myös monia muunlaisia merkintöjä kuin vain laskutoimituksia. Esimerkiksi yhtäsuuruusmerkki on myös operaattori.</p></aside>
         <p>Selaimessa: <math>
@@ -151,7 +190,15 @@
 &#x3C;/math&#x3E;
             </code>
         </pre></p>
-        <p>Pilkku on operaattori, kun esitetään pisteitä koordinaatistossa tai esimerkiksi joukossa:</p>
+                <p>Selaimessa: <math><mi>α</mi><mo>+</mo><mi>x</mi></math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <p>Pilkku on operaattori, kun esitetään pisteitä koordinaatistossa tai esimerkiksi joukossa.</p>
         <p>Selaimessa: <math>
     <mo>{</mo>
     <mn>1</mn>
@@ -177,27 +224,36 @@
 &#x3C;/math&#x3E;
 </code>
 </pre></p><aside class="note"><p>Tällaisissa tapauksissa muunnostyökalut voivat tehdä virheitä: Pilkkua ei välttämättä tunnisteta osaksi lukua.</p></aside>
-        <h3>Muuttujat, funktiot ja näkymättömät merkit</h3>
-        <p>Muuttujia, funktioita ja muuta tekstiä, joka tarkoittaa esimerkiksi suuretta, merkitään <code>mi</code>-elementillä ("<strong>m</strong>ath-<strong>i</strong>dentifier").</p>
-        <p>Selaimessa: <math><mi>α</mi><mo>,</mo><mi>π</mi></mo></math></p>
-        <p>Koodina: <pre><code>
+<p>Erityisoperaattorit, kuten integraali, nabla tai sarjan summamerkintä ovat operaattoreita.</p>
+        <p>Selaimessa: 
+<math>
+    <mo>∫</mo>
+    <mo>,</mo>
+    <mo>Σ</mo>
+    <mo>,</mo>
+    <mo>∇</mo>
+</math>
+</p><p>Koodina:
+        <pre>
+            <code>
 &#x3C;math&#x3E;
-    &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;{&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;π&#x3C;/mi&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;mi&#x3E;&#x26;#x2026;&#x3C;/mi&#x3E; 
+    &#x3C;mo&#x3E;}&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
-        </code></pre></p>
-        <p>Selaimessa: <math><mi>α</mi><mo>+</mo><mi>x</mi></math></p>
-        <p>Koodina: <pre><code>
-&#x3C;math&#x3E;
-    &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
-&#x3C;/math&#x3E;
-        </code></pre></p>
+</code>
+</pre></p>
+<aside class="note"><p><a href="https://en.wikipedia.org/wiki/Mathematical_Operators_(Unicode_block)">Wikipediassa on taulukko matemaattisista operaattoreista (englanniksi)</a>, jotka merkitään <code>mo</code>-elementin sisään.</p></aside>
+        <h3>Funktiot ja näkymättömät merkit</h3>
+        <p>Funktioita merkitään myös <code>mi</code>-elementeillä. Funktiot voivat olla yhden tai useamman merkin pituisia.</p>
         <p>Funktioita kirjoittaessa täytyy muistaa näkymätön merkki, joka tarkoittaa "funktion käyttöä".</p><aside class="note">
             <p>Näkymättömän merkin käyttäminen on tärkeää siksi, että esimerkiksi ruudunlukijakäyttäjä tietää, onko kyseessä funktio vai kertolasku.</p>
-            <p>Näkymätön funktiomerkki on <code>&amp#x2061;</code> ja näkymätön kertomerkki on <code>&amp#8290;</code>. Ne ovat operaattororeita, joihin käytetään <code>mo</code>-elementtiä.</p>
+            <p>Näkymätön funktiomerkki on <code>&amp#x2061;</code>. Se on operaattori, johon käytetään <code>mo</code>-elementtiä.</p>
         </aside>
         <p>Selaimessa: <math>
             <mi>f</mi>
@@ -215,7 +271,7 @@
     &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Näkymätöntä funktion merkkiä käytetään myös valmiiksi määriteltyihin funktioihin, kuten trigonometrisiin funktioihin, ja, joissa on useampi kirjain. Ne kirjoitetaan kokonaan yhden <code>mi</code>-elementin sisään.</p>
+        <p><code>mi</code>-elementtiä käytetään valmiiksi määriteltyihin ja vakiintuneisiin funktioihin, kuten trigonometrisiin funktioihin ja logaritmifunktioihin.</p>
         <p>Selaimessa: <math>
             <mi>sin</mi>
             <mo>&#x2061;</mo>
@@ -249,8 +305,52 @@
 &#x3C;/math&#x3E;
         </code></pre></p>
         <aside class="note">
-            <p>Erityisesti epäselvissä tapauksissa on tärkeää, että näkymätön merkki merkitään.</p>
-            <p>Esimerkiksi lausekkeesta <math><mi>a</mi><mo>&#8290;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>h</mi><mo>)</mo></math> ei voi tietää, onko kyseessä kertolasku vai funktio ellei näkymätöntä merkkiä käytä. (Tässä se on kertolasku.)</p>
+            <p>Näkymätön kertomerkki on <code>&amp#8290;</code>.</p>
+        </aside>
+                <p>Selaimessa: 
+<math>
+    <mn>2</mn>
+    <mo>&#8290;</mo>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>−</mo>
+    <mi>y</mi>
+    <mo>)</mo>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x26;#8290;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;y&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
+        <aside class="note">
+            <p>Epäselvissä tapauksissa on tärkeää, että näkymätön merkki merkitään.</p>
+            <p>Esimerkiksi lausekkeesta 
+<math>
+    <mi>a</mi>
+    <mo>&#8290;</mo>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>h</mi>
+    <mo>)</mo>
+</math> ei voi tietää, onko kyseessä kertolasku vai funktio ellei näkymätöntä merkkiä käytä. (Tässä se on kertolasku.)</p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x26;#8290;&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;h&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
         </aside>
         <h3>Juuret</h3>
         <p>Neliöjuurimerkintä tehdään <code>mqsrt</code>-elementin avulla ja muut juurimerkinnät tehdään <code>mroot</code>-elementin avulla.</p>
@@ -379,8 +479,31 @@
     &#x3C;/mfrac&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
+        <p>Selaimessa: 
+<math>
+    <mroot>
+        <mn>256</mn>
+        <mrow>
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+        </mrow>
+    </mroot>
+</math></p>
+        <p>Koodina: <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mroot&#x3E;
+        &#x3C;mn&#x3E;256&#x3C;/mn&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+            &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+            &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+        &#x3C;/mrow&#x3E;
+    &#x3C;/mroot&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre></p>
         <aside class="note">
-            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Riippuu kuitenkin paljon selaimesta tai lukuohjelmasta, miltä lopputulos näyttää. Seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
+            <p>Jos <code>mrow</code>-elementti puuttuu, niin lopputulos voi näyttää sekavalta. Seuraavassa esimerkissä ei voi tietää, että kyseessä pitäisi olla murtoluku.</p>
         
         <p>Selaimessa: 
 <math>
@@ -400,9 +523,9 @@
         &#x3C;mn&#x3E;6&#x3C;/mn&#x3E;
     &#x3C;/mfrac&#x3E;
 &#x3C;/math&#x3E;
-        </code></pre></p></aside>
-        <h3>Eksponentit, ylä- ja alaindeksit</h3>
-        <p>Eksponentti tai yläindeksi merkitään <code>msup</code>-elementillä ("<strong>m</strong>ath-<strong>sup</strong>erscript"). Vastaavasti alaindeksi merkitään <code>msub</code>-elementillä ("<strong>m</strong>ath-<strong>sub</strong>script")</p>
+        </code></pre></p><p>Riippuu kuitenkin paljon selaimesta tai lukuohjelmasta, miltä lopputulos näyttää.</p></aside>
+        <h3>Ylä- ja alaindeksit</h3>
+        <p>Eksponentti tai yläindeksi merkitään <code>msup</code>-elementillä ("<strong>m</strong>ath-<strong>sup</strong>erscript").</p>
         
         <p>Selaimessa: 
 <math>
@@ -431,6 +554,7 @@
         </mrow>
     </msup>
 </math></p>
+<p>Vastaavasti alaindeksi merkitään <code>msub</code>-elementillä ("<strong>m</strong>ath-<strong>sub</strong>script").</p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
     &#x3C;msup&#x3E;
@@ -641,7 +765,7 @@
                     <mo>+</mo>
                     <mn>5</mn>
                 </mrow>
-                <mo>⏟</mo>
+                <mo>&#x23DF;</mo>
             </munder>
         </mrow>
         <mtext>N kpl</mtext>
@@ -661,13 +785,13 @@
                     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
                     &#x3C;mn&#x3E;17&#x3C;/mn&#x3E;
                     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-                    &#x3C;mo&#x3E;&#x2026;&#x3C;!-- &#x2026; --&#x3E;&#x3C;/mo&#x3E;
+                    &#x3C;mo&#x3E;&#x2026;&#x3C;/mo&#x3E;
                     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
                     &#x3C;mn&#x3E;n&#x3C;/mn&#x3E;
                     &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
                     &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
                 &#x3C;/mrow&#x3E;
-                &#x3C;mo&#x3E;&#x23DF;&#x3C;/mo&#x3E;
+                &#x3C;mo&#x3E;&amp#x23DF;&#x3C;/mo&#x3E;
             &#x3C;/munder&#x3E;
         &#x3C;/mrow&#x3E;
         &#x3C;mtext&#x3E;N kpl&#x3C;/mtext&#x3E;
@@ -716,7 +840,7 @@
             <li><code>display="<strong>inline</strong>"</code></li>
         </ul>
         <p>Kaikella MathML-koodilla kirjoitetulla matematiikalla on oletuksena <code>display="inline"</code>, sitä ei tarvitse kirjoittaa erikseen koodiin. Se mahdollistaa matematiikan kirjoittamisen tekstin sekaan luontevasti.</p>
-        <p><code>display</code>-attribuutti vaikuttaa erityisesti suurien operaattoreihin ja, miltä ne näyttävät. Aiempi esimerkki uudelleen:</p>
+        <p><code>display</code>-attribuutin arvo vaikuttaa erityisesti suurien operaattoreihin ulkonäköön.</p>
         <p>Selaimessa: 
 <math display="block">
     <munderover>
@@ -941,7 +1065,7 @@ vuoksi.&#x3C;/p&#x3E;
       </math>
         </p>
         <aside class="note">
-            <p>Esimerkiksi Firefox-selain edellyttää, että <code>mtable</code>-elementti ja sulkeet on <code>mrow</code>-elementin sisällä, jotta sulkeet venyvät koko matriisin laidoille. Tämä on bugi Firefox-selaimessa, eikä sitä pitäisi tarvita. Tässä esimerkissä <code>mrow</code>-elementit on jätetty paikalleen, koska ne eivät vaikuta negatiivisesti muissa selaimissa tai lukuohjelmissa.</p>
+            <p>Esimerkiksi Firefox-selain edellyttää, että <code>mtable</code>-elementti ja sulkeet on <code>mrow</code>-elementin sisällä, jotta sulkeet venyvät koko matriisin laidoille. Tämä on bugi Firefox-selaimessa, eikä sitä pitäisi tarvita. Tässä esimerkissä <code>mrow</code>-elementit on jätetty paikalleen, koska niistä ei ole haittaa muissa selaimissa tai lukuohjelmissa.</p>
         </aside>
           <p>Koodina:
             <pre><code>
@@ -1011,7 +1135,7 @@ vuoksi.&#x3C;/p&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
 
-        <p>Sulkeet venyvät suurimman elementin mukaisiksi ellei sitä rajata <code>mrow</code>-elementin avulla.</p>
+        <p>Sulkeet venyvät suurimman elementin mukaisiksi ellei sitä rajata <code>mrow</code>-elementin avulla. Tämä on tärkeä huomioida, kun samalla rivillä on erikokoisia lausekkeita.</p>
 <aside class="note">
     <p>Normaali välilyönti ei näy lukijalle, jos <code>mtext</code>-elementin sisältö alkaa tai loppuu välilyönnillä. Sen sijaan pitää käyttää sitovaa välilyöntiä. Tekstin seassa olevat normaalit välilyönnit toimivat.</p>
     <p>Sitova välilyönti on <code>&ampnbsp;</code></p>
@@ -1108,7 +1232,7 @@ vuoksi.&#x3C;/p&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
         <aside class="note">
-            <p>Jos <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> -merkinnässä ei ole käytetty <code>mrow</code>-elementtiä, niin sulkeet voivat olla tarpeettoman isot (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
+            <p>Jos <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> -merkinnässä ei ole käytetty <code>mrow</code>-elementtiä, niin sulkeet voivat olla tarpeettoman isot (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö lauseke oikein):
 <math display="block">
     <mi>f</mi>
     <mo>&#x2061;</mo>
@@ -1151,7 +1275,7 @@ vuoksi.&#x3C;/p&#x3E;
     </mrow>
 </math>
             </p>
-            <p>Jos funktion määrittelyssä ei ole käytetty <code>mrow</code>-elementtiä, niin sulkeet voivat olla liian pienet (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
+            <p>Jos funktion määrittelyssä ei ole käytetty <code>mrow</code>-elementtiä, niin sulkeet voivat olla liian pienet (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö lauseke oikein):
 <math display="block">
     <mi>f</mi>
     <mo>&#x2061;</mo>
@@ -1193,7 +1317,7 @@ vuoksi.&#x3C;/p&#x3E;
 </math>
             </p>
         </aside>
-        <h3>Yksiköt</h3>
+        <h3>Lukuarvojen ja yksiköiden merkitseminen</h3>
         <p>Yksiköiden merkitsemiseen on oma tapansa, jotta ne näkyvät oikein. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
 <math>
@@ -1246,7 +1370,7 @@ vuoksi.&#x3C;/p&#x3E;
             <p><code>:intent="unit"</code>-attribuutti perustuu MathML 4 -standardiin, jota ei ole vielä julkaistu, mutta siihen valmistaudutaan etupainotteisesti.</p>
         </aside>
         <h3>Matematiikka osana muuta tekstiä</h3>
-        <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattisia kaavoja ei kirjoiteta lähtökohtaisesti omaan itsenäisesti elementtiinsä, vaan esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
+        <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattisia kaavoja ei kirjoiteta lähtökohtaisesti omaan itsenäiseen elementtiinsä, vaan esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
         <p>Matemaattiset lausekkeet voivat myös päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki.</p>
         <p>Selaimessa:</p>
             <blockquote>
