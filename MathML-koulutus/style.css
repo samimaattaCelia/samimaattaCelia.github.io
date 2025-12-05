@@ -3,6 +3,7 @@
   font-family: "Atkinson Hyperlegible", sans-serif;
 
   --primary-color: #3fae29;
+  --secondary-color: #00615B;
   --grey-100: rgb(238, 238, 238);
 }
 
@@ -49,8 +50,21 @@ code {
 }
 
 pre {
-  border: 1px dashed black;
+  border: 1px dashed var(--secondary-color);
   background-color: var(--grey-100);
+  position: relative;
+  padding-top: 1em;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "HTML ja MathML";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-color);
+  }
 }
 
 .write-as-is {

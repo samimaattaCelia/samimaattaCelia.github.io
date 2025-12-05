@@ -18,7 +18,16 @@
     <h2>Unicode-merkit</h2>
     <p>Apuvälineiden toiminta perustuu siihen, että merkit on lisätty oikealla tavalla. Nettiympäristössä erilaiset merkit perustuvat Unicode-merkkeihin.</p>
     <p>Voit tarkistaa ja kopioida itsellesi talteen tärkeitä Unicode-merkkejä.</p>
-    <h2>Esimerkkejä</h2>
+    <h2>MathML-koodin käyttäminen</h2>
+    <h3><code>math</code>-elementti</h3>
+    <p>Kaikki matematiikka kirjoitetaan <code>math</code>-elementin sisälle.</p><p>Lähtökohtaisesti <code>math</code>-elementti ei tarvitse attribuutteja toimiakseen, mutta EPUB-kirjoissa (e-kirjoissa) kannattaa käyttää muotoa:
+    <pre><code>
+&#x3C;math xmlns=&#x22;http://www.w3.org/1998/Math/MathML&#x22;&#x3E;
+    ...
+&#x3C;/math&#x3E;
+    </code></pre>
+    </p>
+    <p>Näiden perusteiden esimerkeissä tätä attribuuttia ei aina kirjoiteta.</p>
     <h3>Luvut</h3>
     <p>Luvut ja niiden kaikki osat merkitään <code>mn</code> -elementin ("<strong>m</strong>ath-<strong>n</strong>umber") sisään:</p> 
         <p>Selaimessa: <math><mn>2</mn></math></p>
@@ -243,7 +252,7 @@
             <p>Erityisesti epäselvissä tapauksissa on tärkeää, että näkymätön merkki merkitään.</p>
             <p>Esimerkiksi lausekkeesta <math><mi>a</mi><mo>&#8290;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>h</mi><mo>)</mo></math> ei voi tietää, onko kyseessä kertolasku vai funktio ellei näkymätöntä merkkiä käytä. (Tässä se on kertolasku.)</p>
         </aside>
-        <h2>Juuret</h2>
+        <h3>Juuret</h3>
         <p>Neliöjuurimerkintä tehdään <code>mqsrt</code>-elementin avulla ja muut juurimerkinnät tehdään <code>mroot</code>-elementin avulla.</p>
         <p>Selaimessa: 
 <math>
@@ -310,7 +319,7 @@
     &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <h2>Murtoluvut ja teksti matematiikassa</h2>
+        <h3>Murtoluvut ja teksti matematiikassa</h3>
         <p>Murtolukujen kirjoittamiseen käytetään <code>mfrac</code>-elementtiä. Tässäkin järjestyksellä on väliä.</p>
         <p>Osoittaja (murtolukuviivan yläpuolella) kirjoitetaan ensin ja sen jälkeen nimittäjä (murtolukuviivan alapuolella).</p>
         <p>Selaimessa: 
@@ -344,7 +353,7 @@
     &#x3C;/mfrac&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <h2>Lukujen ja lausekkeiden ryhmittely</h2>
+        <h3>Lukujen ja lausekkeiden ryhmittely</h3>
         <p>MathML-koodissa pitää erikseen käyttää ryhmittelyelementtiä <code>mrow</code>, kun useampi luku tai lauseke halutaan esimerkiksi murtoluvun osoittajaksi tai nimittäjäksi.</p>
         <p><code>mrow</code>-elementti on kuin näkymättön sulkumerkintä, joka kertoo MathML-koodin kautta selaimelle tai lukuohjelmalle, miten matematiikka esitetään.</p>
         <p>Selaimessa: 
@@ -392,7 +401,7 @@
     &#x3C;/mfrac&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p></aside>
-        <h2>Eksponentit, ylä- ja alaindeksit</h2>
+        <h3>Eksponentit, ylä- ja alaindeksit</h3>
         <p>Eksponentti tai yläindeksi merkitään <code>msup</code>-elementillä ("<strong>m</strong>ath-<strong>sup</strong>erscript"). Vastaavasti alaindeksi merkitään <code>msub</code>-elementillä ("<strong>m</strong>ath-<strong>sub</strong>script")</p>
         
         <p>Selaimessa: 
@@ -571,7 +580,7 @@
     &#x3C;/msup&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <h2>Ylä- ja alamerkinnät</h2>
+        <h3>Ylä- ja alamerkinnät</h3>
         <p><code>mover</code>- ja <code>munder</code>-elementit mahdollistavat toisten merkkien kirjoittamisen toisen elementin päälle tai alle.</p>
 <p>Selaimessa: 
 <math>
@@ -667,7 +676,7 @@
         </code></pre></p>
         <p>Vastaavasti kuin ylä- ja alaindeksille, niin ylä- ja alamerkinnälle on myös yhdistetty <code>munderover</code>-elementti.</p>
         <aside class="note">
-        <p>Seuraavassa lausekkeessa on myös käytetty <code>display="block"</code> -attribuuttia. Siitä kerrotaan enemmän seuraavassa luvussa. Se erottaa matemaattisen sisällön omalle rivilleen ja muuttaa tiettyjen merkkien näkymistä sivulla.</p>
+        <p>Seuraavassa lausekkeessa on myös käytetty <code>display="block"</code> -attribuuttia. Siitä kerrotaan enemmän seuraavassa luvussa. Se erottaa matemaattisen sisällön omalle rivilleen. Se vaikuttaa myös "suurien operaattorien" ulkonäköön.</p>
         </aside>
 <p>Selaimessa: 
 <math display="block">
@@ -694,7 +703,7 @@
     &#x3C;/munderover&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <h2>Suuret operaattorit ja matemaattisen sisällön rivitys</h2>
+        <h3>Suuret operaattorit ja matemaattisen sisällön rivitys</h3>
         <p>Suuria operaattoreita ovat esimerkiksi sarjoissa käytettävä sigma (∑) tai tulossa käytettävä pii (∏).</p>
         <p>Unicode-merkkeinä nämä ovat</p>
         <ul>
@@ -733,7 +742,7 @@
     &#x3C;/munderover&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Uudelleen, mutta ilman <code>display="block"</code>-attribuuttia:</p>
+        <p>Ilman <code>display="block"</code>-attribuuttia lauseke sopii paremmin riville muun tekstin kanssa.</p>
         <p>Selaimessa: 
         <math>
     <munderover>
@@ -759,7 +768,6 @@
     &#x3C;/munderover&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Pienempänä kirjoitettuna lauseke sopii paremmin riville muun tekstin mukaan.</p>
         <aside class="note">
             <p>On myös mahdollista, että rivillä oleva suuri operaattori halutaankin kirjoittaa block-tyylisenä. Sen voi tehdä käyttämällä <code>displaystyle="true"</code>-attribuuttia.</p>
         </aside>
@@ -791,7 +799,7 @@
 T&#xE4;ss&#xE4;kin voi jo huomata, miten riviv&#xE4;li suurenee merkinn&#xE4;n 
 vuoksi.&#x3C;/p&#x3E;
         </code></pre></p>
-        <h2>Monirivinen matematiikka</h2>
+        <h3>Monirivinen matematiikka</h3>
         <p>Monirivinen matematiikka esitetään yleensä <code>mtable</code>-elementin avulla. Monirivistä matematiikkaa ovat esimerkiksi yhtälöparit, yhtälöryhmät, matriisit, determinantit ja yhtälönratkaisu.</p><p><code>mtable</code>-elementtiin sisälle merkitään taulukon rivit <code>mtr</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>r</strong>ow) ja rivien sisään taulukon solut <code>mtd</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>d</strong>ata cell).</p>
         <aside class="note">
             <p>Suurin osa MathML-koodista tuotetaan jonkinlaisella muunnosohjelmalla. Erityisesti monirivinen matematiikka olisi työlästä kirjoittaa käsin.</p>
@@ -1005,7 +1013,7 @@ vuoksi.&#x3C;/p&#x3E;
 
         <p>Sulkeet venyvät suurimman elementin mukaisiksi ellei sitä rajata <code>mrow</code>-elementin avulla.</p>
 <aside class="note">
-    <p>Jos <code>mtext</code>-elementin sisältö alkaa tai loppuu välilyönnillä, niin siinä pitää käyttää sitovaa välilyöntiä, koska normaali välilyönti ei näy lukijalle. Tekstin seassa olevat välilyönnit toimivat.</p>
+    <p>Normaali välilyönti ei näy lukijalle, jos <code>mtext</code>-elementin sisältö alkaa tai loppuu välilyönnillä. Sen sijaan pitää käyttää sitovaa välilyöntiä. Tekstin seassa olevat normaalit välilyönnit toimivat.</p>
     <p>Sitova välilyönti on <code>&ampnbsp;</code></p>
 </aside>
 
@@ -1100,7 +1108,7 @@ vuoksi.&#x3C;/p&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
         <aside class="note">
-            <p>Esimerkki, jos <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> -merkinnässä ei ole käytetty <code>mrow</code>-elementtiä (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
+            <p>Jos <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></math> -merkinnässä ei ole käytetty <code>mrow</code>-elementtiä, niin sulkeet voivat olla tarpeettoman isot (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
 <math display="block">
     <mi>f</mi>
     <mo>&#x2061;</mo>
@@ -1143,7 +1151,7 @@ vuoksi.&#x3C;/p&#x3E;
     </mrow>
 </math>
             </p>
-            <p>Esimerkki, jos funktion määrittelyssä ei ole käytetty <code>mrow</code>-elementtiä (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
+            <p>Jos funktion määrittelyssä ei ole käytetty <code>mrow</code>-elementtiä, niin sulkeet voivat olla liian pienet (riippuu silti selaimesta tai lukuohjelmasta, että näkyykö kaava oikein):
 <math display="block">
     <mi>f</mi>
     <mo>&#x2061;</mo>
@@ -1185,7 +1193,7 @@ vuoksi.&#x3C;/p&#x3E;
 </math>
             </p>
         </aside>
-        <h2>Yksiköt</h2>
+        <h3>Yksiköt</h3>
         <p>Yksiköiden merkitsemiseen on oma tapansa, jotta ne näkyvät oikein. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
 <math>
@@ -1231,7 +1239,13 @@ vuoksi.&#x3C;/p&#x3E;
     &#x3C;/mrow&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <h2>Matematiikka osana muuta tekstiä</h2>
+        <aside class="note">
+            <p><code>rspace="0.25em"</code>-attribuutin arvo on mielivaltainen ja se kannattaa sovittaa omiin tarpeisiin. Muista kuitenkin käyttää suhteellista pituusyksikköä, kuten em tai rem!</p>
+            <p>Näkymätöntä kertomerkkiä käytetään "liittämään" lukuarvo ja yksikkö toisiinsa.</p>
+            <p>Attribuuttia <code>mathvariant="normal"</code> käytetään siksi, että kirjain on kirjoitettu "normaalisti", eikä kursiivilla, jolloin se muistuttaisi muuttujaa.</p>
+            <p><code>:intent="unit"</code>-attribuutti perustuu MathML 4 -standardiin, jota ei ole vielä julkaistu, mutta siihen valmistaudutaan etupainotteisesti.</p>
+        </aside>
+        <h3>Matematiikka osana muuta tekstiä</h3>
         <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattisia kaavoja ei kirjoiteta lähtökohtaisesti omaan itsenäisesti elementtiinsä, vaan esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
         <p>Matemaattiset lausekkeet voivat myös päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki.</p>
         <p>Selaimessa:</p>
