@@ -105,7 +105,7 @@
     &#x3C;mi&#x3E;π&#x3C;/mi&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Funktiotkin merkitään samalla <code>mi</code>-elementillä. Niitä ei kursivoida, koska ne koostuvat useammasta merkistä.</p>
+        <p>Funktiotkin merkitään samalla <code>mi</code>-elementillä. Ne esitetään normaalina tekstinä automaattisesti, eikä kursiivilla, koska ne koostuvat useammasta kirjaimesta.</p>
         <p>Selaimessa: <math><mi>cos</mi><mo>,</mo><mi>ln</mi></math></p>
         <p>Koodina: <pre><code>
 &#x3C;math&#x3E;
@@ -198,7 +198,7 @@
     &#x3C;mi&#x3E;x&#x3C;/mi&#x3E;
 &#x3C;/math&#x3E;
         </code></pre></p>
-        <p>Pilkku on operaattori, kun esitetään pisteitä koordinaatistossa tai esimerkiksi joukossa.</p>
+        <p>Pilkku on operaattori, kun esitetään pisteitä koordinaatistossa, alkioita joukossa tai muuten listataan asioita MathML-koodissa.</p>
         <p>Selaimessa: <math>
     <mo>{</mo>
     <mn>1</mn>
@@ -223,8 +223,8 @@
     &#x3C;mo&#x3E;}&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
 </code>
-</pre></p><aside class="note"><p>Tällaisissa tapauksissa muunnostyökalut voivat tehdä virheitä: Pilkkua ei välttämättä tunnisteta osaksi lukua.</p></aside>
-<p>Erityisoperaattorit, kuten integraali, nabla tai sarjan summamerkintä ovat operaattoreita.</p>
+</pre></p><aside class="note"><p>Tällaisissa tapauksissa muunnostyökalut voivat tehdä virheitä: Suomeksi pilkkua käytetään desimaalierottimena, joten muunnostyökalut saattavat muuttaa sen virheellisesti operaattoriksi.</p></aside>
+<p>Erityisoperaattorit, kuten integraali, sarjan summamerkintä tai nabla ovat operaattoreita.</p>
         <p>Selaimessa: 
 <math>
     <mo>∫</mo>
@@ -237,18 +237,16 @@
         <pre>
             <code>
 &#x3C;math&#x3E;
-    &#x3C;mo&#x3E;{&#x3C;/mo&#x3E;
-    &#x3C;mn&#x3E;1&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x222B;&#x3C;/mo&#x3E;
     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x3A3;&#x3C;/mo&#x3E;
     &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
-    &#x3C;mi&#x3E;&#x26;#x2026;&#x3C;/mi&#x3E; 
-    &#x3C;mo&#x3E;}&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;&#x2207;&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
 </code>
 </pre></p>
-<aside class="note"><p><a href="https://en.wikipedia.org/wiki/Mathematical_Operators_(Unicode_block)">Wikipediassa on taulukko matemaattisista operaattoreista (englanniksi)</a>, jotka merkitään <code>mo</code>-elementin sisään.</p></aside>
+<aside class="note"><p><a href="https://en.wikipedia.org/wiki/Mathematical_Operators_(Unicode_block)">Wikipediassa on taulukko matemaattisista operaattoreista (englanniksi)</a>, jotka merkitään <code>mo</code>-elementin sisään.</p>
+<p>Huomaa, että esimerkiksi sulkeet eivät kuulu tähän taulukkoon, mutta ne ovat operaattoreita.</p></aside>
         <h3>Funktiot ja näkymättömät merkit</h3>
         <p>Funktioita merkitään myös <code>mi</code>-elementeillä. Funktiot voivat olla yhden tai useamman merkin pituisia.</p>
         <p>Funktioita kirjoittaessa täytyy muistaa näkymätön merkki, joka tarkoittaa "funktion käyttöä".</p><aside class="note">

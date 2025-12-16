@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juuret, murtoluvut, ylä- ja alaindeksit</title>
+    <title>Harjoitus 2: Funktiot ja näkymättömät merkit</title>
     
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
         <a href="./index.html">Palaa sisällysluetteloon</a>
-    <h1>Juuret, murtoluvut, ylä- ja alaindeksit</h1>
-
+    <h1>Funktiot ja näkymättömät merkit</h1>
+    <p>Tällä sivulla harjoitellaan peruslaskutoimitusten ja muiden perusmerkkien kirjoittamista MathML-koodilla.</p>
+    <p>Unicode-merkkejä, joita tarvitset sivulla:</p>
+    <ul>
+        <li><p>Näkymätön funktiomerkki: <code>&amp#x2061;</code></p></li>
+        <li>
+            <p>Näkymätön kertomerkki: <code>&amp#8290;</code></p>
+        </li>
+    </ul>
     <h2>Tehtävät</h2>
-    <h3>Tehtävä 1</h3>
     <p>Kirjoita alla olevat tekstit ja MathML-kaavat itse uudelleen.</p>
     <p>Jos tarvitset apua kirjoittamisessa tai haluat tarkistaa oman koodin, niin käytä selaimen "Tarkista" tai "Tarkastele"-tilaa esimerkiksi oikealla hiiren klikkauksella ja tarkista sivuston koodi sieltä.</p>
-    <ol>
+    <h3>Tehtävä 1</h3>
+<ol>
         <li>
 <math>
     <mi>g</mi>
@@ -43,53 +50,20 @@
 </math></li>
 <li></li>
     </ol>
-    <h3>Tehtävä</h3>
-<p>Tunnista ja korjaa virhe: <math>
-    <msup>
-            <mo>(</mo>
-            <mfrac>
-                <mi>h</mi>
-                <mn>5</mn>
-            </mfrac>
-            <mo>)</mo>
-        <mn>2</mn>
-    </msup>
-</math></p>
-<p>Oikea lauseke: <img src="./images/murtoluku-eksponentti.png" alt="Sulku auki murtoluku h per viisi sulku kiinni potenssiin 2."></p>
-    <h3>Tehtävä</h3>
-    <p>Selvitä <a href="https://www.w3.org/TR/mathml-core">MathML Core -sivuilta</a>, miten seuraava merkintä tehdään: <br>
-<math displaystyle="true">
-    <mrow>
-    <mo>(</mo>
-    <mfrac linethickness="0">
-        <mi>n</mi>
-        <mi>k</mi>
-    </mfrac>
-    <mo>)</mo>
-    </mrow>
-</math> <br><details>
-    <summary>Vihje</summary>
-    <p>Etsi hakusanalla "linethickness".</p><p>MathML-koodiin on lisätty ylimääräiset <code>mrow</code>-elementit, jotta se näyttää oikealta myös Firefox-selaimessa.</p>
-</details>
-</p>
-<h3>Tehtävä</h3>
-<p><math>
-    <msub>
-    <mi>log</mi>
-    <mn>10</mn>
-    </msub>
-    <mo>&#x2061;</mo>
-    <mrow>
-    <mo>(</mo>
-    <mfrac>
-        <mi>x</mi>
-        <mi>h</mi>
-    </mfrac>
-    <mo>)</mo>
-    </mrow>
-
-</math></p>
-
-<a href="./index.html">Palaa sisällysluetteloon</a>
+    <h3 id="label-1">Tehtävä 2</h3>
+    <p>Kirjoita alueen sisällä oleva teksti sellaisenaan uudelleen.</p>
+    <div role="region" aria-labelledby="label-1" class="write-as-is">
+        <p></p>
+    </div>
+    <h3>Tehtävä 3</h3>
+    <div class="write-as-is">
+        <p></p>
+    </div>
+    <h3>Tehtävä 4</h3>
+    <div class="write-as-is">
+        <p></p>
+    </div>
+    
+        <a href="./index.html">Palaa sisällysluetteloon</a>
 </body>
 </html>
