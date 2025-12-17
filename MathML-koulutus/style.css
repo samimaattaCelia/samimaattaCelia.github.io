@@ -41,8 +41,6 @@ aside.note {
 
 }
 
-
-
 code {
     padding-left: 0.25em;
     padding-right: 0.25em;
@@ -76,4 +74,5 @@ details {
   border: 3px solid var(--primary-color);
   width: fit-content;
   padding: 0.5em;
+  margin-block-start: 1em;
 }

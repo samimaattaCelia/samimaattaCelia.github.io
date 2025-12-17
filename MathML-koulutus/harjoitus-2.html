@@ -19,50 +19,171 @@
             <p>Näkymätön kertomerkki: <code>&amp#8290;</code></p>
         </li>
     </ul>
+    
     <h2>Tehtävät</h2>
     <p>Kirjoita alla olevat tekstit ja MathML-kaavat itse uudelleen.</p>
     <p>Jos tarvitset apua kirjoittamisessa tai haluat tarkistaa oman koodin, niin käytä selaimen "Tarkista" tai "Tarkastele"-tilaa esimerkiksi oikealla hiiren klikkauksella ja tarkista sivuston koodi sieltä.</p>
+    <aside class="note">
+        <p>Näkymättömät merkit eivät näy selaimen "Tarkista"-tilassa, joten ne on merkitty koodiin kommenttien avulla. HTML-koodissa kommentti kirjoitetaan erillisten merkkien väliin: <code>&lt;!-- [kommentti] --&gt;</code>. Kommentti ei näy nettisivulla.</p>
+    </aside>
+    <details>
+        <summary>Ruudunlukijan käyttäjälle</summary>
+        <p>Tehtävissä on merkitty alueita kiintopisteiksi. Tarkista ruudunlukijan asetuksista, että se ilmoittaa kiintopisteet. Näiden alueiden sisällä on tekstiä, jonka pitää tietää kuuluvan tiettyyn alueeseen.</p>
+    </details>
     <h3>Tehtävä 1</h3>
 <ol>
         <li>
 <math>
     <mi>g</mi>
-    <mo>&#x2061;</mo>
+    <mo>&#x2061;<!-- &#x2061; --></mo>
     <mo>(</mo>
     <mi>x</mi>
     <mo>)</mo>
 </math>
         </li>
         <li><math>
-    <mi>sin</mi>
-    <mo>&#x2061;</mo>
-    <mo>(</mo>
-    <mi>y</mi>
-    <mo>)</mo>
+        <mi>sin</mi>
+  <mo>&#x2061;<!-- &#x2061; --> </mo>
+  <mi>x</mi>
 </math></li>
         
         <li><math>
     <mi>log</mi>
-    <mo>&#x2061;</mo>
+    <mo>&#x2061;<!-- &#x2061; --></mo>
     <mo>(</mo>
     <mi>h</mi>
     <mo>)</mo>
 </math></li>
-<li></li>
+<li>
+    <math>
+        <mi>ln</mi>
+        <mo>&#x2061;<!-- &#x2061; --></mo>
+        <mo>(</mo>
+        <mi>h</mi>
+        <mo>+</mo>
+        <mi>x</mi>
+        <mo>)</mo>
+    </math>
+</li>
     </ol>
-    <h3 id="label-1">Tehtävä 2</h3>
-    <p>Kirjoita alueen sisällä oleva teksti sellaisenaan uudelleen.</p>
+    <h3>Tehtävä 2</h3>
+    <ol>
+        <li>
+            <math>
+                <mi> x </mi>
+                <mo> &#x2062;<!-- &#8290; --> </mo>
+                <mi> y </mi>
+            </math>
+        </li>
+        <li>
+<math>
+    <mn>2</mn>
+    <mo>&#8290;<!-- &#8290; --></mo>
+    <mo>(</mo>
+    <mn>4</mn>
+    <mo>+</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+</math>
+        </li>
+        <li>
+<math>
+    <mo>(</mo>
+    <mi>a</mi>
+    <mo>/</mo>
+    <mn>4</mn>
+    <mo>)</mo>
+    <mo>&#8290;<!-- &#8290; --></mo>
+    <mo>(</mo>
+    <mn>25</mn>
+    <mo>+</mo>
+    <mi>10</mi>
+    <mo>)</mo>
+</math>
+        </li>
+        <li>
+            <math>
+                <mi>x</mi>
+                <mo>&#8290;<!-- &#8290; --></mo>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mn>2</mn>
+                <mo>)</mo>
+            </math>
+        </li>
+    </ol>
+    <h3 id="label-1">Tehtävä 3</h3>
+    <p>Mikä virhe on tehty? Kirjoita lauseke oikein.</p>
     <div role="region" aria-labelledby="label-1" class="write-as-is">
-        <p></p>
+        <p>Määritellään funktio <math><mi>h</mi><mo>&#8290;<!-- &#8290; --></mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mn>2</mn><mo>&#8290;<!-- &#8290; --></mo><mi>x</mi><mo>+</mo><mi>y</mi></math>.</p>
     </div>
-    <h3>Tehtävä 3</h3>
-    <div class="write-as-is">
-        <p></p>
+    <details>
+        <summary>Vastaus</summary>
+        <p>Näkymättämön funktiomerkinnän <code>&amp#x2061;</code> sijasta on käytetty näkymätöntä kertomerkkiä <code>&amp#8290;</code>.</p>
+        <p>Tämän takia NVDA sanoo virheellisesti: "h kertaa auki sulku x pilkku y kiinni sulku", jonka vuoksi merkintä on tärkeä tehdä oikein.</p>
+    </details>
+    <h3 id="label-2">Tehtävä 4</h3>
+    <p>Mitä virheitä on tehty? Kirjoita lauseke oikein.</p>
+    <div role="region" aria-labelledby="label-2" class="write-as-is">
+        <p>Voidaan muodostaa kertolasku <mi> x </mi><mi> y </mi>.</p>
     </div>
-    <h3>Tehtävä 4</h3>
-    <div class="write-as-is">
-        <p></p>
-    </div>
+        <details>
+        <summary>Vastaus</summary>
+        <p>Matematiikkaa ei ole merkitty <code>math</code>-elementin sisään.</p><p>Muuttujien <math><mi>x</mi></math> ja <math><mi>y</mi></math> välissä ei ole käytetty näkymätöntä kertomerkkiä <code>&amp#8290;</code>.</p>
+    </details>
+    <h3>Tehtävä 5</h3>
+    <p>Jaottele (matemaattiset) merkit muuttujiin <code>mi</code> ja operaatioihin <code>mo</code>.</p>
+    <p>Jos jonkin merkin tunnistaminen on vaikeaa, niin voit käyttää <a href="https://babelstone.co.uk/Unicode/whatisit.html">What is this Unicode -sivustoa (englanniksi)</a>.</p>
+    <ol>
+        <li><math><mo>(</mo></math></li>
+        <li><math><mi>x</mi></math></li>
+        <li><math><mo>∏</mo></math></li>
+        <li><math><mo>∫</mo></math></li>
+        <li><math><mi>log</mi></math></li>
+        <li>
+            <math><mo>}</mo></math>
+        </li>
+        <li>
+            <math><mo>+</mo></math>
+        </li>
+        <li>
+            <math><mi>cl</mi></math>
+        </li>
+    </ol>
+    <details>
+        <summary>Vastaus</summary>
+        <ol>
+        <li><math><mo>(</mo></math> <code>mo</code>, sulku</li>
+        <li><math><mi>x</mi></math> <code>mi</code>, muuttuja x</li>
+        <li><math><mo>∏</mo></math> <code>mo</code>, tulo</li>
+        <li><math><mo>∫</mo></math> <code>mo</code>, integraali</li>
+        <li><math><mi>log</mi></math> <code>mi</code>, logaritmi</li>
+        <li>
+            <math><mo>}</mo></math> <code>mo</code>, aaltosulku
+        </li>
+         <li>
+            <math><mo>+</mo></math> <code>mo</code>, plus
+        </li>
+        <li>
+            <math><mi>cl</mi></math> <code>mi</code>, senttilitra
+        </li>
+    </ol>
+    <p>(Kontekstista riippuen jotkin merkeistä voivat olla operaatioita tai muuttujia.)</p>
+    </details>
+    <h3>Tehtävä 6</h3>
+    <p>MathML-koodissa on itse asiassa käytössä 4 näkymätöntä merkkiä. Selvitä, mitkä merkit ne ovat ja mihin niitä käytetään <a href="https://www.w3.org/TR/mathml4/">MathML 4 -standardin sivuilta (englanniksi)</a>.</p>
+    <p>MathML 4 on tuleva standardi, joka ei ole vielä käytössä.</p>
+    <details><summary>Vihje</summary><p>Etsi hakusanoilla "invisible operators" ja lue esimerkkejä.</p></details>
+    <details>
+        <summary>Vastaus</summary>
+        <ul>
+            <li>Näkymätön funktiomerkki: <code>&amp#x2061;</code>. Käytetään funktioiden merkitsemisen yhteydessä.</li>
+            <li>Näkymätön kertomerkki: <code>&amp#x2062;</code>. Käytetään kertomerkkinä, kun sitä ei merkitä näkyviin.</li>
+            <li>Näkymätön pilkku: <code>&amp#x2063;</code>. Käytetään, kun kaksi peräkkäistä lukua on tarkoitus lausua erikseen, eikä yhtenä lukuna.</li>
+            <li>Näkymätön plus: <code>&amp#x2064;</code>. Käytetään murtoluvun kokonaisosan ja murto-osan välissä.</li>
+        </ul>
+    </details>
     
         <a href="./index.html">Palaa sisällysluetteloon</a>
 </body>
