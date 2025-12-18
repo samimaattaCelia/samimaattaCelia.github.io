@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathML as inline or block?</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>MathML as inline or block?</h1>
+    <p>This page investigates whether MathML styled as a block element should be written inside or outside of the <code>p</code> element.</p>
+    <h2>Motivation</h2>
+    <p>People used to writing HTML and CSS are used to the block model of representing the web page (or similar). Basically this means that all content is somehow divided into vertical blocks that can stretch across the whole view.</p>
+    <p>This paragraph is in a block and they can vary in size.</p>
+    <p>Inside blocks of content there is inline content such as this text inside the paragraph.</p>
+    <p>MathML can be marked up as an inline or as a block element with the <code>display</code> attribute. It can be either</p>
+    <ul>
+        <li><code>display="<strong>block</strong>"</code></li>
+        <li><code>display="<strong>inline</strong>"</code>.</li>
+    </ul>
+<p>In a way, it has a this kind of dual property. This has led to some confusion on how MathML should be written in an HTML document.</p>
+<p>On this page an attempt is made to diffuse the confusion.</p>
+    <h2>Discussion</h2>
+    <p>Let's look into how the MathML block content should be interpreted. This we will start by going into the relevant specifications:</p>
+    <ul>
+        <li><a href="https://html.spec.whatwg.org/multipage/">HTML specification (multipage)</a></li>
+        <li><a href="https://drafts.csswg.org/css2/">CSS specification (as cited in the HTML specification)</a>.</li>
+    </ul>
+    <h3>The content model</h3>
+    <p>Since we are talking about a specific element, <code>p</code>, we have to figure out what kind of content is allowed inside it.</p><p>The HTML specification specifies each element's <strong>content model</strong>, which means</p>
+    <blockquote>
+        <dl>
+            <dd><dt>"Content model</dt></dd>
+            <dd><p>A normative description of what content must be included as children and descendants of
+   the element."</p></dd>
+        </dl>
+        <cite><a href="https://html.spec.whatwg.org/#concept-element-content-model">Concept content model, 3.2.4 Element definitions, HTML specification</a></cite>
+    </blockquote>
+
+    <p>Now, the <code>p</code> element's content model states that its content model is "<strong>phrasing content</strong>" (<a href="https://html.spec.whatwg.org/#the-p-element">4.4.1 The p element, HTML specification</a>), which means that the <code>p</code> element accepts only phrasing content.</p>
+    <p>This is the reason that, for example, list elements <code>ol</code> and <code>ul</code> are not allowed inside the <code>p</code> element, since the list elements are "<strong>flow content</strong>" (like the <code>p</code> element).</p>
+    <h3>MatML as content</h3>
+    <p>This leads a natural question: What kind of content is MathML?</p><p>Here the specification takes an interesting turn, since MathML is a lot of different content:</p>
+    <blockquote>
+        <p>"The <a href="https://w3c.github.io/mathml-core/#the-top-level-math-element">MathML <code>math</code></a> element falls into the <a href="#embedded-content-category">embedded content</a>,
+  <a href="#phrasing-content-2">phrasing content</a>, <a href="#flow-content-2">flow content</a>, and <a href="#palpable-content-2">palpable content</a>
+  categories --."</p>
+        <cite><a href="https://html.spec.whatwg.org/#mathml">4.8.15 MathML, HTML specification</a></cite>
+    </blockquote>
+<p><strong>We have an answer</strong>: since MathML is phrasing content, it is allowed inside the <code>p</code> element.</p>
+<p>This might have been clear when MathML is presented inline, but the question is what about when it is a block element?</p>
+<h3>MathML as an inline or as a block element?</h3>
+<p>The confusion with MathML content lies in the way it is presented. MathML can be marked up as an inline or a block (or an inline-block) element.</p><p>(To be fair, so can any other element with styling.)</p>
+<p>There are two answers.</p>
+<h4>1. It is allowed, because MathML is phrasing content</h4>
+<p>The way content is <strong>presented</strong> shouldn't affect its category. MathML doesn't turn into flow content when its visual representation is changed, so it would still be allowed inside the <code>p</code> element.</p>
+<h4>2. We have to look at the CSS specification</h4>
+<p><a href="https://drafts.csswg.org/css2/">CSS specification (as cited in the HTML specification)</a> can also provide us with some answers. We are mainly interested in the concepts of inline formatting context, block formatting context, inline boxes and block boxes, and how they can be nested.</p>
+
+</body>
+</html>

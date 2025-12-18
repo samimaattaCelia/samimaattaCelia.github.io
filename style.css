@@ -3,16 +3,17 @@
   font-family: "Atkinson Hyperlegible", sans-serif;
 
   --primary-color: #3fae29;
+  --secondary-color: #00615B;
+  --grey-100: rgb(238, 238, 238);
 }
 
 html {
-  
-  background-color: rgb(238, 238, 238);
+  max-width: 700px;
 }
 
 body {
-  max-width: 700px;
   font-size: 1.2rem;
+  overflow-x: auto;
   padding-left: 2rem;
 }
 
@@ -20,12 +21,68 @@ a[href]:is(:focus, :hover) {
   outline: 3px solid black;
 }
 
-.note {
+aside.note {
   border: solid 1px var(--primary-color);
   border-left: solid 10px var(--primary-color);
-  padding: 0 1rem;
+  padding: 1.25em 1em 0 1em ;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Huomio";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+  }
+  
+
 }
 
-math {
-  margin-block-start: 1rem;
+code {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    background-color: var(--grey-100);
+}
+
+pre {
+  border: 1px dashed var(--secondary-color);
+  background-color: var(--grey-100);
+  position: relative;
+  padding-top: 1em;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "MathML";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-color);
+  }
+}
+
+.write-as-is {
+  border: 1px dashed black;
+  padding: 1em;
+}
+
+details {
+  border: 3px solid var(--primary-color);
+  width: fit-content;
+  padding: 0.5em;
+  margin-block-start: 1em;
+}
+
+blockquote {
+  border-left: 4px solid #00615B;
+  padding: 0.5em;
+  background-color: #eeffea;
+}
+
+blockquote > * {
+  margin-top: 0;
 }
