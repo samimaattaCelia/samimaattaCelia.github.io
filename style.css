@@ -52,12 +52,84 @@ pre {
   background-color: var(--grey-100);
   position: relative;
   padding-top: 1em;
+  overflow-x: scroll;
 
   &:before {
     position: absolute;
     top: 0;
     left: 0;
     content: "MathML";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-color);
+  }
+}
+
+.p-block {
+  border: 1px solid var(--secondary-color);
+  position: relative;
+  padding: 2em 1em 0 1em;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "p block";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-color);
+  }
+}
+
+.text-block {
+  border: 1px solid var(--secondary-color);
+  position: relative;
+  padding: 2em 1em 1em 1em;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "text block";
+    padding: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-color);
+  }
+}
+
+.inline-text {
+    --accent-color: rgb(50, 24, 178);
+    border: 3px solid var(--accent-color);
+    position: relative;
+    padding-left: 5.5em;
+
+    &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "inline text";
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--accent-color);
+  }
+}
+
+.math-block {
+  border: 1px solid var(--secondary-color);
+  position: relative;
+  padding-top: 2em;
+  margin-top: 0.25em;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "math block";
     padding: 0.25em;
     font-weight: bold;
     color: white;
@@ -85,4 +157,12 @@ blockquote {
 
 blockquote > * {
   margin-top: 0;
+}
+
+math[display="block"] {
+  margin-top: 1em;
+}
+
+strong.yellow {
+  background-color: yellow;
 }
