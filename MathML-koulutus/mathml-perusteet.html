@@ -96,21 +96,17 @@
     &#x3C;mi&#x3E;∞&#x3C;/mi&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
-        <p>Selaimessa: <math><mi>α</mi><mo>,</mo><mi>π</mi></math></p>
+        <p>Selaimessa: <math><mi>α</mi></math></p>
         <p>Koodina: </p><pre><code>
 &#x3C;math&#x3E;
     &#x3C;mi&#x3E;&#x3B1;&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;π&#x3C;/mi&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
         <p>Funktiotkin merkitään samalla <code>mi</code>-elementillä. Ne esitetään normaalina tekstinä automaattisesti, eikä kursiivilla, koska ne koostuvat useammasta kirjaimesta.</p>
-        <p>Selaimessa: <math><mi>cos</mi><mo>,</mo><mi>ln</mi></math></p>
+        <p>Selaimessa: <math><mi>cos</mi></math></p>
         <p>Koodina: </p><pre><code>
 &#x3C;math&#x3E;
     &#x3C;mi&#x3E;cos&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;ln&#x3C;/mi&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
         <p>Yksiköiden ei ole tarkoitus olla kursiivilla, joten ne saa näyttämään normaalilta kirjoitukselta <code>mathvariant="normal"</code>-attribuutilla.</p>
@@ -120,6 +116,14 @@
     &#x3C;mi mathvariant="normal"&#x3E;l&#x3C;/mi&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
+        <p>Kun yksikkö on koostuu useammasta kirjaimesta, niin kursiivia ei ole.</p>
+        <p>Selaimessa: <math><mi>km</mi></math></p>
+        <p>Koodina: </p><pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;km&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        
         
         <h3>Laskutoimitukset ja operaattorit</h3>
         <p>Laskutoimitusoperaattorit merkitään <code>mo</code> -elementin ("<strong>m</strong>ath-<strong>o</strong>perator") sisään.</p>
@@ -347,9 +351,32 @@
 &#x3C;/math&#x3E;
         </code></pre>
         <h4>Lisäksi</h4>
-        <p>Näkymättömien merkkien unohtaminen ei kuitenkaan ole virhe suurimmasta päästä. Yleensä ruudunlukijan käyttäjä voi ymmärtää kontekstin perusteella, että onko kyseessä funktio vai kertolasku. Käytännössä näkevä lukija tekee tätä arviointia koko ajan.</p>
+        <p>Näkymättömien merkkien unohtaminen ei ole virhe suurimmasta päästä. Yleensä ruudunlukijan käyttäjä voi ymmärtää kontekstin perusteella, että onko kyseessä funktio vai kertolasku. Käytännössä näkeväkin lukija tekee tätä arviointia koko ajan.</p>
         <p>Tärkeämpää on siis, että ei käytä vahingossa väärää merkkiä!</p>
         </aside>
+        <h3>Lukuarvot ja yksiköt</h3>
+        <p>Lukuarvojen ja yksiköiden välissä käytetään myös näkymätöntä kertomerkkiä. Sen lisäksi täytyy käyttää myös <code>rspace</code>-attribuuttia, jotta lukuarvon ja yksikön väliin ei tule automaattisesti välilyöntiä.</p><p>
+            <p>Näkymätöntä kertomerkkiä käytetään "liittämään" lukuarvo ja yksikkö toisiinsa.</p></p>
+        <p>Selaimessa:
+<math>
+    <mn>100</mn>
+    <mo rspace="0.25em">&#x2062;</mo>
+    <mi mathvariant="normal">m</mi>
+</math>
+        </p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;100&#x3C;/mn&#x3E;
+    &#x3C;mo rspace=&#x22;0.25em&#x22;&#x3E;&#x26;#x2062;&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;m&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+                
+        <aside class="note">
+            <p><code>rspace</code>-attribuutin arvo on mielivaltainen ja se kannattaa sovittaa omiin tarpeisiin. Muista kuitenkin käyttää suhteellista pituusyksikköä, kuten em tai rem!</p>
+        </aside>
+        
         <h3>Juuret</h3>
         <p>Neliöjuurimerkintä tehdään <code>mqsrt</code>-elementin avulla ja muut juurimerkinnät tehdään <code>mroot</code>-elementin avulla.</p>
         <p>Selaimessa: 
@@ -703,6 +730,39 @@
     &#x3C;/msup&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
+        
+        <h3>Matematiikka osana muuta tekstiä</h3>
+        <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattiset kaavat kuuluvat <code>math</code>-elementin lisäksi esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
+        <p>Matemaattiset lausekkeet voivat myös päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki. Normaalin kieliopin mukaan näitä välimerkkejä ei jätetä kirjoittamatta.</p>
+        <p>Selaimessa:</p>
+            <blockquote>
+                <div class="write-as-is">
+                <p>"Jos lisäksi on voimassa kaikilla alkioilla <math><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>G</mi></math> siten, että <math><mi>a</mi><mo>∘</mo><mi>b</mi><mo>=</mo><mi>b</mi><mo>∘</mo><mi>a</mi></math>, sanotaan, että ryhmä on kommutatiivinen eli vaihdannainen. Kommutatiivista ryhmää kutsutaan nimellä Abelin ryhmä."</p>
+            </div>
+            </blockquote> 
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;p&#x3E;&#x22;Jos lis&#xE4;ksi on voimassa kaikilla alkioilla 
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2208;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;G&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+siten, ett&#xE4; 
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2218;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2218;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;, sanotaan, että ryhmä on kommutatiivinen eli 
+vaihdannainen. Kommutatiivista ryhmää kutsutaan nimellä
+Abelin ryhmä.
+        </code></pre>
         <h3>Ylä- ja alamerkinnät</h3>
         <p><code>mover</code>- ja <code>munder</code>-elementit mahdollistavat toisten merkkien kirjoittamisen toisen elementin päälle tai alle.</p>
 <p>Selaimessa: 
@@ -835,10 +895,10 @@
         </ul>
         <p>Edellisessä esimerkissä summaoperaattori ∑ esitettiin omalla rivillään. Se tehdään <code>display</code>-attribuutin avulla. Sillä on kaksi mahdollista arvoa:</p>
         <ul>
-            <li><code>display="<strong>block</strong>"</code></li>
-            <li><code>display="<strong>inline</strong>"</code></li>
+            <li><code>display="<strong>block</strong>"</code>: kaava on omalla rivillään, erillään muusta tekstistä</li>
+            <li><code>display="<strong>inline</strong>"</code>: kaava on rivitettynä tekstin sekaan.</li>
         </ul>
-        <p>Kaikella MathML-koodilla kirjoitetulla matematiikalla on oletuksena <code>display="inline"</code>, sitä ei tarvitse kirjoittaa erikseen koodiin. Se mahdollistaa matematiikan kirjoittamisen tekstin sekaan luontevasti.</p>
+        <p>Kaikella MathML-koodilla kirjoitetulla matematiikalla on oletuksena <code>display="inline"</code>, sitä ei tarvitse kirjoittaa erikseen koodiin.</p>
         <p><code>display</code>-attribuutin arvo vaikuttaa erityisesti suurien operaattoreihin ulkonäköön.</p>
         <p>Selaimessa: 
 <math display="block">
@@ -922,6 +982,72 @@
 T&#xE4;ss&#xE4;kin voi jo huomata, miten riviv&#xE4;li suurenee merkinn&#xE4;n 
 vuoksi.&#x3C;/p&#x3E;
         </code></pre>
+        <h3>Block-tyylinen matematiikka osana muuta tekstiä</h3>
+        <p>Block-tyylinenkin, omalla rivillään oleva matematiikan kaava on myös osa ympäröivää tekstiä ja silloin noudatetaan normaaleja kielioppisääntöjä. Tällöin välimerkit ja vastaavat merkit pitää kirjoittaa <code>math</code>-elementin sisään.</p>
+        <p>Kiinnitä erityisesti huomiota pisteen sijaintiin seuraavassa esimerkissä ja, miten se on kirjoitettu koodina.</p>
+        <p>Selaimessa:</p>
+            <blockquote>
+                <div class="write-as-is">
+                <p>"Ryhmän <math><mi>G</mi></math> esitys <math><mi>n</mi></math>-dimensioisessa reaalisessa vektoriavaruudessa on ryhmähomomorfismi 
+                    <math display="block">
+                        <mi>ρ</mi>
+                        <mo>:</mo>
+                        <mi>G</mi>
+                        <mo>→</mo>
+                        <mi>GL</mi>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>R</mi>
+                        <mo>)</mo>
+                        <mtext>.</mtext>
+                    </math></p>
+                    <p>Se on ryhmähomomorfismi ryhmästä yleiseen lineaariryhmään."</p>
+                    </div>
+            </blockquote> 
+            <p>Koodina:
+            </p><pre><code>
+&#x22;Ryhm&#xE4;n &#x3C;math&#x3E;&#x3C;mi&#x3E;G&#x3C;/mi&#x3E;&#x3C;/math&#x3E; esitys 
+&#x3C;math&#x3E;&#x3C;mi&#x3E;n&#x3C;/mi&#x3E;&#x3C;/math&#x3E;-dimensioisessa reaalisessa 
+vektoriavaruudessa on ryhm&#xE4;homomorfismi 
+&#x3C;math display=&#x22;block&#x22;&#x3E;
+    &#x3C;mi&#x3E;&#x3C1;&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;:&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;G&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;GL&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;R&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;mtext&#x3E;.&#x3C;/mtext&#x3E;
+&#x3C;/math&#x3E;
+&#x3C;p&#x3E;Se on ryhm&#xE4;homomorfismi ryhm&#xE4;st&#xE4; 
+yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
+        </code></pre>
+        <aside class="note">
+            <p>Jos välimerkin tai vastaavan merkin jättää block-tyylisen matemaattisen lausekkeen ulkopuolelle, niin tekstin asettelu näyttää oudolta.</p>
+            <p>Selaimessa:</p>
+            <blockquote>
+                <div class="write-as-is">
+                <p>"Ryhmän <math><mi>G</mi></math> esitys <math><mi>n</mi></math>-dimensioisessa reaalisessa vektoriavaruudessa on ryhmähomomorfismi 
+                    <math display="block">
+                        <mi>ρ</mi>
+                        <mo>:</mo>
+                        <mi>G</mi>
+                        <mo>→</mo>
+                        <mi>GL</mi>
+                        <mo>(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>R</mi>
+                        <mo>)</mo>
+                    </math>.</p>
+                    <p>Se on ryhmähomomorfismi ryhmästä yleiseen lineaariryhmään."</p>
+                    </div>
+            </blockquote> 
+        </aside>
         <h3>Monirivinen matematiikka</h3>
         <p>Monirivinen matematiikka esitetään yleensä <code>mtable</code>-elementin avulla. Monirivistä matematiikkaa ovat esimerkiksi yhtälöparit, yhtälöryhmät, matriisit, determinantit ja yhtälönratkaisu.</p><p><code>mtable</code>-elementtiin sisälle merkitään taulukon rivit <code>mtr</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>r</strong>ow) ja rivien sisään taulukon solut <code>mtd</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>d</strong>ata cell).</p>
         <aside class="note">
@@ -1313,8 +1439,10 @@ vuoksi.&#x3C;/p&#x3E;
 </math>
             </p>
         </aside>
-        <h3>Lukuarvojen ja yksiköiden merkitseminen</h3>
-        <p>Yksiköiden merkitsemiseen on oma tapansa, jotta ne näkyvät oikein. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
+        <h3>Kemia</h3>
+<p>MathML-koodia voidaan käyttää kemian merkintöjen tekemiseen.</p>
+        <h3>Lisätietoa: Lukuarvojen ja yksiköiden merkitseminen</h3>
+        <p>Saavutettavissa julkaisuissa käytetään vielä yksityiskohtasempaa merkintätapaa lukuarvojen ja yksiköiden merkitsemiseen. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
 <math>
     <mn>100</mn>
@@ -1365,96 +1493,7 @@ vuoksi.&#x3C;/p&#x3E;
             <p>Attribuuttia <code>mathvariant="normal"</code> käytetään siksi, että kirjain on kirjoitettu "normaalisti", eikä kursiivilla, jolloin se muistuttaisi muuttujaa.</p>
             <p><code>:intent="unit"</code>-attribuutti perustuu MathML 4 -standardiin, jota ei ole vielä julkaistu, mutta siihen valmistaudutaan etupainotteisesti.</p>
         </aside>
-        <h3>Matematiikka osana muuta tekstiä</h3>
-        <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattisia kaavoja ei kirjoiteta lähtökohtaisesti omaan itsenäiseen elementtiinsä, vaan esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
-        <p>Matemaattiset lausekkeet voivat myös päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki.</p>
-        <p>Selaimessa:</p>
-            <blockquote>
-                <p>"Jos lisäksi on voimassa kaikilla alkioilla <math><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>G</mi></math> siten, että <math><mi>a</mi><mo>∘</mo><mi>b</mi><mo>=</mo><mi>b</mi><mo>∘</mo><mi>a</mi></math>, sanotaan, että ryhmä on kommutatiivinen eli vaihdannainen. Kommutatiivista ryhmää kutsutaan nimellä Abelin ryhmä."</p>
-            </blockquote> 
-        <p>Koodina:
-            </p><pre><code>
-&#x3C;p&#x3E;&#x22;Jos lis&#xE4;ksi on voimassa kaikilla alkioilla 
-&#x3C;math&#x3E;
-    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;&#x2208;&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;G&#x3C;/mi&#x3E;
-&#x3C;/math&#x3E;
-siten, ett&#xE4; 
-&#x3C;math&#x3E;
-    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;&#x2218;&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;=&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;b&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;&#x2218;&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;a&#x3C;/mi&#x3E;
-&#x3C;/math&#x3E;, sanotaan, että ryhmä on kommutatiivinen eli 
-vaihdannainen. Kommutatiivista ryhmää kutsutaan nimellä
-Abelin ryhmä.
-        </code></pre>
-        <p>Tämä pätee myös block-tyyliseen matematiikkaan. Tällöin välimerkit ja muut merkit pitää kirjoittaa matematiikan 'sisään'.</p>
-        <p>Selaimessa:</p>
-            <blockquote>
-                <p>"Ryhmän <math><mi>G</mi></math> esitys <math><mi>n</mi></math>-dimensioisessa reaalisessa vektoriavaruudessa on ryhmähomomorfismi 
-                    <math display="block">
-                        <mi>ρ</mi>
-                        <mo>:</mo>
-                        <mi>G</mi>
-                        <mo>→</mo>
-                        <mi>GL</mi>
-                        <mo>(</mo>
-                        <mi>n</mi>
-                        <mo>,</mo>
-                        <mi>R</mi>
-                        <mo>)</mo>
-                        <mtext>.</mtext>
-                    </math></p>
-                    <p>Se on ryhmähomomorfismi ryhmästä yleiseen lineaariryhmään."</p>
-            </blockquote> 
-            <p>Koodina:
-            </p><pre><code>
-&#x22;Ryhm&#xE4;n &#x3C;math&#x3E;&#x3C;mi&#x3E;G&#x3C;/mi&#x3E;&#x3C;/math&#x3E; esitys 
-&#x3C;math&#x3E;&#x3C;mi&#x3E;n&#x3C;/mi&#x3E;&#x3C;/math&#x3E;-dimensioisessa reaalisessa 
-vektoriavaruudessa on ryhm&#xE4;homomorfismi 
-&#x3C;math display=&#x22;block&#x22;&#x3E;
-    &#x3C;mi&#x3E;&#x3C1;&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;:&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;G&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;GL&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;n&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;,&#x3C;/mo&#x3E;
-    &#x3C;mi&#x3E;R&#x3C;/mi&#x3E;
-    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
-    &#x3C;mtext&#x3E;.&#x3C;/mtext&#x3E;
-&#x3C;/math&#x3E;
-&#x3C;p&#x3E;Se on ryhm&#xE4;homomorfismi ryhm&#xE4;st&#xE4; 
-yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
-        </code></pre>
-        <aside class="note">
-            <p>Jos välimerkin tai vastaavan merkin jättää block-tyylisen matemaattisen lausekkeen ulkopuolelle, niin tekstin asettelu näyttää oudolta.</p>
-            <p>Selaimessa:</p>
-            <blockquote>
-                <p>"Ryhmän <math><mi>G</mi></math> esitys <math><mi>n</mi></math>-dimensioisessa reaalisessa vektoriavaruudessa on ryhmähomomorfismi 
-                    <math display="block">
-                        <mi>ρ</mi>
-                        <mo>:</mo>
-                        <mi>G</mi>
-                        <mo>→</mo>
-                        <mi>GL</mi>
-                        <mo>(</mo>
-                        <mi>n</mi>
-                        <mo>,</mo>
-                        <mi>R</mi>
-                        <mo>)</mo>
-                    </math>.</p>
-                    <p>Se on ryhmähomomorfismi ryhmästä yleiseen lineaariryhmään."</p>
-            </blockquote> 
-        </aside>
-        <a href="./index.html">Palaa sisällysluetteloon</a>
+        <p>
+        <a href="./index.html">Palaa sisällysluetteloon</a></p>
 </body>
 </html>

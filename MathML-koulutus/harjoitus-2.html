@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harjoitus 2: Funktiot ja näkymättömät merkit</title>
+    <title>Harjoitus 2: Funktiot, näkymättömät merkit ja yksiköt</title>
     
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
         <a href="./index.html">Palaa sisällysluetteloon</a>
-    <h1>Funktiot ja näkymättömät merkit</h1>
+    <h1>Funktiot, näkymättömät merkit ja yksiköt</h1>
     <p>Tällä sivulla harjoitellaan peruslaskutoimitusten ja muiden perusmerkkien kirjoittamista MathML-koodilla.</p>
     <p>Unicode-merkkejä, joita tarvitset sivulla:</p>
     <ul>
@@ -32,6 +32,11 @@
     </details>
     <h3>Tehtävä 1</h3>
 <ol>
+    <li>
+        <math>
+            <mi>f</mi>
+        </math>
+    </li>
         <li>
 <math>
     <mi>g</mi>
@@ -68,6 +73,9 @@
     </ol>
     <h3>Tehtävä 2</h3>
     <ol>
+        <li>
+            <math><mi>tan</mi></math>
+        </li>
         <li>
             <math>
                 <mi> x </mi>
@@ -133,44 +141,28 @@
         <p>Matematiikkaa ei ole merkitty <code>math</code>-elementin sisään.</p><p>Muuttujien <math><mi>x</mi></math> ja <math><mi>y</mi></math> välissä ei ole käytetty näkymätöntä kertomerkkiä <code>&amp;#8290;</code>.</p>
     </details>
     <h3>Tehtävä 5</h3>
-    <p>Jaottele (matemaattiset) merkit muuttujiin <code>mi</code> ja operaatioihin <code>mo</code>.</p>
-    <p>Jos jonkin merkin tunnistaminen on vaikeaa, niin voit käyttää <a href="https://babelstone.co.uk/Unicode/whatisit.html">What is this Unicode -sivustoa (englanniksi)</a>.</p>
     <ol>
-        <li><math><mo>(</mo></math></li>
-        <li><math><mi>x</mi></math></li>
-        <li><math><mo>∏</mo></math></li>
-        <li><math><mo>∫</mo></math></li>
-        <li><math><mi>log</mi></math></li>
-        <li>
-            <math><mo>}</mo></math>
-        </li>
-        <li>
-            <math><mo>+</mo></math>
-        </li>
-        <li>
-            <math><mi>cl</mi></math>
-        </li>
+        <li><math>
+    <mn>2500</mn>
+    <mo rspace="0.25em">&#x2062;</mo>
+    <mi mathvariant="normal">m</mi>
+</math></li>
+        <li><math>
+    <mn>90</mn>
+    <mo rspace="0.25em">&#x2062;</mo>
+    <mi mathvariant="normal">cm</mi>
+</math></li>
+        <li><math>
+    <mn>766,333...</mn>
+    <mo rspace="0.25em">&#x2062;</mo>
+    <mi mathvariant="normal">ml</mi>
+</math></li>
+        <li><math>
+    <mn>12</mn>
+    <mo rspace="0.25em">&#x2062;</mo>
+    <mi mathvariant="normal">h</mi>
+</math></li>
     </ol>
-    <details>
-        <summary>Vastaus</summary>
-        <ol>
-        <li><math><mo>(</mo></math> <code>mo</code>, sulku</li>
-        <li><math><mi>x</mi></math> <code>mi</code>, muuttuja x</li>
-        <li><math><mo>∏</mo></math> <code>mo</code>, tulo</li>
-        <li><math><mo>∫</mo></math> <code>mo</code>, integraali</li>
-        <li><math><mi>log</mi></math> <code>mi</code>, logaritmi</li>
-        <li>
-            <math><mo>}</mo></math> <code>mo</code>, aaltosulku
-        </li>
-         <li>
-            <math><mo>+</mo></math> <code>mo</code>, plus
-        </li>
-        <li>
-            <math><mi>cl</mi></math> <code>mi</code>, senttilitra
-        </li>
-    </ol>
-    <p>(Kontekstista riippuen jotkin merkeistä voivat olla operaatioita tai muuttujia.)</p>
-    </details>
     <h3>Tehtävä 6</h3>
     <p>MathML-koodissa on itse asiassa käytössä 4 näkymätöntä merkkiä. Selvitä, mitkä merkit ne ovat ja mihin niitä käytetään <a href="https://www.w3.org/TR/mathml4/">MathML 4 -standardin sivuilta (englanniksi)</a>.</p>
     <p>MathML 4 on tuleva standardi, joka ei ole vielä käytössä.</p>
