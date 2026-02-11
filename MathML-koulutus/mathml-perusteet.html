@@ -1439,8 +1439,281 @@ yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
 </math>
             </p>
         </aside>
-        <h3>Kemia</h3>
-<p>MathML-koodia voidaan käyttää kemian merkintöjen tekemiseen.</p>
+        <h2>Kemia</h2>
+        <p>MathML-koodia ei ole tehty kemian merkintöjen tekemiseen, mutta vastaavaa merkintäkieltä, joka olisi yhtä hyvin tuettu, ei tällä hetkellä ole.</p><p>Kemiaa kirjoitetaan MathML-koodin avulla, koska tekniset apuvälineet voivat lukea sitä.</p><p>Tässä osuudessa oletetaan, että lukija on käynyt läpi materiaalin aiemmat osat.</p>
+        <h3>Alkuaineet ja yhdisteet</h3>
+        <p>Alkuaineet merkitään muuttujina <code>mi</code>-elementteinä.</p>
+        <p>Selaimessa: <math><mi mathvariant="normal">C</mi></math></p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math mathvariant="normal"&#x3E;
+  &#x3C;mi&#x3E;C&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        <p>Selaimessa: <math>
+  <mi>Na</mi>
+</math></p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+  &#x3C;mi&#x3E;Na&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        <p>Yhdisteissä kukin yksittäinen alkuaine merkitään omaan <code>mi</code>-elementtiinsä.</p>
+        <p>Selaimessa: <math>
+  <mi>Na</mi>
+  <mi>Cl</mi>
+</math></p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+  &#x3C;mi&#x3E;Na&#x3C;/mi&#x3E;
+  &#x3C;mi&#x3E;Cl&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+
+        <p>Ala- ja yläindeksit merkitään samoin kuin matematiikassa <code>msup</code>, <code>msub</code> tai <code>msubsup</code> elementeillä.</p>
+        <p>Selaimessa: <math><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi></math></p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+  &#x3C;msub&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+  &#x3C;/msub&#x3E;
+  &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;O&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        <p>Selaimessa: <math>
+    <mi mathvariant="normal">S</mi>
+    <msubsup>
+        <mi mathvariant="normal">O</mi>
+        <mn>4</mn>
+        <mrow>
+            <mn>2</mn>
+            <mo>−</mo>
+        </mrow>
+    </msubsup>
+</math> vai     
+<math>
+    <msup>
+        <mrow>
+            <mi mathvariant="normal">S</mi>
+            <msub>
+                <mi mathvariant="normal">O</mi>
+                <mn>4</mn>
+            </msub>
+        </mrow>
+        <mrow>
+            <mn>2</mn>
+            <mo>−</mo>
+        </mrow>  
+    </msup>  
+</math></p>
+<p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi mathvariant="normal"&#x3E;S&#x3C;/mi&#x3E;
+    &#x3C;msubsup&#x3E;
+        &#x3C;mi mathvariant="normal"&#x3E;O&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+        &#x3C;/mrow&#x3E;
+    &#x3C;/msubsup&#x3E;
+&#x3C;/math&#x3E;
+
+vai
+
+&#x3C;math&#x3E;
+    &#x3C;msup&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;S&#x3C;/mi&#x3E;
+            &#x3C;msub&#x3E;
+                &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;O&#x3C;/mi&#x3E;
+                &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
+            &#x3C;/msub&#x3E;
+        &#x3C;/mrow&#x3E;
+        &#x3C;mrow&#x3E;
+            &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+            &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+        &#x3C;/mrow&#x3E;  
+    &#x3C;/msup&#x3E;  
+&#x3C;/math&#x3E;
+        </code></pre>
+<h3>Olomuotojen merkitseminen</h3>
+<p>Alkuaineen tai yhdisteen olomuoto ilmaistaan muuttujana eli <code>mi</code>-elementin avulla.</p>
+<p>Selaimessa: 
+<math>
+    <mi>Fe</mi>
+    <msub>
+        <mi>Cl</mi>
+        <mn>3</mn>
+    </msub>
+    <mo>(</mo>
+    <mi>aq</mi>
+    <mo>)</mo>
+</math></p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi&#x3E;Fe&#x3C;/mi&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi&#x3E;Cl&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;aq&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        
+<h3>Järjestys- ja massaluvun merkitseminen</h3>
+<p>Järjestys- ja massalukujen merkitsemisessä käytetään <code>mmultiscripts</code>-elementtiä.</p>
+<p>Selaimessa:
+<math>
+    <mmultiscripts>
+        <mi mathvariant="normal">C</mi>
+        <mprescripts/>
+        <mn>6</mn>
+        <mn>14</mn>
+    </mmultiscripts>
+</math>
+</p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mmultiscripts&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;C&#x3C;/mi&#x3E;
+        &#x3C;mprescripts/&#x3E;
+        &#x3C;mn&#x3E;6&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;14&#x3C;/mn&#x3E;
+    &#x3C;/mmultiscripts&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+<h3>Reaktioyhtälöiden ja vastaavien kirjoittaminen</h3>
+<p>Reaktioyhtälöiden erilaiset nuolet ovat operaattoreita eli ne kirjoitetaan <code>mo</code>-elementteinä. Näkymätöntä kertomerkkiä käytetään kertomaan alkuaineiden tai yhdisteiden määristä.</p>
+<p>Selaimessa:
+<math>
+    <mn>2</mn>
+    <mo>&#8290;</mo>
+    <mi mathvariant="normal">H</mi>
+    <mi>Cl</mi>
+    <mo>+</mo>
+    <mn>2</mn>
+    <mo>&#8290;</mo>
+    <mi>Na</mi>
+    <mo>→</mo>
+    <mn>2</mn>
+    <mo>&#8290;</mo>
+    <mi>Na</mi>
+    <mi>Cl</mi>
+    <mo>+</mo>
+    <msub>
+        <mi mathvariant="normal">H</mi>
+        <mn>2</mn>
+    </msub>
+</math></p>
+        <p>Koodina:
+            </p><pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x26;#8290;&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+    &#x3C;mi&#x3E;Cl&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x26;#8290;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;Na&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;&#x2192;&#x3C;/mo&#x3E;
+    &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;mo&#x3E;&#x26;#8290;&#x3C;/mo&#x3E;
+    &#x3C;mi&#x3E;Na&#x3C;/mi&#x3E;
+    &#x3C;mi&#x3E;Cl&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        <p>Operaattorien tai elementtien päälle voi tehdä muita merkintöjä <code>mover</code>-elementin avulla.</p>
+        <p>Selaimessa: 
+<math>
+    <msub>
+        <mi mathvariant="normal">H</mi>
+        <mn>2</mn>
+    </msub>
+    <mo>(</mo>
+    <mi mathvariant="normal">g</mi>
+    <mo>)</mo>
+    <mo>+</mo>
+    <msub>
+        <mi mathvariant="normal">C</mi>
+        <mn>2</mn>
+    </msub>
+    <msub>
+        <mi mathvariant="normal">H</mi>
+        <mn>4</mn>
+    </msub>
+    <mo>(</mo>
+    <mi mathvariant="normal">g</mi>
+    <mo>)</mo>
+    <mover>
+        <mo>&#x21CC;</mo>
+        <mi>Ni</mi>
+    </mover>
+    <msub>
+        <mi mathvariant="normal">C</mi>
+        <mn>2</mn>
+    </msub>
+    <msub>
+        <mi mathvariant="normal">H</mi>
+        <mn>6</mn>
+    </msub>
+    <mo>(</mo>
+    <mi mathvariant="normal">g</mi>
+    <mo>)</mo>
+</math></p>
+<pre><code>
+&#x3C;math&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;g&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;mo&#x3E;+&#x3C;/mo&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;C&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;g&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;mover&#x3E;
+        &#x3C;mo&#x3E;&#x26;#x21CC;&#x3C;/mo&#x3E;
+        &#x3C;mi&#x3E;Ni&#x3C;/mi&#x3E;
+    &#x3C;/mover&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;C&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;6&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;mo&#x3E;(&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;g&#x3C;/mi&#x3E;
+    &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
         <h3>Lisätietoa: Lukuarvojen ja yksiköiden merkitseminen</h3>
         <p>Saavutettavissa julkaisuissa käytetään vielä yksityiskohtasempaa merkintätapaa lukuarvojen ja yksiköiden merkitsemiseen. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
