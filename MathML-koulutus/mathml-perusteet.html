@@ -730,7 +730,65 @@
     &#x3C;/msup&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
-        
+        <h4>Monta ylä- tai alaindeksiä</h4>
+        <p><code>mmultiscripts</code>-elementtiä käytetään, kun täytyy kirjoittaa lauseke, jossa on useita ylä- tai alaindeksejä.</p><p><code>mrow</code>-elementtiä käytetään tyhjän indeksipaikan merkitsemiseen.</p>
+        <p>Selaimessa:
+<math>
+    <mmultiscripts>
+        <mi>T</mi>
+        <mi>r</mi>
+        <mi>l</mi>
+        <mrow></mrow>
+        <mi>k</mi>
+    </mmultiscripts>
+</math>
+        </p>
+        <p>Koodina:</p>
+        <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mmultiscripts&#x3E;
+        &#x3C;mi&#x3E;T&#x3C;/mi&#x3E;
+        &#x3C;mi&#x3E;r&#x3C;/mi&#x3E;
+        &#x3C;mi&#x3E;l&#x3C;/mi&#x3E;
+        &#x3C;mrow&#x3E;&#x3C;/mrow&#x3E;
+        &#x3C;mi&#x3E;k&#x3C;/mi&#x3E;
+    &#x3C;/mmultiscripts&#x3E;
+&#x3C;/math&#x3E;
+        </code></pre>
+        <p><code>mmultiscripts</code>-elementin avulla voi kirjoittaa indeksimerkintöjä lausekkeen etupuolelle. <code>mprescripts</code>-elementin jälkeen kirjoitetut muuttujat sijoitetaan lausekkeen etupuolelle.</p>
+        <p>Laventamisen merkitsemiseen tarvitaan <code>mmultiscripts</code>-elementtiä.</p>
+         <p>Selaimessa: 
+<math>
+    <mmultiscripts>
+    <mfrac>
+        <mn>5</mn>
+        <mn>6</mn>
+    </mfrac>
+    <mprescripts/>
+    <mrow></mrow>
+    <mrow>
+        <mn>3</mn>
+        <mo>)</mo>
+    </mrow>
+    </mmultiscripts>
+</math></p>
+        <p>Koodina:</p>
+        <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mmultiscripts&#x3E;
+    &#x3C;mfrac&#x3E;
+        &#x3C;mn&#x3E;5&#x3C;/mn&#x3E;
+        &#x3C;mn&#x3E;6&#x3C;/mn&#x3E;
+    &#x3C;/mfrac&#x3E;
+    &#x3C;mprescripts/&#x3E;
+    &#x3C;mrow&#x3E;&#x3C;/mrow&#x3E;
+    &#x3C;mrow&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+        &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
+    &#x3C;/mrow&#x3E;
+    &#x3C;/mmultiscripts&#x3E;
+&#x3C;/math
+        </code></pre>
         <h3>Matematiikka osana muuta tekstiä</h3>
         <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattiset kaavat kuuluvat <code>math</code>-elementin lisäksi esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
         <p>Matemaattiset lausekkeet voivat myös päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki. Normaalin kieliopin mukaan näitä välimerkkejä ei jätetä kirjoittamatta.</p>
@@ -1494,21 +1552,6 @@ yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
             <mo>−</mo>
         </mrow>
     </msubsup>
-</math> vai     
-<math>
-    <msup>
-        <mrow>
-            <mi mathvariant="normal">S</mi>
-            <msub>
-                <mi mathvariant="normal">O</mi>
-                <mn>4</mn>
-            </msub>
-        </mrow>
-        <mrow>
-            <mn>2</mn>
-            <mo>−</mo>
-        </mrow>  
-    </msup>  
 </math></p>
 <p>Koodina:
             </p><pre><code>
@@ -1523,25 +1566,8 @@ yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
         &#x3C;/mrow&#x3E;
     &#x3C;/msubsup&#x3E;
 &#x3C;/math&#x3E;
-
-vai
-
-&#x3C;math&#x3E;
-    &#x3C;msup&#x3E;
-        &#x3C;mrow&#x3E;
-            &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;S&#x3C;/mi&#x3E;
-            &#x3C;msub&#x3E;
-                &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;O&#x3C;/mi&#x3E;
-                &#x3C;mn&#x3E;4&#x3C;/mn&#x3E;
-            &#x3C;/msub&#x3E;
-        &#x3C;/mrow&#x3E;
-        &#x3C;mrow&#x3E;
-            &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
-            &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
-        &#x3C;/mrow&#x3E;  
-    &#x3C;/msup&#x3E;  
-&#x3C;/math&#x3E;
         </code></pre>
+
 <h3>Olomuotojen merkitseminen</h3>
 <p>Alkuaineen tai yhdisteen olomuoto ilmaistaan muuttujana eli <code>mi</code>-elementin avulla.</p>
 <p>Selaimessa: 
@@ -1714,6 +1740,40 @@ vai
     &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
+        <p>Selaimessa: <math>
+          <mi mathvariant="normal">C</mi>
+          <msub>
+            <mi mathvariant="normal">H</mi>
+            <mn>3</mn>
+          </msub>
+          <mo>−</mo>
+          <mi mathvariant="normal">C</mi>
+          <msub>
+            <mi mathvariant="normal">H</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>−</mo>
+          <mi mathvariant="normal">O</mi>
+          <mi mathvariant="normal">H</mi>
+      </math></p>
+      <pre><code>
+&#x3C;math&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;C&#x3C;/mi&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;3&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;C&#x3C;/mi&#x3E;
+    &#x3C;msub&#x3E;
+        &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+        &#x3C;mn&#x3E;2&#x3C;/mn&#x3E;
+    &#x3C;/msub&#x3E;
+    &#x3C;mo&#x3E;&#x2212;&#x3C;/mo&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;O&#x3C;/mi&#x3E;
+    &#x3C;mi mathvariant=&#x22;normal&#x22;&#x3E;H&#x3C;/mi&#x3E;
+&#x3C;/math&#x3E;
+      </code></pre>
         <h3>Lisätietoa: Lukuarvojen ja yksiköiden merkitseminen</h3>
         <p>Saavutettavissa julkaisuissa käytetään vielä yksityiskohtasempaa merkintätapaa lukuarvojen ja yksiköiden merkitsemiseen. <a href="https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md#numbers-with-units">Lisätietoa yksiköiden merkitsemisestä MathML Nordic Guidelines -dokumentissa</a>.</p>
         <p>Selaimessa:
