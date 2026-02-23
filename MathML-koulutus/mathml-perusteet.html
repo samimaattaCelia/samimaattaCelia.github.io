@@ -13,11 +13,10 @@
     <p>Tällä sivulla selitetään perusteita MathML-koodin kirjoittamisesta.</p>
     <p>MathML-koodi perustuu käytännössä kahteen standardiin: <a href="https://www.w3.org/TR/MathML3/">MathML 3 (englanniksi)</a> ja <a href="https://www.w3.org/TR/mathml-core/">MathML Core (englanniksi)</a>. Koko MathML-kehitystä voi seurata <a href="https://www.w3.org/Math/">W3C:n MathML-sivuilla (englanniksi)</a>.</p>
     <h2>MathML 3 ja MathML Core eroavaisuudet</h2>
-    <p>MathML 3 on laajempi, mutta vanhempi versio MathML-standardista. Sen haasteena oli, että juuri mikään selain ei alkanut tukemaan sitä. Monissa selaimissa tämä standardi ei ole voimassa, mutta joitain sen vanhoja ominaisuuksia saatetaan tukea esimerkiksi Mozilla Firefoxissa.</p>
-    <p>MathML Core on suppeampi standardi, jota nykyiset, suurimmat selaimet tukevat.</p>
+    <p>MathML 3 on laajempi ja vanhempi versio MathML-standardista. Sen haasteena oli, että juuri mikään selain ei tukenut sitä. Monissa selaimissa tämä standardi ei ole voimassa, mutta joitain sen vanhoja ominaisuuksia saatetaan tukea esimerkiksi Mozilla Firefoxissa.</p>
+    <p>MathML Core on suppeampi standardi, jota yleisimmät selaimet tukevat.</p>
     <h2>Unicode-merkit</h2>
     <p>Apuvälineiden toiminta perustuu siihen, että merkit on lisätty oikealla tavalla. Nettiympäristössä erilaiset merkit perustuvat Unicode-merkkeihin.</p>
-    <p>Voit tarkistaa ja kopioida itsellesi talteen tärkeitä Unicode-merkkejä.</p>
     <h2>MathML-koodin käyttäminen</h2>
     <h3><code>math</code>-elementti</h3>
     <p>HTML-dokumentissa matematiikka kirjoitetaan <code>math</code>-elementin sisälle.</p>
@@ -256,8 +255,7 @@
 &#x3C;/math&#x3E;
 </code>
 </pre>
-<aside class="note"><p><a href="https://en.wikipedia.org/wiki/Mathematical_Operators_(Unicode_block)">Wikipediassa on taulukko matemaattisista operaattoreista (englanniksi)</a>, jotka merkitään <code>mo</code>-elementin sisään.</p>
-<p>Huomaa, että esimerkiksi sulkeet eivät kuulu tähän taulukkoon, mutta ne ovat operaattoreita.</p></aside>
+<aside class="note"><p><a href="https://www.w3.org/TR/MathML3/mathml.html#appendixc_oper-dict.entries-table">MathML 3 -standardin lopussa on taulukko matemaattisista operaattoreista (englanniksi)</a>, jotka merkitään <code>mo</code>-elementin sisään.</p></aside>
         <h3>Funktiot ja näkymättömät merkit</h3>
         <p>Funktioita merkitään myös <code>mi</code>-elementeillä. Funktiot voivat olla yhden tai useamman merkin pituisia.</p>
         <p>Funktioita kirjoittaessa täytyy muistaa näkymätön merkki, joka tarkoittaa "funktion käyttöä".</p><aside class="note">
@@ -360,13 +358,9 @@
     &#x3C;mo&#x3E;)&#x3C;/mo&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
-        <h4>Lisäksi</h4>
-        <p>Näkymättömien merkkien unohtaminen ei ole virhe suurimmasta päästä. Yleensä ruudunlukijan käyttäjä voi ymmärtää kontekstin perusteella, että onko kyseessä funktio vai kertolasku. Käytännössä näkeväkin lukija tekee tätä arviointia koko ajan.</p>
-        <p>Tärkeämpää on siis, että ei käytä vahingossa väärää merkkiä!</p>
         </aside>
         <h3>Lukuarvot ja yksiköt</h3>
-        <p>Lukuarvojen ja yksiköiden välissä käytetään myös näkymätöntä kertomerkkiä. Sen lisäksi täytyy käyttää myös <code>rspace</code>-attribuuttia, jotta lukuarvon ja yksikön väliin ei tule automaattisesti välilyöntiä.</p><p>
-            <p>Näkymätöntä kertomerkkiä käytetään "liittämään" lukuarvo ja yksikkö toisiinsa.</p>
+        <p>Lukuarvojen ja yksiköiden välissä käytetään näkymätöntä kertomerkkiä. Sen lisäksi täytyy käyttää <code>rspace</code>-attribuuttia, koska muuten lukuarvon ja yksikön väliin ei tule välilyöntiä.</p>
         <p>Selaimessa:
 <math>
     <mn>100</mn>
@@ -384,7 +378,7 @@
         </code></pre>
                 
         <aside class="note">
-            <p><code>rspace</code>-attribuutin arvo on mielivaltainen ja se kannattaa sovittaa omiin tarpeisiin. Muista kuitenkin käyttää suhteellista pituusyksikköä, kuten em tai rem!</p>
+            <p><code>rspace</code>-attribuutin arvo on mielivaltainen. Muista kuitenkin käyttää suhteellista pituusyksikköä, kuten em tai rem!</p>
         </aside>
         
         <h3>Juuret</h3>
@@ -419,7 +413,7 @@
     &#x3C;/msqrt&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
-        <p>Muiden juurimerkintöjen kirjoittamisessa on tärkeää, että elementit ovat oikeassa järjestyksessä.</p><p><code>mroot</code>-elementin tapauksessa juurrettava (eli juurimerkin alla oleva luku tai lauseke) tulee järjestyksessä ennen juuren indeksiä (eli juurimerkin päällä oleva luku tai lauseke).</p>
+        <p>Muiden juurimerkintöjen kirjoittamisessa on tärkeää, että elementit ovat oikeassa järjestyksessä.</p><p><code>mroot</code>-elementin tapauksessa <strong>juurrettava</strong> (eli juurimerkin alla oleva luku tai lauseke) tulee järjestyksessä ennen <strong>juuren indeksiä</strong> (eli juurimerkin päällä oleva luku tai lauseke).</p>
         <p>Selaimessa: 
 <math>
     <mroot>
@@ -801,7 +795,7 @@
         </code></pre>
         <h3>Matematiikka osana muuta tekstiä</h3>
         <p>Matemaattista tekstiä kirjoitetaan niin, että se on osana muuta tekstiä. Se tarkoittaa, että matemaattiset kaavat kuuluvat <code>math</code>-elementin lisäksi esimerkiksi kappale-elementin (<code>p</code>) sisälle.</p>
-        <p>Matemaattiset lausekkeet voivat myös päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki. Normaalin kieliopin mukaan näitä välimerkkejä ei jätetä kirjoittamatta.</p>
+        <p>Matemaattiset lausekkeet voivat päättää virkkeen tai niiden jälkeen voi tulla jokin muu välimerkki.</p>
         <p>Selaimessa:</p>
             <blockquote>
                 <div class="write-as-is">
@@ -871,7 +865,7 @@ Abelin ryhmä.
     &#x3C;/munder&#x3E;
 &#x3C;/math&#x3E;
         </code></pre>
-        <p>Ala- ja ylämerkintää voi kirjoittaa myös sisäkkäin.</p>
+        <p>Ala- ja ylämerkinnän voi kirjoittaa sisäkkäin.</p>
         <p>Selaimessa: 
 <math>
     <munder>
@@ -927,7 +921,7 @@ Abelin ryhmä.
         </code></pre>
         <p>Vastaavasti kuin ylä- ja alaindeksille, niin ylä- ja alamerkinnälle on myös yhdistetty <code>munderover</code>-elementti.</p>
         <aside class="note">
-        <p>Seuraavassa lausekkeessa on myös käytetty <code>display="block"</code> -attribuuttia. Siitä kerrotaan enemmän seuraavassa luvussa. Se erottaa matemaattisen sisällön omalle rivilleen. Se vaikuttaa myös "suurien operaattorien" ulkonäköön.</p>
+        <p>Seuraavassa lausekkeessa on myös käytetty <code>display="block"</code> -attribuuttia. Se erottaa matemaattisen sisällön omalle rivilleen. Siitä kerrotaan enemmän seuraavassa luvussa.</p>
         </aside>
 <p>Selaimessa: 
 <math display="block">
@@ -955,13 +949,13 @@ Abelin ryhmä.
 &#x3C;/math&#x3E;
         </code></pre>
         <h3>Suuret operaattorit ja matemaattisen sisällön rivitys</h3>
-        <p>Suuria operaattoreita ovat esimerkiksi sarjoissa käytettävä sigma (∑) tai tulossa käytettävä pii (∏).</p>
+        <p>Suuria operaattoreita ovat esimerkiksi summan merkintä ∑ tai tulon merkintä ∏.</p>
         <p>Unicode-merkkeinä nämä ovat</p>
         <ul>
             <li>N-ary summation: ∑ (0x2211)</li>
-            <li>N-ary product: ∏ (0x220F)</li>
+            <li>N-ary product: ∏ (0x220F).</li>
         </ul>
-        <p>Edellisessä esimerkissä summaoperaattori ∑ esitettiin omalla rivillään. Se tehdään <code>display</code>-attribuutin avulla. Sillä on kaksi mahdollista arvoa:</p>
+        <p>Edellisessä esimerkissä summaoperaattori ∑ esitettiin omalla rivillään. Se tehdään <code>display</code>-attribuutin avulla. Sillä on kaksi mahdollista arvoa.</p>
         <ul>
             <li><code>display="<strong>block</strong>"</code>: kaava on omalla rivillään, erillään muusta tekstistä</li>
             <li><code>display="<strong>inline</strong>"</code>: kaava on rivitettynä tekstin sekaan.</li>
@@ -1023,7 +1017,7 @@ Abelin ryhmä.
             <p>On myös mahdollista, että rivillä oleva suuri operaattori halutaankin kirjoittaa block-tyylisenä. Sen voi tehdä käyttämällä <code>displaystyle="true"</code>-attribuuttia.</p>
         </aside>
         <p>Tällä tavoin rivillä voi olla suurikin operaattori 
-<math style="display: inline-block;">
+<math displaystyle="true">
     <munderover>
         <mo>∑</mo>
         <mrow>
@@ -1033,7 +1027,7 @@ Abelin ryhmä.
         </mrow>
         <mi>∞</mi>
     </munderover>
-</math>, mutta se silti rivitetään tekstin tasolle. Tässäkin voi jo huomata, miten riviväli suurenee merkinnän vuoksi.</p>
+</math>, mutta se silti rivitetään tekstin tasolle. Riviväli suurenee merkinnän vuoksi.</p>
         <p>Koodina: </p><pre><code>
 &#x3C;p&#x3E;T&#xE4;ll&#xE4; tavoin rivill&#xE4; voi olla suurikin operaattori 
 &#x3C;math displaystyle=&#x22;true&#x22;&#x3E;
@@ -1047,8 +1041,7 @@ Abelin ryhmä.
         &#x3C;mi&#x3E;&#x221E;&#x3C;/mi&#x3E;
     &#x3C;/munderover&#x3E;
 &#x3C;/math&#x3E;, mutta se silti rivitet&#xE4;&#xE4;n tekstin tasolle. 
-T&#xE4;ss&#xE4;kin voi jo huomata, miten riviv&#xE4;li suurenee merkinn&#xE4;n 
-vuoksi.&#x3C;/p&#x3E;
+Riviväli suurenee merkinnän vuoksi.&#x3C;/p&#x3E;
         </code></pre>
         <h3>Block-tyylinen matematiikka osana muuta tekstiä</h3>
         <p>Block-tyylinenkin, omalla rivillään oleva matematiikan kaava on myös osa ympäröivää tekstiä ja silloin noudatetaan normaaleja kielioppisääntöjä. Tällöin välimerkit ja vastaavat merkit pitää kirjoittaa <code>math</code>-elementin sisään.</p>
@@ -1117,14 +1110,12 @@ yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
             </blockquote> 
         </aside>
         <h3>Monirivinen matematiikka</h3>
-        <p>Monirivinen matematiikka esitetään yleensä <code>mtable</code>-elementin avulla. Monirivistä matematiikkaa ovat esimerkiksi yhtälöparit, yhtälöryhmät, matriisit, determinantit ja yhtälönratkaisu.</p><p><code>mtable</code>-elementtiin sisälle merkitään taulukon rivit <code>mtr</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>r</strong>ow) ja rivien sisään taulukon solut <code>mtd</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>d</strong>ata cell).</p>
+        <p>Monirivinen matematiikka esitetään <code>mtable</code>-elementin avulla. Monirivistä matematiikkaa ovat esimerkiksi yhtälöparit, yhtälöryhmät, matriisit, determinantit tai yhtälönratkaisu.</p><p><code>mtable</code>-elementtin sisälle merkitään taulukon rivit <code>mtr</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>r</strong>ow) ja rivien sisään taulukon solut <code>mtd</code>-elementillä (<strong>m</strong>ath <strong>t</strong>able <strong>d</strong>ata cell).</p>
         <aside class="note">
-            <p>Suurin osa MathML-koodista tuotetaan jonkinlaisella muunnosohjelmalla. Erityisesti monirivinen matematiikka olisi työlästä kirjoittaa käsin.</p>
-            <p>Kuten muukin sisältö tällä sivulla, niin tarkoitus on tutustua MathML-koodiin. Se, miten MathML-koodia kirjoitetaan voidaan toteuttaa toisella tavalla.</p>
-            <p>Muunnosohjelmat tuottavat tietynlaisia virheitä, jotka kannattaa korjata, jonka vuoksi MathML-koodin tuntemus on tärkeää.</p>
+            <p>Monirivinen matematiikka on työlästä kirjoittaa käsin, jonka vuoksi käytännössä käytettäisiin muunnostyökaluja.</p>
+            <p>Muunnosohjelmat tuottavat systemaattisia eli samanlaisia, toistuvia virheitä, jotka pitää korjata, minkä vuoksi MathML-koodin tuntemus on tärkeää.</p>
         </aside>
         
-        <p>Yhtälönratkaisussa taulukkorakenne auttaa järjestämään lausekkeet oikeisiin kohtiin.</p>
         <p>Selaimessa:
 <math display="block">
     <mtable>
@@ -1508,7 +1499,10 @@ yleiseen lineraariryhm&#xE4;&#xE4;n.&#x22;&#x3C;/p&#x3E;
             </p>
         </aside>
         <h2>Kemia</h2>
-        <p>MathML-koodia ei ole tehty kemian merkintöjen tekemiseen, mutta vastaavaa merkintäkieltä, joka olisi yhtä hyvin tuettu, ei tällä hetkellä ole.</p><p>Kemiaa kirjoitetaan MathML-koodin avulla, koska tekniset apuvälineet voivat lukea sitä.</p><p>Tässä osuudessa oletetaan, että lukija on käynyt läpi materiaalin aiemmat osat.</p>
+        <p>MathML-koodia ei ole tehty kemian merkintöjen tekemiseen, mutta vastaavaa hyvin tuettua merkintäkieltä ei tällä hetkellä ole.</p><p>Kemiaa kirjoitetaan MathML-koodin avulla, koska tekniset apuvälineet voivat lukea sitä.</p>
+        <aside class="note">
+        <p>Tässä osuudessa oletetaan, että lukija on käynyt läpi materiaalin aiemmat osat.</p>
+        </aside>
         <h3>Alkuaineet ja yhdisteet</h3>
         <p>Alkuaineet merkitään muuttujina <code>mi</code>-elementteinä.</p>
         <p>Selaimessa: <math><mi mathvariant="normal">C</mi></math></p>
