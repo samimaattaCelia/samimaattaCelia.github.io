@@ -20,13 +20,23 @@
     <p>Voit tarkistaa ja kopioida itsellesi talteen tärkeitä Unicode-merkkejä.</p>
     <h2>MathML-koodin käyttäminen</h2>
     <h3><code>math</code>-elementti</h3>
-    <p>Kaikki matematiikka kirjoitetaan <code>math</code>-elementin sisälle.</p><p>Lähtökohtaisesti <code>math</code>-elementti ei tarvitse attribuutteja toimiakseen, mutta EPUB-kirjoissa (e-kirjoissa) kannattaa käyttää muotoa:
-    </p><pre><code>
+    <p>HTML-dokumentissa matematiikka kirjoitetaan <code>math</code>-elementin sisälle.</p>
+        <pre><code>
+&#x3C;math&#x3E;
+    ...
+&#x3C;/math&#x3E;
+    </code></pre>
+    <aside class="note">
+    <h3>Nimiavaruus</h3>
+    <p>EPUB-kirjoissa (e-kirjoissa) <code>math</code>-elementille pitää määritellä nimiavaruus ("namespace"), jotta se toimii moitteettomasti XML- tai XHTML-ympäristössä:</p>
+    <pre><code>
 &#x3C;math xmlns=&#x22;http://www.w3.org/1998/Math/MathML&#x22;&#x3E;
     ...
 &#x3C;/math&#x3E;
     </code></pre>
-    <p>Näiden perusteiden esimerkeissä tätä attribuuttia ei aina kirjoiteta.</p>
+    <p>Muuten <code>math</code>-elementin käyttö toimii vastaavasti kuin HTML-kielessä.</p>
+    <p>Tässä opiskelumateriaalissa nimiavaruutta ei määritellä erikseen, koska oletus on, että opiskelumateriaali on vain HTML-muodossa.</p>
+    </aside>
     <h3>Luvut</h3>
     <p>Luvut ja niiden kaikki osat merkitään <code>mn</code> -elementin ("<strong>m</strong>ath-<strong>n</strong>umber") sisään:</p> 
         <p>Selaimessa: <math><mn>2</mn></math></p>
