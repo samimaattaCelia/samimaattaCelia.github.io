@@ -42,7 +42,17 @@
         margin-block-start: 1rem;
       }
 
-      math[display~='block'] {
+      /* math[display~='block'] {
+overflow-x: auto;
+overflow-y: hidden;
+} */
+
+div:has(math[display~='block']) {
+overflow-x: auto;
+overflow-y: hidden;
+}
+
+.math-block-wrapper {
 overflow-x: auto;
 overflow-y: hidden;
 }
@@ -50,265 +60,84 @@ overflow-y: hidden;
   </head>
   <body>
     <h1>Tests for math equations</h1>
-    <h2><code>math</code> element with <code>overlow-x: auto;</code></h2>
-    <p>If we have an equation such as
-        <math style="overflow-x: auto;" 
-    tabindex="0" 
-    aria-labelledby="label-1-3" 
-    id="eq-1-3a" 
-    display="block">
-        <mo>(</mo>
-          <mi>a</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>b</mi>
-          <mo>)</mo>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>c</mi>
-          <mo>=</mo>
-          <mi>a</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mo>(</mo>
-          <mi>b</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>c</mi>
-          <mo>)</mo>
-          <mspace width="5em"/>
-          <mtext id="label-1-3a">(1.3).</mtext>
-      </math>
-      </p>
-      <p>Then you can reference it with a link: "Check out the equation <a href="#eq-1-3a">1.3</a>."</p>
-    <h2>Wrapper element with <code>overlow-x: auto;</code></h2>
-    <p>If we have an equation such as
-        <div style="overflow-x: auto;" 
-        tabindex="0" 
-        aria-labelledby="label-1-3" role="math" id="eq-1-3b">
-        <math 
-     
-    display="block">
-        <mo>(</mo>
-          <mi>a</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>b</mi>
-          <mo>)</mo>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>c</mi>
-          <mo>=</mo>
-          <mi>a</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mo>(</mo>
-          <mi>b</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>c</mi>
-          <mo>)</mo>
-          <mspace width="5em"/>
-          <mtext id="label-1-3b">(1.3).</mtext>
-      </math>
-    </div>
-      </p>
-      <p>Then you can reference it with a link: "Check out the equation <a href="#eq-1-3b">1.3</a>."</p>
-      <h2>Using external CSS for styling</h2>
-      <math display="block">
-        <mo>(</mo>
-          <mi>a</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>b</mi>
-          <mo>)</mo>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>c</mi>
-          <mo>=</mo>
-          <mi>a</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mo>(</mo>
-          <mi>b</mi>
-          <mo>∘<!-- ∘ --></mo>
-          <mi>c</mi>
-          <mo>)</mo>
-          <mspace width="5em"/>
-          <mtext id="label-1-3a">(1.3).</mtext>
-      </math>
-      <h2>Punctuation in math elements</h2>
-      <p>Period inside the <code>mtext</code> element:
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-        <mrow>
+    <h2><code>math</code> elements with <code>overlow-x: auto;</code></h2>
+    <p><div class="math-block-wrapper">
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle P(x)=x^{n}+b_{1}x^{n-1}+\cdots +b_{n-1}x+b_{n}=(x-x_{1})\cdots (x-x_{n}).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <msup>
           <mi>x</mi>
-          <mo>=</mo>
-          <mfrac>
-            <mrow>
-              <mrow>
-                <mo>&minus;</mo>
-                <mi>b</mi>
-              </mrow>
-              <mo>±</mo>
-              <msqrt>
-                <mrow>
-                  <msup>
-                    <mi>b</mi>
-                    <mn>2</mn>
-                  </msup>
-                  <mrow>
-                    <mo>&minus;</mo>
-                    <mn>4</mn>
-                    <mo>⁢</mo>
-                    <mi>a</mi>
-                    <mo>⁢</mo>
-                    <mi>c</mi>
-                  </mrow>
-                </mrow>
-              </msqrt>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-              <mo>⁢</mo>
-              <mi>a</mi>
-            </mrow>
-          </mfrac>
-        </mrow>
-        <mtext>.</mtext>
-        </math></p>
-        <p>Period inside the <code>mtext</code> element and the <code>mtext</code> has a <code>aria-hidden="true"</code> attribute (it might not be allowed in MathML elements):
-          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-            <mrow>
-              <mi>x</mi>
-              <mo>=</mo>
-              <mfrac>
-                <mrow>
-                  <mrow>
-                    <mo>&minus;</mo>
-                    <mi>b</mi>
-                  </mrow>
-                  <mo>±</mo>
-                  <msqrt>
-                    <mrow>
-                      <msup>
-                        <mi>b</mi>
-                        <mn>2</mn>
-                      </msup>
-                      <mrow>
-                        <mo>&minus;</mo>
-                        <mn>4</mn>
-                        <mo>⁢</mo>
-                        <mi>a</mi>
-                        <mo>⁢</mo>
-                        <mi>c</mi>
-                      </mrow>
-                    </mrow>
-                  </msqrt>
-                </mrow>
-                <mrow>
-                  <mn>2</mn>
-                  <mo>⁢</mo>
-                  <mi>a</mi>
-                </mrow>
-              </mfrac>
-            </mrow>
-            <mtext aria-hidden="true">.</mtext>
-            </math></p>
-        <p>Period outside the <code>math</code> element:
-          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-            <mrow>
-              <mi>x</mi>
-              <mo>=</mo>
-              <mfrac>
-                <mrow>
-                  <mrow>
-                    <mo>&minus;</mo>
-                    <mi>b</mi>
-                  </mrow>
-                  <mo>±</mo>
-                  <msqrt>
-                    <mrow>
-                      <msup>
-                        <mi>b</mi>
-                        <mn>2</mn>
-                      </msup>
-                      <mrow>
-                        <mo>&minus;</mo>
-                        <mn>4</mn>
-                        <mo>⁢</mo>
-                        <mi>a</mi>
-                        <mo>⁢</mo>
-                        <mi>c</mi>
-                      </mrow>
-                    </mrow>
-                  </msqrt>
-                </mrow>
-                <mrow>
-                  <mn>2</mn>
-                  <mo>⁢</mo>
-                  <mi>a</mi>
-                </mrow>
-              </mfrac>
-            </mrow>
-            </math>.</p>
-            <p>Period outside of the block element, but block element's width is set to fit content:</p>
-              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" style="border: 1px solid black; width: fit-content;">
-                <mrow>
-                  <mi>x</mi>
-                  <mo>=</mo>
-                  <mfrac>
-                    <mrow>
-                      <mrow>
-                        <mo>&minus;</mo>
-                        <mi>b</mi>
-                      </mrow>
-                      <mo>±</mo>
-                      <msqrt>
-                        <mrow>
-                          <msup>
-                            <mi>b</mi>
-                            <mn>2</mn>
-                          </msup>
-                          <mrow>
-                            <mo>&minus;</mo>
-                            <mn>4</mn>
-                            <mo>⁢</mo>
-                            <mi>a</mi>
-                            <mo>⁢</mo>
-                            <mi>c</mi>
-                          </mrow>
-                        </mrow>
-                      </msqrt>
-                    </mrow>
-                    <mrow>
-                      <mn>2</mn>
-                      <mo>⁢</mo>
-                      <mi>a</mi>
-                    </mrow>
-                  </mfrac>
-                </mrow>
-                </math>.</p>
-                <h2><code>&lt;mrow&gt;</code> to get large parentheses</h2>
-                  <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mo>(</mo>
-                        <mtable>
-                          <mtr>
-                            <mtd>
-                              <mrow>
-                                <mi>x</mi>
-                                <mo>+</mo>
-                                <mn>1</mn>
-                              </mrow>
-                            </mtd>
-                          </mtr>
-                          <mtr>
-                            <mtd>
-                              <mrow>
-                                <mi>x</mi>
-                                <mo>-</mo>
-                                <mn>1</mn>
-                              </mrow>
-                            </mtd>
-                          </mtr>
-                        </mtable>
-                        <mo>)</mo>
-                  </math>
-                  <math>
-                    <mo>(</mo>
-                    <mfrac linethickness="0">
-                      <mn>2</mn>
-                      <mn>3</mn>
-                    </mfrac>
-                    <mo>)</mo>
-                  </math>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <msup>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>−<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mo>⋯<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>−<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>x</mi>
+        <mo>+</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>−<!-- − --></mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>⋯<!-- ⋯ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>−<!-- − --></mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P(x)=x^{n}+b_{1}x^{n-1}+\cdots +b_{n-1}x+b_{n}=(x-x_{1})\cdots (x-x_{n}).}</annotation>
+  </semantics>
+</math></div></p>
   </body>
 </html>
